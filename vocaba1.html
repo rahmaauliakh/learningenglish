@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vocabulary Table with Bootstrap + Speak</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #D76C82;
+      background-image: url('8.png'); 
+    }
+    th{
+      background-color: #D76C82!important; /* Soft pink background for numbers and titles */
+    }
+    .table-container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 15px;
+      max-height: 89vh; /* Responsif: 70% dari tinggi layar */
+      overflow-y: auto;
+    }
+    h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn.ms {
+    margin-left: auto; /* Menempatkan tombol ke kanan */
+    background-color: #D76C82;
+    color: azure;
+}
+
+@media (max-width: 576px) {
+  .table-container {
+    max-height: 95vh; 
+    padding: 15px;
+  }
+
+  th, td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+}
+
+
+  </style>
+</head>
+<body class="p-4">
+
+  <div class="container table-container">
+    <h2 class="mb-4 text-center">Vocabulary List Level A1<a href="index.html" class="btn ms">back</a></h2>
+    <table class="table table-bordered table-striped table-hover text-center">
+      <thead class="table-dark">
+        <tr>
+          <th class="highlight-column">No</th>
+          <th>Vocabulary</th>
+          <th>Pronunciation</th>
+          <th>Part of</th>
+          <th>Meaning</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="highlight-column">1</td><td>About</td><td onclick="speakMessage('About')" style="cursor:pointer;">/əˈbaʊt/ 🔊</td><td>Preposition</td><td>Mengenai</td></tr>
+        <tr><td class="highlight-column">2</td><td>Above</td><td onclick="speakMessage('Above')" style="cursor:pointer;">/əˈbʌv/ 🔊</td><td>Preposition</td><td>Di atas</td></tr>
+        <tr><td class="highlight-column">3</td><td>Across</td><td onclick="speakMessage('Across')" style="cursor:pointer;">/əˈkrɒs/ 🔊</td><td>Preposition</td><td>Melintasi</td></tr>
+        <tr><td class="highlight-column">4</td><td>Action</td><td onclick="speakMessage('Action')" style="cursor:pointer;">/ˈæk.ʃən/ 🔊</td><td>Noun</td><td>Tindakan</td></tr>
+        <tr><td class="highlight-column">5</td><td>Activity</td><td onclick="speakMessage('Activity')" style="cursor:pointer;">/ækˈtɪv.ə.ti/ 🔊</td><td>Noun</td><td>Kegiatan</td></tr>
+        <tr><td class="highlight-column">6</td><td>Actor</td><td onclick="speakMessage('Actor')" style="cursor:pointer;">/ˈæk.tər/ 🔊</td><td>Noun</td><td>Aktor</td></tr>
+        <tr><td class="highlight-column">7</td><td>Actress</td><td onclick="speakMessage('Actress')" style="cursor:pointer;">/ˈæk.trəs/ 🔊</td><td>Noun</td><td>Aktris</td></tr>
+        <tr><td class="highlight-column">8</td><td>Add</td><td onclick="speakMessage('Add')" style="cursor:pointer;">/æd/ 🔊</td><td>Verb</td><td>Menambahkan</td></tr>
+        <tr><td class="highlight-column">9</td><td>Address</td><td onclick="speakMessage('Address')" style="cursor:pointer;">/əˈdres/ 🔊</td><td>Noun</td><td>Alamat</td></tr>
+        <tr><td class="highlight-column">10</td><td>Adult</td><td onclick="speakMessage('Adult')" style="cursor:pointer;">/ˈæd.ʌlt/ 🔊</td><td>Noun</td><td>Dewasa</td></tr>
+        <tr><td class="highlight-column">11</td><td>Advice</td><td onclick="speakMessage('Advice')" style="cursor:pointer;">/ədˈvaɪs/ 🔊</td><td>Noun</td><td>Saran</td></tr>
+        <tr><td class="highlight-column">12</td><td>Afraid</td><td onclick="speakMessage('Afraid')" style="cursor:pointer;">/əˈfreɪd/ 🔊</td><td>Adjective</td><td>Takut</td></tr>
+        <tr><td class="highlight-column">13</td><td>After</td><td onclick="speakMessage('After')" style="cursor:pointer;">/ˈɑːf.tər/ 🔊</td><td>Preposition</td><td>Setelah</td></tr>
+        <tr><td class="highlight-column">14</td><td>Afternoon</td><td onclick="speakMessage('Afternoon')" style="cursor:pointer;">/ˌɑːf.təˈnuːn/ 🔊</td><td>Noun</td><td>Sore</td></tr>
+        <tr><td class="highlight-column">15</td><td>Again</td><td onclick="speakMessage('Again')" style="cursor:pointer;">/əˈɡen/ 🔊</td><td>Adverb</td><td>Lagi</td></tr>
+        <tr><td class="highlight-column">16</td><td>Age</td><td onclick="speakMessage('Age')" style="cursor:pointer;">/eɪdʒ/ 🔊</td><td>Noun</td><td>Usia</td></tr>
+        <tr><td class="highlight-column">17</td><td>Ago</td><td onclick="speakMessage('Ago')" style="cursor:pointer;">/əˈɡəʊ/ 🔊</td><td>Adverb</td><td>Lalu</td></tr>
+        <tr><td class="highlight-column">18</td><td>Agree</td><td onclick="speakMessage('Agree')" style="cursor:pointer;">/əˈɡriː/ 🔊</td><td>Verb</td><td>Setuju</td></tr>
+        <tr><td class="highlight-column">19</td><td>Air</td><td onclick="speakMessage('Air')" style="cursor:pointer;">/eər/ 🔊</td><td>Noun</td><td>Udara</td></tr>
+        <tr><td class="highlight-column">20</td><td>Airport</td><td onclick="speakMessage('Airport')" style="cursor:pointer;">/ˈeə.pɔːt/ 🔊</td><td>Noun</td><td>Bandara</td></tr>
+        <tr><td class="highlight-column">21</td><td>All</td><td onclick="speakMessage('All')" style="cursor:pointer;">/ɔːl/ 🔊</td><td>Determiner</td><td>Semua</td></tr>
+        <tr><td class="highlight-column">22</td><td>Also</td><td onclick="speakMessage('Also')" style="cursor:pointer;">/ˈɔːl.səʊ/ 🔊</td><td>Adverb</td><td>Juga</td></tr>
+        <tr><td class="highlight-column">23</td><td>Always</td><td onclick="speakMessage('Always')" style="cursor:pointer;">/ˈɔːl.weɪz/ 🔊</td><td>Adverb</td><td>Selalu</td></tr>
+        <tr><td class="highlight-column">24</td><td>Amazing</td><td onclick="speakMessage('Amazing')" style="cursor:pointer;">/əˈmeɪ.zɪŋ/ 🔊</td><td>Adjective</td><td>Luar biasa</td></tr>
+        <tr><td class="highlight-column">25</td><td>And</td><td onclick="speakMessage('And')" style="cursor:pointer;">/ænd/ 🔊</td><td>Conjunction</td><td>Dan</td></tr>
+        <tr><td class="highlight-column">26</td><td>Angry</td><td onclick="speakMessage('Angry')" style="cursor:pointer;">/ˈæŋ.ɡri/ 🔊</td><td>Adjective</td><td>Marah</td></tr>
+        <tr><td class="highlight-column">27</td><td>Animal</td><td onclick="speakMessage('Animal')" style="cursor:pointer;">/ˈæn.ɪ.məl/ 🔊</td><td>Noun</td><td>Hewan</td></tr>
+        <tr><td class="highlight-column">28</td><td>Another</td><td onclick="speakMessage('Another')" style="cursor:pointer;">/əˈnʌð.ər/ 🔊</td><td>Determiner</td><td>Lain</td></tr>
+        <tr><td class="highlight-column">29</td><td>Answer</td><td onclick="speakMessage('Answer')" style="cursor:pointer;">/ˈɑːn.sər/ 🔊</td><td>Noun</td><td>Jawaban</td></tr>
+        <tr><td class="highlight-column">30</td><td>Any</td><td onclick="speakMessage('Any')" style="cursor:pointer;">/ˈen.i/ 🔊</td><td>Determiner</td><td>Apa pun</td></tr>
+        <tr><td class="highlight-column">31</td><td>Anyone</td><td onclick="speakMessage('Anyone')" style="cursor:pointer;">/ˈen.i.wʌn/ 🔊</td><td>Pronoun</td><td>Seseorang</td></tr>
+        <tr><td class="highlight-column">32</td><td>Anything</td><td onclick="speakMessage('Anything')" style="cursor:pointer;">/ˈen.i.θɪŋ/ 🔊</td><td>Pronoun</td><td>Apa pun</td></tr>
+        <tr><td class="highlight-column">33</td><td>Apartment</td><td onclick="speakMessage('Apartment')" style="cursor:pointer;">/əˈpɑːt.mənt/ 🔊</td><td>Noun</td><td>Apartemen</td></tr>
+        <tr><td class="highlight-column">34</td><td>Apple</td><td onclick="speakMessage('Apple')" style="cursor:pointer;">/ˈæp.əl/ 🔊</td><td>Noun</td><td>Apel</td></tr>
+        <tr><td class="highlight-column">35</td><td>April</td><td onclick="speakMessage('April')" style="cursor:pointer;">/ˈeɪ.prəl/ 🔊</td><td>Noun</td><td>April</td></tr>
+        <tr><td class="highlight-column">36</td><td>Area</td><td onclick="speakMessage('Area')" style="cursor:pointer;">/ˈeə.ri.ə/ 🔊</td><td>Noun</td><td>Daerah</td></tr>
+        <tr><td class="highlight-column">37</td><td>Arm</td><td onclick="speakMessage('Arm')" style="cursor:pointer;">/ɑːm/ 🔊</td><td>Noun</td><td>Lengan</td></tr>
+        <tr><td class="highlight-column">38</td><td>Around</td><td onclick="speakMessage('Around')" style="cursor:pointer;">/əˈraʊnd/ 🔊</td><td>Preposition</td><td>Di sekitar</td></tr>
+        <tr><td class="highlight-column">39</td><td>Arrive</td><td onclick="speakMessage('Arrive')" style="cursor:pointer;">/əˈraɪv/ 🔊</td><td>Verb</td><td>Tiba</td></tr>
+        <tr><td class="highlight-column">40</td><td>Art</td><td onclick="speakMessage('Art')" style="cursor:pointer;">/ɑːt/ 🔊</td><td>Noun</td><td>Seni</td></tr>
+        <tr><td class="highlight-column">41</td><td>Article</td><td onclick="speakMessage('Article')" style="cursor:pointer;">/ˈɑː.tɪ.kəl/ 🔊</td><td>Noun</td><td>Artikel</td></tr>
+        <tr><td class="highlight-column">42</td><td>Artist</td><td onclick="speakMessage('Artist')" style="cursor:pointer;">/ˈɑː.tɪst/ 🔊</td><td>Noun</td><td>Seniman</td></tr>
+        <tr><td class="highlight-column">43</td><td>As</td><td onclick="speakMessage('As')" style="cursor:pointer;">/æz/ 🔊</td><td>Conjunction</td><td>Seperti</td></tr>
+        <tr><td class="highlight-column">44</td><td>Ask</td><td onclick="speakMessage('Ask')" style="cursor:pointer;">/æsk/ 🔊</td><td>Verb</td><td>Bertanya</td></tr>
+        <tr><td class="highlight-column">45</td><td>At</td><td onclick="speakMessage('At')" style="cursor:pointer;">/æt/ 🔊</td><td>Preposition</td><td>Di</td></tr>
+        <tr><td class="highlight-column">46</td><td>August</td><td onclick="speakMessage('August')" style="cursor:pointer;">/ˈɔː.ɡəst/ 🔊</td><td>Noun</td><td>Agustus</td></tr>
+        <tr><td class="highlight-column">47</td><td>Aunt</td><td onclick="speakMessage('Aunt')" style="cursor:pointer;">/ɑːnt/ 🔊</td><td>Noun</td><td>Bibi</td></tr>
+        <tr><td class="highlight-column">48</td><td>Autumn</td><td onclick="speakMessage('Autumn')" style="cursor:pointer;">/ˈɔː.təm/ 🔊</td><td>Noun</td><td>Musim gugur</td></tr>
+        <tr><td class="highlight-column">49</td><td>Away</td><td onclick="speakMessage('Away')" style="cursor:pointer;">/əˈweɪ/ 🔊</td><td>Adverb</td><td>Jauh</td></tr>
+        <tr><td class="highlight-column">50</td><td>Baby</td><td onclick="speakMessage('Baby')" style="cursor:pointer;">/ˈbeɪ.bi/ 🔊</td><td>Noun</td><td>Bayi</td></tr>
+        <tr><td class="highlight-column">51</td><td>Back</td><td onclick="speakMessage('Back')" style="cursor:pointer;">/bæk/ 🔊</td><td>Adverb</td><td>Kembali</td></tr>
+        <tr><td class="highlight-column">52</td><td>Bad</td><td onclick="speakMessage('Bad')" style="cursor:pointer;">/bæd/ 🔊</td><td>Adjective</td><td>Buruk</td></tr>
+        <tr><td class="highlight-column">53</td><td>Bag</td><td onclick="speakMessage('Bag')" style="cursor:pointer;">/bæɡ/ 🔊</td><td>Noun</td><td>Tas</td></tr>
+        <tr><td class="highlight-column">54</td><td>Ball</td><td onclick="speakMessage('Ball')" style="cursor:pointer;">/bɔːl/ 🔊</td><td>Noun</td><td>Bola</td></tr>
+        <tr><td class="highlight-column">55</td><td>Banana</td><td onclick="speakMessage('Banana')" style="cursor:pointer;">/bəˈnɑː.nə/ 🔊</td><td>Noun</td><td>Pisang</td></tr>
+        <tr><td class="highlight-column">56</td><td>Band</td><td onclick="speakMessage('Band')" style="cursor:pointer;">/bænd/ 🔊</td><td>Noun</td><td>Grup musik</td></tr>
+        <tr><td class="highlight-column">57</td><td>Bank</td><td onclick="speakMessage('Bank')" style="cursor:pointer;">/bæŋk/ 🔊</td><td>Noun</td><td>Bank</td></tr>
+        <tr><td class="highlight-column">58</td><td>Bath</td><td onclick="speakMessage('Bath')" style="cursor:pointer;">/bɑːθ/ 🔊</td><td>Noun</td><td>Mandikan</td></tr>
+        <tr><td class="highlight-column">59</td><td>Bathroom</td><td onclick="speakMessage('Bathroom')" style="cursor:pointer;">/ˈbɑːθ.ruːm/ 🔊</td><td>Noun</td><td>Kamar mandi</td></tr>
+        <tr><td class="highlight-column">60</td><td>Be</td><td onclick="speakMessage('Be')" style="cursor:pointer;">/biː/ 🔊</td><td>Verb</td><td>Menjadi</td></tr>
+        <tr><td class="highlight-column">61</td><td>Beach</td><td onclick="speakMessage('Beach')" style="cursor:pointer;">/biːtʃ/ 🔊</td><td>Noun</td><td>Pantai</td></tr>
+        <tr><td class="highlight-column">62</td><td>Beautiful</td><td onclick="speakMessage('Beautiful')" style="cursor:pointer;">/ˈbjuː.tɪ.fəl/ 🔊</td><td>Adjective</td><td>Indah</td></tr>
+        <tr><td class="highlight-column">63</td><td>Because</td><td onclick="speakMessage('Because')" style="cursor:pointer;">/bɪˈkəz/ 🔊</td><td>Conjunction</td><td>Karena</td></tr>
+        <tr><td class="highlight-column">64</td><td>Become</td><td onclick="speakMessage('Become')" style="cursor:pointer;">/bɪˈkʌm/ 🔊</td><td>Verb</td><td>Menjadi</td></tr>
+        <tr><td class="highlight-column">65</td><td>Bed</td><td onclick="speakMessage('Bed')" style="cursor:pointer;">/bed/ 🔊</td><td>Noun</td><td>Tempat tidur</td></tr>
+        <tr><td class="highlight-column">66</td><td>Bedroom</td><td onclick="speakMessage('Bedroom')" style="cursor:pointer;">/ˈbed.ruːm/ 🔊</td><td>Noun</td><td>Kamar tidur</td></tr>
+        <tr><td class="highlight-column">67</td><td>Beer</td><td onclick="speakMessage('Beer')" style="cursor:pointer;">/bɪə(r)/ 🔊</td><td>Noun</td><td>Bir</td></tr>
+        <tr><td class="highlight-column">68</td><td>Before</td><td onclick="speakMessage('Before')" style="cursor:pointer;">/bɪˈfɔː(r)/ 🔊</td><td>Preposition</td><td>Sebelum</td></tr>
+        <tr><td class="highlight-column">69</td><td>Begin</td><td onclick="speakMessage('Begin')" style="cursor:pointer;">/bɪˈɡɪn/ 🔊</td><td>Verb</td><td>Memulai</td></tr>
+        <tr><td class="highlight-column">70</td><td>Beginning</td><td onclick="speakMessage('Beginning')" style="cursor:pointer;">/bɪˈɡɪn.ɪŋ/ 🔊</td><td>Noun</td><td>Permulaan</td></tr>
+        <tr><td class="highlight-column">71</td><td>Behind</td><td onclick="speakMessage('Behind')" style="cursor:pointer;">/bɪˈhaɪnd/ 🔊</td><td>Preposition</td><td>Di belakang</td></tr>
+        <tr><td class="highlight-column">72</td><td>Believe</td><td onclick="speakMessage('Believe')" style="cursor:pointer;">/bɪˈliːv/ 🔊</td><td>Verb</td><td>Mempercayai</td></tr>
+        <tr><td class="highlight-column">73</td><td>Below</td><td onclick="speakMessage('Below')" style="cursor:pointer;">/bɪˈləʊ/ 🔊</td><td>Preposition</td><td>Di bawah</td></tr>
+        <tr><td class="highlight-column">74</td><td>Best</td><td onclick="speakMessage('Best')" style="cursor:pointer;">/best/ 🔊</td><td>Adjective</td><td>Terbaik</td></tr>
+        <tr><td class="highlight-column">75</td><td>Better</td><td onclick="speakMessage('Better')" style="cursor:pointer;">/ˈbet.ər/ 🔊</td><td>Adjective</td><td>Lebih baik</td></tr>
+        <tr><td class="highlight-column">76</td><td>Between</td><td onclick="speakMessage('Between')" style="cursor:pointer;">/bɪˈtwiːn/ 🔊</td><td>Preposition</td><td>Di antara</td></tr>
+        <tr><td class="highlight-column">77</td><td>Bicycle</td><td onclick="speakMessage('Bicycle')" style="cursor:pointer;">/ˈbaɪ.sɪ.kəl/ 🔊</td><td>Noun</td><td>Sepeda</td></tr>
+        <tr><td class="highlight-column">78</td><td>Big</td><td onclick="speakMessage('Big')" style="cursor:pointer;">/bɪɡ/ 🔊</td><td>Adjective</td><td>Besar</td></tr>
+        <tr><td class="highlight-column">79</td><td>Bike</td><td onclick="speakMessage('Bike')" style="cursor:pointer;">/baɪk/ 🔊</td><td>Noun</td><td>Sepeda motor / sepeda</td></tr>
+        <tr><td class="highlight-column">80</td><td>Bill</td><td onclick="speakMessage('Bill')" style="cursor:pointer;">/bɪl/ 🔊</td><td>Noun</td><td>Tagihan</td></tr>
+        <tr><td class="highlight-column">81</td><td>Bird</td><td onclick="speakMessage('Bird')" style="cursor:pointer;">/bɜːd/ 🔊</td><td>Noun</td><td>Burung</td></tr>
+        <tr><td class="highlight-column">82</td><td>Birthday</td><td onclick="speakMessage('Birthday')" style="cursor:pointer;">/ˈbɜːθ.deɪ/ 🔊</td><td>Noun</td><td>Ulang tahun</td></tr>
+        <tr><td class="highlight-column">83</td><td>Black</td><td onclick="speakMessage('Black')" style="cursor:pointer;">/blæk/ 🔊</td><td>Adjective</td><td>Hitam</td></tr>
+        <tr><td class="highlight-column">84</td><td>Blog</td><td onclick="speakMessage('Blog')" style="cursor:pointer;">/blɒɡ/ 🔊</td><td>Noun</td><td>Blog</td></tr>
+        <tr><td class="highlight-column">85</td><td>Blonde</td><td onclick="speakMessage('Blonde')" style="cursor:pointer;">/blɒnd/ 🔊</td><td>Adjective</td><td>Pirang</td></tr>
+        <tr><td class="highlight-column">86</td><td>Blue</td><td onclick="speakMessage('Blue')" style="cursor:pointer;">/bluː/ 🔊</td><td>Adjective</td><td>Biru</td></tr>
+        <tr><td class="highlight-column">86</td><td>Boat</td><td onclick="speakMessage('Boat')" style="cursor:pointer;">/bəʊt/ 🔊</td><td>Noun</td><td>Perahu</td></tr>
+        <tr><td class="highlight-column">87</td><td>Body</td><td onclick="speakMessage('Body')" style="cursor:pointer;">/ˈbɒd.i/ 🔊</td><td>Noun</td><td>Tubuh</td></tr>
+        <tr><td class="highlight-column">88</td><td>Book</td><td onclick="speakMessage('Book')" style="cursor:pointer;">/bʊk/ 🔊</td><td>Noun</td><td>Buku</td></tr>
+        <tr><td class="highlight-column">89</td><td>Boot</td><td onclick="speakMessage('Boot')" style="cursor:pointer;">/buːt/ 🔊</td><td>Noun</td><td>Sepatu bot</td></tr>
+        <tr><td class="highlight-column">90</td><td>Bored</td><td onclick="speakMessage('Bored')" style="cursor:pointer;">/bɔːd/ 🔊</td><td>Adjective</td><td>Bosan</td></tr>
+        <tr><td class="highlight-column">91</td><td>Boring</td><td onclick="speakMessage('Boring')" style="cursor:pointer;">/ˈbɔː.rɪŋ/ 🔊</td><td>Adjective</td><td>Membosankan</td></tr>
+        <tr><td class="highlight-column">92</td><td>Born</td><td onclick="speakMessage('Born')" style="cursor:pointer;">/bɔːn/ 🔊</td><td>Verb</td><td>Lahir</td></tr>
+        <tr><td class="highlight-column">93</td><td>Both</td><td onclick="speakMessage('Both')" style="cursor:pointer;">/bəʊθ/ 🔊</td><td>Determiner</td><td>Keduanya</td></tr>
+        <tr><td class="highlight-column">94</td><td>Bottle</td><td onclick="speakMessage('Bottle')" style="cursor:pointer;">/ˈbɒt.l̩/ 🔊</td><td>Noun</td><td>Botol</td></tr>
+        <tr><td class="highlight-column">95</td><td>Box</td><td onclick="speakMessage('Box')" style="cursor:pointer;">/bɒks/ 🔊</td><td>Noun</td><td>Kotak</td></tr>
+        <tr><td class="highlight-column">96</td><td>Boy</td><td onclick="speakMessage('Boy')" style="cursor:pointer;">/bɔɪ/ 🔊</td><td>Noun</td><td>Anak laki-laki</td></tr>
+        <tr><td class="highlight-column">97</td><td>Boyfriend</td><td onclick="speakMessage('Boyfriend')" style="cursor:pointer;">/ˈbɔɪ.frend/ 🔊</td><td>Noun</td><td>Pacar (pria)</td></tr>
+        <tr><td class="highlight-column">98</td><td>Bread</td><td onclick="speakMessage('Bread')" style="cursor:pointer;">/bred/ 🔊</td><td>Noun</td><td>Roti</td></tr>
+        <tr><td class="highlight-column">99</td><td>Break</td><td onclick="speakMessage('Break')" style="cursor:pointer;">/breɪk/ 🔊</td><td>Verb</td><td>Istirahat / Merusak</td></tr>
+        <tr><td class="highlight-column">100</td><td>Breakfast</td><td onclick="speakMessage('Breakfast')" style="cursor:pointer;">/ˈbrek.fəst/ 🔊</td><td>Noun</td><td>Sarapan</td></tr>
+        <tr><td class="highlight-column">101</td><td>Bring</td><td onclick="speakMessage('Bring')" style="cursor:pointer;">/brɪŋ/ 🔊</td><td>Verb</td><td>Membawa</td></tr>
+        <tr><td class="highlight-column">102</td><td>Brother</td><td onclick="speakMessage('Brother')" style="cursor:pointer;">/ˈbrʌð.ər/ 🔊</td><td>Noun</td><td>Saudara laki-laki</td></tr>
+        <tr><td class="highlight-column">103</td><td>Brown</td><td onclick="speakMessage('Brown')" style="cursor:pointer;">/braʊn/ 🔊</td><td>Adjective</td><td>Cokelat</td></tr>
+        <tr><td class="highlight-column">104</td><td>Build</td><td onclick="speakMessage('Build')" style="cursor:pointer;">/bɪld/ 🔊</td><td>Verb</td><td>Membangun</td></tr>
+        <tr><td class="highlight-column">105</td><td>Building</td><td onclick="speakMessage('Building')" style="cursor:pointer;">/ˈbɪl.dɪŋ/ 🔊</td><td>Noun</td><td>Bangunan</td></tr>
+        <tr><td class="highlight-column">106</td><td>Bus</td><td onclick="speakMessage('Bus')" style="cursor:pointer;">/bʌs/ 🔊</td><td>Noun</td><td>Bis</td></tr>
+        <tr><td class="highlight-column">107</td><td>Business</td><td onclick="speakMessage('Business')" style="cursor:pointer;">/ˈbɪz.nɪs/ 🔊</td><td>Noun</td><td>Bisnis</td></tr>
+        <tr><td class="highlight-column">108</td><td>Busy</td><td onclick="speakMessage('Busy')" style="cursor:pointer;">/ˈbɪz.i/ 🔊</td><td>Adjective</td><td>Sibuk</td></tr>
+        <tr><td class="highlight-column">109</td><td>But</td><td onclick="speakMessage('But')" style="cursor:pointer;">/bʌt/ 🔊</td><td>Conjunction</td><td>Tetapi</td></tr>
+        <tr><td class="highlight-column">110</td><td>Butter</td><td onclick="speakMessage('Butter')" style="cursor:pointer;">/ˈbʌt.ər/ 🔊</td><td>Noun</td><td>Mentega</td></tr>
+        <tr><td class="highlight-column">111</td><td>Buy</td><td onclick="speakMessage('Buy')" style="cursor:pointer;">/baɪ/ 🔊</td><td>Verb</td><td>Membeli</td></tr>
+        <tr><td class="highlight-column">112</td><td>By</td><td onclick="speakMessage('By')" style="cursor:pointer;">/baɪ/ 🔊</td><td>Preposition</td><td>Oleh</td></tr>
+        <tr><td class="highlight-column">113</td><td>Bye</td><td onclick="speakMessage('Bye')" style="cursor:pointer;">/baɪ/ 🔊</td><td>Exclamation</td><td>Dada</td></tr>
+        <tr><td class="highlight-column">114</td><td>Cafe</td><td onclick="speakMessage('Cafe')" style="cursor:pointer;">/ˈkæf.eɪ/ 🔊</td><td>Noun</td><td>Kafe</td></tr>
+        <tr><td class="highlight-column">115</td><td>Cake</td><td onclick="speakMessage('Cake')" style="cursor:pointer;">/keɪk/ 🔊</td><td>Noun</td><td>Kue</td></tr>
+        <tr><td class="highlight-column">116</td><td>Call</td><td onclick="speakMessage('Call')" style="cursor:pointer;">/kɔːl/ 🔊</td><td>Verb</td><td>Memanggil / Menelepon</td></tr>
+        <tr><td class="highlight-column">117</td><td>Camera</td><td onclick="speakMessage('Camera')" style="cursor:pointer;">/ˈkæm.rə/ 🔊</td><td>Noun</td><td>Kamera</td></tr>
+        <tr><td class="highlight-column">118</td><td>Can</td><td onclick="speakMessage('Can')" style="cursor:pointer;">/kæn/ 🔊</td><td>Modal Verb</td><td>Bisa</td></tr>
+        <tr><td class="highlight-column">119</td><td>Cannot</td><td onclick="speakMessage('Cannot')" style="cursor:pointer;">/ˈkæn.ɒt/ 🔊</td><td>Modal Verb</td><td>Tidak bisa</td></tr>
+        <tr><td class="highlight-column">120</td><td>Capital</td><td onclick="speakMessage('Capital')" style="cursor:pointer;">/ˈkæp.ɪ.təl/ 🔊</td><td>Noun</td><td>Ibukota</td></tr>
+        <tr><td class="highlight-column">121</td><td>Car</td><td onclick="speakMessage('Car')" style="cursor:pointer;">/kɑːr/ 🔊</td><td>Noun</td><td>Mobil</td></tr>
+        <tr><td class="highlight-column">122</td><td>Card</td><td onclick="speakMessage('Card')" style="cursor:pointer;">/kɑːd/ 🔊</td><td>Noun</td><td>Kartu</td></tr>
+        <tr><td class="highlight-column">123</td><td>Career</td><td onclick="speakMessage('Career')" style="cursor:pointer;">/kəˈrɪər/ 🔊</td><td>Noun</td><td>Karier</td></tr>
+        <tr><td class="highlight-column">124</td><td>Carrot</td><td onclick="speakMessage('Carrot')" style="cursor:pointer;">/ˈkær.ət/ 🔊</td><td>Noun</td><td>Wortel</td></tr>
+        <tr><td class="highlight-column">125</td><td>Carry</td><td onclick="speakMessage('Carry')" style="cursor:pointer;">/ˈkær.i/ 🔊</td><td>Verb</td><td>Membawa</td></tr>
+        <tr><td class="highlight-column">126</td><td>Cat</td><td onclick="speakMessage('Cat')" style="cursor:pointer;">/kæt/ 🔊</td><td>Noun</td><td>Kucing</td></tr>
+        <tr><td class="highlight-column">127</td><td>Centre</td><td onclick="speakMessage('Centre')" style="cursor:pointer;">/ˈsen.tər/ 🔊</td><td>Noun</td><td>Pusat</td></tr>
+        <tr><td class="highlight-column">128</td><td>Cent</td><td onclick="speakMessage('Cent')" style="cursor:pointer;">/sent/ 🔊</td><td>Noun</td><td>Sen (mata uang)</td></tr>
+        <tr><td class="highlight-column">129</td><td>Century</td><td onclick="speakMessage('Century')" style="cursor:pointer;">/ˈsen.tʃər.i/ 🔊</td><td>Noun</td><td>Abad</td></tr>
+        <tr><td class="highlight-column">130</td><td>Chair</td><td onclick="speakMessage('Chair')" style="cursor:pointer;">/tʃeər/ 🔊</td><td>Noun</td><td>Kursi</td></tr>
+        <tr><td class="highlight-column">131</td><td>Change</td><td onclick="speakMessage('Change')" style="cursor:pointer;">/tʃeɪndʒ/ 🔊</td><td>Verb/Noun</td><td>Berubah/Perubahan</td></tr>
+        <tr><td class="highlight-column">132</td><td>Chart</td><td onclick="speakMessage('Chart')" style="cursor:pointer;">/tʃɑːt/ 🔊</td><td>Noun</td><td>Bagan</td></tr>
+        <tr><td class="highlight-column">133</td><td>Cheap</td><td onclick="speakMessage('Cheap')" style="cursor:pointer;">/tʃiːp/ 🔊</td><td>Adjective</td><td>Murah</td></tr>
+        <tr><td class="highlight-column">134</td><td>Check</td><td onclick="speakMessage('Check')" style="cursor:pointer;">/tʃek/ 🔊</td><td>Verb</td><td>Memeriksa</td></tr>
+        <tr><td class="highlight-column">135</td><td>Cheese</td><td onclick="speakMessage('Cheese')" style="cursor:pointer;">/tʃiːz/ 🔊</td><td>Noun</td><td>Keju</td></tr>
+        <tr><td class="highlight-column">136</td><td>Chicken</td><td onclick="speakMessage('Chicken')" style="cursor:pointer;">/ˈtʃɪk.ɪn/ 🔊</td><td>Noun</td><td>Ayam</td></tr>
+        <tr><td class="highlight-column">137</td><td>Child</td><td onclick="speakMessage('Child')" style="cursor:pointer;">/tʃaɪld/ 🔊</td><td>Noun</td><td>Anak</td></tr>
+        <tr><td class="highlight-column">138</td><td>Chocolate</td><td onclick="speakMessage('Chocolate')" style="cursor:pointer;">/ˈtʃɒk.lət/ 🔊</td><td>Noun</td><td>Cokelat</td></tr>
+        <tr><td class="highlight-column">139</td><td>Choose</td><td onclick="speakMessage('Choose')" style="cursor:pointer;">/tʃuːz/ 🔊</td><td>Verb</td><td>Memilih</td></tr>
+        <tr><td class="highlight-column">140</td><td>Cinema</td><td onclick="speakMessage('Cinema')" style="cursor:pointer;">/ˈsɪn.ə.mə/ 🔊</td><td>Noun</td><td>Bioskop</td></tr>
+        <tr><td class="highlight-column">141</td><td>City</td><td onclick="speakMessage('City')" style="cursor:pointer;">/ˈsɪt.i/ 🔊</td><td>Noun</td><td>Kota</td></tr>
+        <tr><td class="highlight-column">142</td><td>Class</td><td onclick="speakMessage('Class')" style="cursor:pointer;">/klɑːs/ 🔊</td><td>Noun</td><td>Kelas</td></tr>
+        <tr><td class="highlight-column">143</td><td>Classroom</td><td onclick="speakMessage('Classroom')" style="cursor:pointer;">/ˈklɑːs.ruːm/ 🔊</td><td>Noun</td><td>Ruang kelas</td></tr>
+        <tr><td class="highlight-column">144</td><td>Clean</td><td onclick="speakMessage('Clean')" style="cursor:pointer;">/kliːn/ 🔊</td><td>Verb/Adjective</td><td>Membersihkan/Bersih</td></tr>
+        <tr><td class="highlight-column">145</td><td>Climb</td><td onclick="speakMessage('Climb')" style="cursor:pointer;">/klaɪm/ 🔊</td><td>Verb</td><td>Memanjat</td></tr>
+        <tr><td class="highlight-column">146</td><td>Clock</td><td onclick="speakMessage('Clock')" style="cursor:pointer;">/klɒk/ 🔊</td><td>Noun</td><td>Jam</td></tr>
+        <tr><td class="highlight-column">147</td><td>Close</td><td onclick="speakMessage('Close')" style="cursor:pointer;">/kləʊz/ 🔊</td><td>Verb</td><td>Menutup</td></tr>
+        <tr><td class="highlight-column">148</td><td>Clothes</td><td onclick="speakMessage('Clothes')" style="cursor:pointer;">/kləʊðz/ 🔊</td><td>Noun</td><td>Pakaian</td></tr>
+        <tr><td class="highlight-column">149</td><td>Club</td><td onclick="speakMessage('Club')" style="cursor:pointer;">/klʌb/ 🔊</td><td>Noun</td><td>Klub</td></tr>
+        <tr><td class="highlight-column">150</td><td>Coat</td><td onclick="speakMessage('Coat')" style="cursor:pointer;">/kəʊt/ 🔊</td><td>Noun</td><td>Jas/Hoodie/Coat</td></tr>
+        <tr><td class="highlight-column">151</td><td>Coffee</td><td onclick="speakMessage('Coffee')" style="cursor:pointer;">/ˈkɒf.i/ 🔊</td><td>Noun</td><td>Kopi</td></tr>
+        <tr><td class="highlight-column">152</td><td>Cold</td><td onclick="speakMessage('Cold')" style="cursor:pointer;">/kəʊld/ 🔊</td><td>Adjective</td><td>Dingin</td></tr>
+        <tr><td class="highlight-column">153</td><td>College</td><td onclick="speakMessage('College')" style="cursor:pointer;">/ˈkɒl.ɪdʒ/ 🔊</td><td>Noun</td><td>Kampus</td></tr>
+        <tr><td class="highlight-column">154</td><td>Colour</td><td onclick="speakMessage('Colour')" style="cursor:pointer;">/ˈkʌl.ər/ 🔊</td><td>Noun</td><td>Warna</td></tr>
+        <tr><td class="highlight-column">155</td><td>Come</td><td onclick="speakMessage('Come')" style="cursor:pointer;">/kʌm/ 🔊</td><td>Verb</td><td>Datang</td></tr>
+        <tr><td class="highlight-column">156</td><td>Common</td><td onclick="speakMessage('Common')" style="cursor:pointer;">/ˈkɒm.ən/ 🔊</td><td>Adjective</td><td>Umum</td></tr>
+        <tr><td class="highlight-column">157</td><td>Company</td><td onclick="speakMessage('Company')" style="cursor:pointer;">/ˈkʌm.pə.ni/ 🔊</td><td>Noun</td><td>Perusahaan</td></tr>
+        <tr><td class="highlight-column">158</td><td>Compare</td><td onclick="speakMessage('Compare')" style="cursor:pointer;">/kəmˈpeər/ 🔊</td><td>Verb</td><td>Membandingkan</td></tr>
+        <tr><td class="highlight-column">159</td><td>Complete</td><td onclick="speakMessage('Complete')" style="cursor:pointer;">/kəmˈpliːt/ 🔊</td><td>Verb</td><td>Menyelesaikan</td></tr>
+        <tr><td class="highlight-column">160</td><td>Computer</td><td onclick="speakMessage('Computer')" style="cursor:pointer;">/kəmˈpjuː.tər/ 🔊</td><td>Noun</td><td>Komputer</td></tr>
+        <tr><td class="highlight-column">161</td><td>Concert</td><td onclick="speakMessage('Concert')" style="cursor:pointer;">/ˈkɒn.sət/ 🔊</td><td>Noun</td><td>Konser</td></tr>
+        <tr><td class="highlight-column">162</td><td>Conversation</td><td onclick="speakMessage('Conversation')" style="cursor:pointer;">/ˌkɒn.vəˈseɪ.ʃən/ 🔊</td><td>Noun</td><td>Percakapan</td></tr>
+        <tr><td class="highlight-column">163</td><td>Cook</td><td onclick="speakMessage('Cook')" style="cursor:pointer;">/kʊk/ 🔊</td><td>Verb/Noun</td><td>Memasak/Koki</td></tr>
+        <tr><td class="highlight-column">164</td><td>Cooking</td><td onclick="speakMessage('Cooking')" style="cursor:pointer;">/ˈkʊk.ɪŋ/ 🔊</td><td>Noun</td><td>Kegiatan memasak</td></tr>
+        <tr><td class="highlight-column">165</td><td>Cool</td><td onclick="speakMessage('Cool')" style="cursor:pointer;">/kuːl/ 🔊</td><td>Adjective</td><td>Keren/Dingin</td></tr>
+        <tr><td class="highlight-column">166</td><td>Correct</td><td onclick="speakMessage('Correct')" style="cursor:pointer;">/kəˈrekt/ 🔊</td><td>Adjective/Verb</td><td>Benar/Membenarkan</td></tr>
+        <tr><td class="highlight-column">167</td><td>Cost</td><td onclick="speakMessage('Cost')" style="cursor:pointer;">/kɒst/ 🔊</td><td>Noun/Verb</td><td>Biaya/Berharga</td></tr>
+        <tr><td class="highlight-column">168</td><td>Could</td><td onclick="speakMessage('Could')" style="cursor:pointer;">/kʊd/ 🔊</td><td>Modal Verb</td><td>Bisa</td></tr>
+        <tr><td class="highlight-column">169</td><td>Country</td><td onclick="speakMessage('Country')" style="cursor:pointer;">/ˈkʌn.tri/ 🔊</td><td>Noun</td><td>Negara</td></tr>
+        <tr><td class="highlight-column">170</td><td>Course</td><td onclick="speakMessage('Course')" style="cursor:pointer;">/kɔːs/ 🔊</td><td>Noun</td><td>Kursus/Program</td></tr>
+        <tr><td class="highlight-column">171</td><td>Cousin</td><td onclick="speakMessage('Cousin')" style="cursor:pointer;">/ˈkʌz.ən/ 🔊</td><td>Noun</td><td>Sepupu</td></tr>
+        <tr><td class="highlight-column">172</td><td>Cow</td><td onclick="speakMessage('Cow')" style="cursor:pointer;">/kaʊ/ 🔊</td><td>Noun</td><td>Sapi</td></tr>
+        <tr><td class="highlight-column">173</td><td>Cream</td><td onclick="speakMessage('Cream')" style="cursor:pointer;">/kriːm/ 🔊</td><td>Noun</td><td>Krim</td></tr>
+        <tr><td class="highlight-column">174</td><td>Create</td><td onclick="speakMessage('Create')" style="cursor:pointer;">/kriˈeɪt/ 🔊</td><td>Verb</td><td>Menciptakan</td></tr>
+        <tr><td class="highlight-column">175</td><td>Culture</td><td onclick="speakMessage('Culture')" style="cursor:pointer;">/ˈkʌl.tʃər/ 🔊</td><td>Noun</td><td>Budaya</td></tr>
+        <tr><td class="highlight-column">176</td><td>Cup</td><td onclick="speakMessage('Cup')" style="cursor:pointer;">/kʌp/ 🔊</td><td>Noun</td><td>Cangkir</td></tr>
+        <tr><td class="highlight-column">177</td><td>Customer</td><td onclick="speakMessage('Customer')" style="cursor:pointer;">/ˈkʌs.tə.mər/ 🔊</td><td>Noun</td><td>Pelanggan</td></tr>
+        <tr><td class="highlight-column">178</td><td>Cut</td><td onclick="speakMessage('Cut')" style="cursor:pointer;">/kʌt/ 🔊</td><td>Verb/Noun</td><td>Memotong</td></tr>
+        <tr><td class="highlight-column">179</td><td>Dad</td><td onclick="speakMessage('Dad')" style="cursor:pointer;">/dæd/ 🔊</td><td>Noun</td><td>Ayah</td></tr>
+        <tr><td class="highlight-column">180</td><td>Dance</td><td onclick="speakMessage('Dance')" style="cursor:pointer;">/dæns/ 🔊</td><td>Verb/Noun</td><td>Tari/Tari</td></tr>
+        <tr><td class="highlight-column">181</td><td>Dancer</td><td onclick="speakMessage('Dancer')" style="cursor:pointer;">/ˈdænsər/ 🔊</td><td>Noun</td><td>Penari</td></tr>
+        <tr><td class="highlight-column">182</td><td>Dancing</td><td onclick="speakMessage('Dancing')" style="cursor:pointer;">/ˈdænsɪŋ/ 🔊</td><td>Noun</td><td>Menari</td></tr>
+        <tr><td class="highlight-column">183</td><td>Dangerous</td><td onclick="speakMessage('Dangerous')" style="cursor:pointer;">/ˈdeɪn.dʒər.əs/ 🔊</td><td>Adjective</td><td>Berbahaya</td></tr>
+        <tr><td class="highlight-column">184</td><td>Dark</td><td onclick="speakMessage('Dark')" style="cursor:pointer;">/dɑːk/ 🔊</td><td>Adjective</td><td>Gelap</td></tr>
+        <tr><td class="highlight-column">185</td><td>Date</td><td onclick="speakMessage('Date')" style="cursor:pointer;">/deɪt/ 🔊</td><td>Noun</td><td>Tanggal</td></tr>
+        <tr><td class="highlight-column">186</td><td>Daughter</td><td onclick="speakMessage('Daughter')" style="cursor:pointer;">/ˈdɔː.tər/ 🔊</td><td>Noun</td><td>Anak Perempuan</td></tr>
+        <tr><td class="highlight-column">187</td><td>Day</td><td onclick="speakMessage('Day')" style="cursor:pointer;">/deɪ/ 🔊</td><td>Noun</td><td>Hari</td></tr>
+        <tr><td class="highlight-column">188</td><td>Dear</td><td onclick="speakMessage('Dear')" style="cursor:pointer;">/dɪər/ 🔊</td><td>Adjective</td><td>Sayang</td></tr>
+        <tr><td class="highlight-column">189</td><td>December</td><td onclick="speakMessage('December')" style="cursor:pointer;">/dɪˈsem.bər/ 🔊</td><td>Noun</td><td>Desember</td></tr>
+        <tr><td class="highlight-column">190</td><td>Decide</td><td onclick="speakMessage('Decide')" style="cursor:pointer;">/dɪˈsaɪd/ 🔊</td><td>Verb</td><td>Memutuskan</td></tr>
+        <tr><td class="highlight-column">191</td><td>Delicious</td><td onclick="speakMessage('Delicious')" style="cursor:pointer;">/dɪˈlɪʃəs/ 🔊</td><td>Adjective</td><td>Lezat</td></tr>
+        <tr><td class="highlight-column">192</td><td>Describe</td><td onclick="speakMessage('Describe')" style="cursor:pointer;">/dɪˈskraɪb/ 🔊</td><td>Verb</td><td>Menjelaskan</td></tr>
+        <tr><td class="highlight-column">193</td><td>Description</td><td onclick="speakMessage('Description')" style="cursor:pointer;">/dɪˈskrɪpʃən/ 🔊</td><td>Noun</td><td>Deskripsi</td></tr>
+        <tr><td class="highlight-column">194</td><td>Design</td><td onclick="speakMessage('Design')" style="cursor:pointer;">/dɪˈzaɪn/ 🔊</td><td>Verb/Noun</td><td>Merancang/Desain</td></tr>
+        <tr><td class="highlight-column">195</td><td>Desk</td><td onclick="speakMessage('Desk')" style="cursor:pointer;">/desk/ 🔊</td><td>Noun</td><td>Meja</td></tr>
+        <tr><td class="highlight-column">196</td><td>Detail</td><td onclick="speakMessage('Detail')" style="cursor:pointer;">/ˈdiː.teɪl/ 🔊</td><td>Noun</td><td>Detail</td></tr>
+        <tr><td class="highlight-column">197</td><td>Dialogue</td><td onclick="speakMessage('Dialogue')" style="cursor:pointer;">/ˈdaɪ.ə.lɒɡ/ 🔊</td><td>Noun</td><td>Dialog</td></tr>
+        <tr><td class="highlight-column">198</td><td>Dictionary</td><td onclick="speakMessage('Dictionary')" style="cursor:pointer;">/ˈdɪkʃənəri/ 🔊</td><td>Noun</td><td>Kamus</td></tr>
+        <tr><td class="highlight-column">199</td><td>Die</td><td onclick="speakMessage('Die')" style="cursor:pointer;">/daɪ/ 🔊</td><td>Verb</td><td>Meniggal</td></tr>
+        <tr><td class="highlight-column">200</td><td>Diet</td><td onclick="speakMessage('Diet')" style="cursor:pointer;">/ˈdaɪ.ət/ 🔊</td><td>Noun</td><td>Diet</td></tr>
+        <tr><td class="highlight-column">201</td><td>Difference</td><td onclick="speakMessage('Difference')" style="cursor:pointer;">/ˈdɪf.ər.əns/ 🔊</td><td>Noun</td><td>Perbedaan</td></tr>
+        <tr><td class="highlight-column">202</td><td>Different</td><td onclick="speakMessage('Different')" style="cursor:pointer;">/ˈdɪfərənt/ 🔊</td><td>Adjective</td><td>Berbeda</td></tr>
+        <tr><td class="highlight-column">203</td><td>Difficult</td><td onclick="speakMessage('Difficult')" style="cursor:pointer;">/ˈdɪfɪkəlt/ 🔊</td><td>Adjective</td><td>Sulit</td></tr>
+        <tr><td class="highlight-column">204</td><td>Dinner</td><td onclick="speakMessage('Dinner')" style="cursor:pointer;">/ˈdɪnər/ 🔊</td><td>Noun</td><td>Makan Malam</td></tr>
+        <tr><td class="highlight-column">205</td><td>Dirty</td><td onclick="speakMessage('Dirty')" style="cursor:pointer;">/ˈdɜːrti/ 🔊</td><td>Adjective</td><td>Kotor</td></tr>
+        <tr><td class="highlight-column">206</td><td>Discuss</td><td onclick="speakMessage('Discuss')" style="cursor:pointer;">/dɪsˈkʌs/ 🔊</td><td>Verb</td><td>Membahas</td></tr>
+        <tr><td class="highlight-column">207</td><td>Dish</td><td onclick="speakMessage('Dish')" style="cursor:pointer;">/dɪʃ/ 🔊</td><td>Noun</td><td>Piring/Perangkat</td></tr>
+        <tr><td class="highlight-column">208</td><td>Do</td><td onclick="speakMessage('Do')" style="cursor:pointer;">/duː/ 🔊</td><td>Verb</td><td>Melakukan</td></tr>
+        <tr><td class="highlight-column">209</td><td>Doctor</td><td onclick="speakMessage('Doctor')" style="cursor:pointer;">/ˈdɒktər/ 🔊</td><td>Noun</td><td>Dokter</td></tr>
+        <tr><td class="highlight-column">210</td><td>Dog</td><td onclick="speakMessage('Dog')" style="cursor:pointer;">/dɒɡ/ 🔊</td><td>Noun</td><td>Anjing</td></tr>
+        <tr><td class="highlight-column">211</td><td>Dollar</td><td onclick="speakMessage('Dollar')" style="cursor:pointer;">/ˈdɒlər/ 🔊</td><td>Noun</td><td>Dolar</td></tr>
+        <tr><td class="highlight-column">212</td><td>Door</td><td onclick="speakMessage('Door')" style="cursor:pointer;">/dɔːr/ 🔊</td><td>Noun</td><td>Pintu</td></tr>
+        <tr><td class="highlight-column">213</td><td>Down</td><td onclick="speakMessage('Down')" style="cursor:pointer;">/daʊn/ 🔊</td><td>Adverb/Preposition</td><td>Bawah</td></tr>
+        <tr><td class="highlight-column">214</td><td>Downstairs</td><td onclick="speakMessage('Downstairs')" style="cursor:pointer;">/ˈdaʊnˈsteərz/ 🔊</td><td>Adverb</td><td>Di lantai bawah</td></tr>
+        <tr><td class="highlight-column">215</td><td>Draw</td><td onclick="speakMessage('Draw')" style="cursor:pointer;">/drɔː/ 🔊</td><td>Verb</td><td>Menarik</td></tr>
+        <tr><td class="highlight-column">216</td><td>Dress</td><td onclick="speakMessage('Dress')" style="cursor:pointer;">/dres/ 🔊</td><td>Verb/Noun</td><td>Berpakaian/Pakaian</td></tr>
+        <tr><td class="highlight-column">217</td><td>Drink</td><td onclick="speakMessage('Drink')" style="cursor:pointer;">/drɪŋk/ 🔊</td><td>Verb/Noun</td><td>Minum/Minuman</td></tr>
+        <tr><td class="highlight-column">218</td><td>Drive</td><td onclick="speakMessage('Drive')" style="cursor:pointer;">/draɪv/ 🔊</td><td>Verb</td><td>Mengemudi</td></tr>
+        <tr><td class="highlight-column">219</td><td>Driver</td><td onclick="speakMessage('Driver')" style="cursor:pointer;">/ˈdraɪvər/ 🔊</td><td>Noun</td><td>Pengemudi</td></tr>
+        <tr><td class="highlight-column">220</td><td>During</td><td onclick="speakMessage('During')" style="cursor:pointer;">/ˈdʊrɪŋ/ 🔊</td><td>Preposition</td><td>Selama</td></tr>
+        <tr><td class="highlight-column">221</td><td>DVD</td><td onclick="speakMessage('DVD')" style="cursor:pointer;">/ˌdiː.viːˈdiː/ 🔊</td><td>Noun</td><td>DVD</td></tr>
+        <tr><td class="highlight-column">222</td><td>Each</td><td onclick="speakMessage('Each')" style="cursor:pointer;">/iːtʃ/ 🔊</td><td>Pronoun/Adjective</td><td>Setiap</td></tr>
+        <tr><td class="highlight-column">223</td><td>Ear</td><td onclick="speakMessage('Ear')" style="cursor:pointer;">/ɪər/ 🔊</td><td>Noun</td><td>Telinga</td></tr>
+        <tr><td class="highlight-column">224</td><td>Early</td><td onclick="speakMessage('Early')" style="cursor:pointer;">/ˈɜːli/ 🔊</td><td>Adjective/Adverb</td><td>Awal</td></tr>
+        <tr><td class="highlight-column">225</td><td>East</td><td onclick="speakMessage('East')" style="cursor:pointer;">/iːst/ 🔊</td><td>Noun/Adjective</td><td>Timur</td></tr>
+        <tr><td class="highlight-column">226</td><td>Easy</td><td onclick="speakMessage('Easy')" style="cursor:pointer;">/ˈiːzi/ 🔊</td><td>Adjective</td><td>Mudah</td></tr>
+        <tr><td class="highlight-column">227</td><td>Eat</td><td onclick="speakMessage('Eat')" style="cursor:pointer;">/iːt/ 🔊</td><td>Verb</td><td>Memakan</td></tr>
+        <tr><td class="highlight-column">228</td><td>Egg</td><td onclick="speakMessage('Egg')" style="cursor:pointer;">/ɛɡ/ 🔊</td><td>Noun</td><td>Telur</td></tr>
+        <tr><td class="highlight-column">229</td><td>Eight</td><td onclick="speakMessage('Eight')" style="cursor:pointer;">/eɪt/ 🔊</td><td>Number</td><td>Delapan</td></tr>
+        <tr><td class="highlight-column">230</td><td>Eighteen</td><td onclick="speakMessage('Eighteen')" style="cursor:pointer;">/ˈeɪˈtiːn/ 🔊</td><td>Number</td><td>Delapan Belas</td></tr>
+        <tr><td class="highlight-column">231</td><td>Eighty</td><td onclick="speakMessage('Eighty')" style="cursor:pointer;">/ˈeɪti/ 🔊</td><td>Number</td><td>Delapan Puluh</td></tr>
+        <tr><td class="highlight-column">232</td><td>Elephant</td><td onclick="speakMessage('Elephant')" style="cursor:pointer;">/ˈɛlɪfənt/ 🔊</td><td>Noun</td><td>Gajah</td></tr>
+        <tr><td class="highlight-column">233</td><td>Eleven</td><td onclick="speakMessage('Eleven')" style="cursor:pointer;">/ɪˈlɛvən/ 🔊</td><td>Number</td><td>Sebelas</td></tr>
+        <tr><td class="highlight-column">234</td><td>Else</td><td onclick="speakMessage('Else')" style="cursor:pointer;">/ɛls/ 🔊</td><td>Adverb</td><td>Lainnya</td></tr>
+        <tr><td class="highlight-column">235</td><td>Email</td><td onclick="speakMessage('Email')" style="cursor:pointer;">/ˈiːmeɪl/ 🔊</td><td>Noun</td><td>Email</td></tr>
+        <tr><td class="highlight-column">236</td><td>End</td><td onclick="speakMessage('End')" style="cursor:pointer;">/ɛnd/ 🔊</td><td>Verb/Noun</td><td>Akhir</td></tr>
+        <tr><td class="highlight-column">237</td><td>Enjoy</td><td onclick="speakMessage('Enjoy')" style="cursor:pointer;">/ɪnˈdʒɔɪ/ 🔊</td><td>Verb</td><td>Menikmati</td></tr>
+        <tr><td class="highlight-column">238</td><td>Enough</td><td onclick="speakMessage('Enough')" style="cursor:pointer;">/ɪˈnʌf/ 🔊</td><td>Adjective/Adverb</td><td>Cukup</td></tr>
+        <tr><td class="highlight-column">239</td><td>Euro</td><td onclick="speakMessage('Euro')" style="cursor:pointer;">/ˈjʊə.roʊ/ 🔊</td><td>Noun</td><td>Euro</td></tr>
+        <tr><td class="highlight-column">240</td><td>Even</td><td onclick="speakMessage('Even')" style="cursor:pointer;">/ˈiːvən/ 🔊</td><td>Adjective/Adverb</td><td>Even</td></tr>
+        <tr><td class="highlight-column">241</td><td>Evening</td><td onclick="speakMessage('Evening')" style="cursor:pointer;">/ˈiːvnɪŋ/ 🔊</td><td>Noun</td><td>Sore</td></tr>
+        <tr><td class="highlight-column">242</td><td>Event</td><td onclick="speakMessage('Event')" style="cursor:pointer;">/ɪˈvɛnt/ 🔊</td><td>Noun</td><td>Acara</td></tr>
+        <tr><td class="highlight-column">243</td><td>Ever</td><td onclick="speakMessage('Ever')" style="cursor:pointer;">/ˈɛvər/ 🔊</td><td>Adverb</td><td>Pernah</td></tr>
+        <tr><td class="highlight-column">244</td><td>Every</td><td onclick="speakMessage('Every')" style="cursor:pointer;">/ˈɛvri/ 🔊</td><td>Adjective</td><td>Setiap</td></tr>
+        <tr><td class="highlight-column">245</td><td>Everybody</td><td onclick="speakMessage('Everybody')" style="cursor:pointer;">/ˈɛvrɪˌbɒdi/ 🔊</td><td>Pronoun</td><td>Semua Orang</td></tr>
+        <tr><td class="highlight-column">246</td><td>Everyone</td><td onclick="speakMessage('Everyone')" style="cursor:pointer;">/ˈɛvrɪwʌn/ 🔊</td><td>Pronoun</td><td>Setiap Orang</td></tr>
+        <tr><td class="highlight-column">247</td><td>Everything</td><td onclick="speakMessage('Everything')" style="cursor:pointer;">/ˈɛvrɪθɪŋ/ 🔊</td><td>Pronoun</td><td>Segala Sesuatu</td></tr>
+        <tr><td class="highlight-column">248</td><td>Exam</td><td onclick="speakMessage('Exam')" style="cursor:pointer;">/ɪɡˈzæm/ 🔊</td><td>Noun</td><td>Ujian</td></tr>
+        <tr><td class="highlight-column">249</td><td>Example</td><td onclick="speakMessage('Example')" style="cursor:pointer;">/ɪɡˈzɑːmpl/ 🔊</td><td>Noun</td><td>Contoh</td></tr>
+        <tr><td class="highlight-column">250</td><td>Excited</td><td onclick="speakMessage('Excited')" style="cursor:pointer;">/ɪkˈsʌɪtɪd/ 🔊</td><td>Adjective</td><td>Bersemangat</td></tr>
+        <tr><td class="highlight-column">251</td><td>Exciting</td><td onclick="speakMessage('Exciting')" style="cursor:pointer;">/ɪkˈsaɪtɪŋ/ 🔊</td><td>Adjective</td><td>Menyenangkan</td></tr>
+        <tr><td class="highlight-column">252</td><td>Exercise</td><td onclick="speakMessage('Exercise')" style="cursor:pointer;">/ˈɛksəsaɪz/ 🔊</td><td>Verb/Noun</td><td>Latihan</td></tr>
+        <tr><td class="highlight-column">253</td><td>Expensive</td><td onclick="speakMessage('Expensive')" style="cursor:pointer;">/ɪkˈspɛnsɪv/ 🔊</td><td>Adjective</td><td>Mahal</td></tr>
+        <tr><td class="highlight-column">254</td><td>Explain</td><td onclick="speakMessage('Explain')" style="cursor:pointer;">/ɪkˈspleɪn/ 🔊</td><td>Verb</td><td>Menjelaskan</td></tr>
+        <tr><td class="highlight-column">255</td><td>Extra</td><td onclick="speakMessage('Extra')" style="cursor:pointer;">/ˈɛkstrə/ 🔊</td><td>Adjective/Adverb</td><td>Ekstra</td></tr>
+        <tr><td class="highlight-column">256</td><td>Eye</td><td onclick="speakMessage('Eye')" style="cursor:pointer;">/aɪ/ 🔊</td><td>Noun</td><td>Mata</td></tr>
+        <tr><td class="highlight-column">257</td><td>Face</td><td onclick="speakMessage('Face')" style="cursor:pointer;">/feɪs/ 🔊</td><td>Noun</td><td>Wajah</td></tr>
+        <tr><td class="highlight-column">258</td><td>Fact</td><td onclick="speakMessage('Fact')" style="cursor:pointer;">/fækt/ 🔊</td><td>Noun</td><td>Fakta</td></tr>
+        <tr><td class="highlight-column">259</td><td>Fall</td><td onclick="speakMessage('Fall')" style="cursor:pointer;">/fɔːl/ 🔊</td><td>Verb/Noun</td><td>Jatuh</td></tr>
+        <tr><td class="highlight-column">260</td><td>False</td><td onclick="speakMessage('False')" style="cursor:pointer;">/fɔːls/ 🔊</td><td>Adjective</td><td>Salah</td></tr>
+        <tr><td class="highlight-column">261</td><td>Family</td><td onclick="speakMessage('Family')" style="cursor:pointer;">/ˈfæmɪli/ 🔊</td><td>Noun</td><td>Keluarga</td></tr>
+        <tr><td class="highlight-column">262</td><td>Famous</td><td onclick="speakMessage('Famous')" style="cursor:pointer;">/ˈfeɪməs/ 🔊</td><td>Adjective</td><td>Terkenal</td></tr>
+        <tr><td class="highlight-column">263</td><td>Fantastic</td><td onclick="speakMessage('Fantastic')" style="cursor:pointer;">/fænˈtæstɪk/ 🔊</td><td>Adjective</td><td>Fantastis</td></tr>
+        <tr><td class="highlight-column">264</td><td>Far</td><td onclick="speakMessage('Far')" style="cursor:pointer;">/fɑːr/ 🔊</td><td>Adjective/Adverb</td><td>Jauh</td></tr>
+        <tr><td class="highlight-column">265</td><td>Farm</td><td onclick="speakMessage('Farm')" style="cursor:pointer;">/fɑːrm/ 🔊</td><td>Noun</td><td>Peternakan</td></tr>
+        <tr><td class="highlight-column">266</td><td>Farmer</td><td onclick="speakMessage('Farmer')" style="cursor:pointer;">/ˈfɑːrmər/ 🔊</td><td>Noun</td><td>Petani</td></tr>
+        <tr><td class="highlight-column">267</td><td>Fast</td><td onclick="speakMessage('Fast')" style="cursor:pointer;">/fæst/ 🔊</td><td>Adjective/Adverb</td><td>Cepat</td></tr>
+        <tr><td class="highlight-column">268</td><td>Fat</td><td onclick="speakMessage('Fat')" style="cursor:pointer;">/fæt/ 🔊</td><td>Adjective/Noun</td><td>Gemuk</td></tr>
+        <tr><td class="highlight-column">269</td><td>Father</td><td onclick="speakMessage('Father')" style="cursor:pointer;">/ˈfɑːðər/ 🔊</td><td>Noun</td><td>Ayah</td></tr>
+        <tr><td class="highlight-column">270</td><td>Favourite</td><td onclick="speakMessage('Favourite')" style="cursor:pointer;">/ˈfeɪvərɪt/ 🔊</td><td>Adjective/Noun</td><td>Favorit</td></tr>
+        <tr><td class="highlight-column">271</td><td>February</td><td onclick="speakMessage('February')" style="cursor:pointer;">/ˈfebruːəri/ 🔊</td><td>Noun</td><td>Februari</td></tr>
+        <tr><td class="highlight-column">272</td><td>Feel</td><td onclick="speakMessage('Feel')" style="cursor:pointer;">/fiːl/ 🔊</td><td>Verb</td><td>Merasa</td></tr>
+        <tr><td class="highlight-column">273</td><td>Feeling</td><td onclick="speakMessage('Feeling')" style="cursor:pointer;">/ˈfiːlɪŋ/ 🔊</td><td>Noun</td><td>Perasaan</td></tr>
+        <tr><td class="highlight-column">274</td><td>Festival</td><td onclick="speakMessage('Festival')" style="cursor:pointer;">/ˈfɛstɪvəl/ 🔊</td><td>Noun</td><td>Festival</td></tr>
+        <tr><td class="highlight-column">275</td><td>Few</td><td onclick="speakMessage('Few')" style="cursor:pointer;">/fjuː/ 🔊</td><td>Adjective/Pronoun</td><td>Sedikit</td></tr>
+        <tr><td class="highlight-column">276</td><td>Fifteen</td><td onclick="speakMessage('Fifteen')" style="cursor:pointer;">/ˈfɪfˌtiːn/ 🔊</td><td>Number</td><td>Lima Belas</td></tr>
+        <tr><td class="highlight-column">277</td><td>Fifth</td><td onclick="speakMessage('Fifth')" style="cursor:pointer;">/fɪfθ/ 🔊</td><td>Adjective/Noun</td><td>Kelima</td></tr>
+        <tr><td class="highlight-column">278</td><td>Fifty</td><td onclick="speakMessage('Fifty')" style="cursor:pointer;">/ˈfɪfti/ 🔊</td><td>Number</td><td>Lima Puluh</td></tr>
+        <tr><td class="highlight-column">279</td><td>Fill</td><td onclick="speakMessage('Fill')" style="cursor:pointer;">/fɪl/ 🔊</td><td>Verb</td><td>Memenuhi</td></tr>
+        <tr><td class="highlight-column">280</td><td>Film</td><td onclick="speakMessage('Film')" style="cursor:pointer;">/fɪlm/ 🔊</td><td>Noun</td><td>Film</td></tr>
+        <tr><td class="highlight-column">281</td><td>Final</td><td onclick="speakMessage('Final')" style="cursor:pointer;">/ˈfaɪnəl/ 🔊</td><td>Adjective/Noun</td><td>Akhir</td></tr>
+        <tr><td class="highlight-column">282</td><td>Find</td><td onclick="speakMessage('Find')" style="cursor:pointer;">/faɪnd/ 🔊</td><td>Verb</td><td>Menemukan</td></tr>
+        <tr><td class="highlight-column">283</td><td>Fine</td><td onclick="speakMessage('Fine')" style="cursor:pointer;">/faɪn/ 🔊</td><td>Adjective</td><td>Baik</td></tr>
+        <tr><td class="highlight-column">284</td><td>Finish</td><td onclick="speakMessage('Finish')" style="cursor:pointer;">/ˈfɪnɪʃ/ 🔊</td><td>Verb</td><td>Menyelesaikan</td></tr>
+        <tr><td class="highlight-column">285</td><td>Fire</td><td onclick="speakMessage('Fire')" style="cursor:pointer;">/faɪər/ 🔊</td><td>Noun/Verb</td><td>Api/Membakar</td></tr>
+        <tr><td class="highlight-column">286</td><td>First</td><td onclick="speakMessage('First')" style="cursor:pointer;">/fɜːrst/ 🔊</td><td>Adjective/Noun</td><td>Pertama</td></tr>
+        <tr><td class="highlight-column">287</td><td>Fish</td><td onclick="speakMessage('Fish')" style="cursor:pointer;">/fɪʃ/ 🔊</td><td>Noun</td><td>Ikan</td></tr>
+        <tr><td class="highlight-column">288</td><td>Five</td><td onclick="speakMessage('Five')" style="cursor:pointer;">/faɪv/ 🔊</td><td>Number</td><td>Lima</td></tr>
+        <tr><td class="highlight-column">289</td><td>Flat</td><td onclick="speakMessage('Flat')" style="cursor:pointer;">/flæt/ 🔊</td><td>Adjective</td><td>Datar</td></tr>
+        <tr><td class="highlight-column">290</td><td>Flight</td><td onclick="speakMessage('Flight')" style="cursor:pointer;">/flaɪt/ 🔊</td><td>Noun</td><td>Penerbangan</td></tr>
+        <tr><td class="highlight-column">291</td><td>Floor</td><td onclick="speakMessage('Floor')" style="cursor:pointer;">/flɔːr/ 🔊</td><td>Noun</td><td>Lantai</td></tr>
+        <tr><td class="highlight-column">292</td><td>Flower</td><td onclick="speakMessage('Flower')" style="cursor:pointer;">/ˈflaʊər/ 🔊</td><td>Noun</td><td>Bunga</td></tr>
+        <tr><td class="highlight-column">293</td><td>Fly</td><td onclick="speakMessage('Fly')" style="cursor:pointer;">/flaɪ/ 🔊</td><td>Verb</td><td>Terbang</td></tr>
+        <tr><td class="highlight-column">294</td><td>Follow</td><td onclick="speakMessage('Follow')" style="cursor:pointer;">/ˈfɒləʊ/ 🔊</td><td>Verb</td><td>Mengikuti</td></tr>
+        <tr><td class="highlight-column">295</td><td>Food</td><td onclick="speakMessage('Food')" style="cursor:pointer;">/fuːd/ 🔊</td><td>Noun</td><td> Makanan</td></tr>
+        <tr><td class="highlight-column">296</td><td>Foot</td><td onclick="speakMessage('Foot')" style="cursor:pointer;">/fʊt/ 🔊</td><td>Noun</td><td>Kaki</td></tr>
+        <tr><td class="highlight-column">297</td><td>Football</td><td onclick="speakMessage('Football')" style="cursor:pointer;">/ˈfʊtˌbɔːl/ 🔊</td><td>Noun</td><td>Sepak Bola</td></tr>
+        <tr><td class="highlight-column">298</td><td>For</td><td onclick="speakMessage('For')" style="cursor:pointer;">/fɔːr/ 🔊</td><td>Preposition</td><td>Untuk</td></tr>
+        <tr><td class="highlight-column">299</td><td>Forget</td><td onclick="speakMessage('Forget')" style="cursor:pointer;">/fərˈɡɛt/ 🔊</td><td>Verb</td><td>Lupa</td></tr>
+        <tr><td class="highlight-column">300</td><td>Form</td><td onclick="speakMessage('Form')" style="cursor:pointer;">/fɔːrm/ 🔊</td><td>Noun/Verb</td><td>Bentuk/Membentuk</td></tr>
+        <tr><td class="highlight-column">301</td><td>Forty</td><td onclick="speakMessage('Forty')" style="cursor:pointer;">/ˈfɔːrti/ 🔊</td><td>Number</td><td>Empat Puluh</td></tr>
+        <tr><td class="highlight-column">302</td><td>Four</td><td onclick="speakMessage('Four')" style="cursor:pointer;">/fɔːr/ 🔊</td><td>Number</td><td>Empat</td></tr>
+        <tr><td class="highlight-column">303</td><td>Fourteen</td><td onclick="speakMessage('Fourteen')" style="cursor:pointer;">/ˈfɔːrˈtiːn/ 🔊</td><td>Number</td><td>Empat Belas</td></tr>
+        <tr><td class="highlight-column">304</td><td>Fourth</td><td onclick="speakMessage('Fourth')" style="cursor:pointer;">/fɔːrθ/ 🔊</td><td>Ordinal Number</td><td>Keempat</td></tr>
+        <tr><td class="highlight-column">305</td><td>Free</td><td onclick="speakMessage('Free')" style="cursor:pointer;">/friː/ 🔊</td><td>Adjective</td><td>Gratis</td></tr>
+        <tr><td class="highlight-column">306</td><td>Friday</td><td onclick="speakMessage('Friday')" style="cursor:pointer;">/ˈfraɪdeɪ/ 🔊</td><td>Noun</td><td>Jumat</td></tr>
+        <tr><td class="highlight-column">307</td><td>Friend</td><td onclick="speakMessage('Friend')" style="cursor:pointer;">/frɛnd/ 🔊</td><td>Noun</td><td>Teman</td></tr>
+        <tr><td class="highlight-column">308</td><td>Friendly</td><td onclick="speakMessage('Friendly')" style="cursor:pointer;">/ˈfrɛndli/ 🔊</td><td>Adjective</td><td>Ramah</td></tr>
+        <tr><td class="highlight-column">309</td><td>From</td><td onclick="speakMessage('From')" style="cursor:pointer;">/frɒm/ 🔊</td><td>Preposition</td><td>Dari</td></tr>
+        <tr><td class="highlight-column">310</td><td>Front</td><td onclick="speakMessage('Front')" style="cursor:pointer;">/frʌnt/ 🔊</td><td>Noun/Adjective</td><td>Depan</td></tr>
+        <tr><td class="highlight-column">311</td><td>Fruit</td><td onclick="speakMessage('Fruit')" style="cursor:pointer;">/fruːt/ 🔊</td><td>Noun</td><td>Buah</td></tr>
+        <tr><td class="highlight-column">312</td><td>Full</td><td onclick="speakMessage('Full')" style="cursor:pointer;">/fʊl/ 🔊</td><td>Adjective</td><td>Penuh</td></tr>
+        <tr><td class="highlight-column">313</td><td>Fun</td><td onclick="speakMessage('Fun')" style="cursor:pointer;">/fʌn/ 🔊</td><td>Adjective/Noun</td><td>Menyenankan</td></tr>
+        <tr><td class="highlight-column">314</td><td>Funny</td><td onclick="speakMessage('Funny')" style="cursor:pointer;">/ˈfʌni/ 🔊</td><td>Adjective</td><td>Lucu</td></tr>
+        <tr><td class="highlight-column">315</td><td>Future</td><td onclick="speakMessage('Future')" style="cursor:pointer;">/ˈfjuːtʃər/ 🔊</td><td>Noun/Adjective</td><td>Masa Depan</td></tr>
+        <tr><td class="highlight-column">316</td><td>Game</td><td onclick="speakMessage('Game')" style="cursor:pointer;">/ɡeɪm/ 🔊</td><td>Noun</td><td>Permainan</td></tr>
+        <tr><td class="highlight-column">317</td><td>Garden</td><td onclick="speakMessage('Garden')" style="cursor:pointer;">/ˈɡɑːrdən/ 🔊</td><td>Noun</td><td>Taman</td></tr>
+        <tr><td class="highlight-column">318</td><td>Geography</td><td onclick="speakMessage('Geography')" style="cursor:pointer;">/dʒiˈɒɡrəfi/ 🔊</td><td>Noun</td><td>Geografi</td></tr>
+        <tr><td class="highlight-column">319</td><td>Get</td><td onclick="speakMessage('Get')" style="cursor:pointer;">/ɡɛt/ 🔊</td><td>Verb</td><td>Mendapatkan</td></tr>
+        <tr><td class="highlight-column">320</td><td>Girl</td><td onclick="speakMessage('Girl')" style="cursor:pointer;">/ɡɜːrl/ 🔊</td><td>Noun</td><td>Gadis</td></tr>
+        <tr><td class="highlight-column">321</td><td>Girlfriend</td><td onclick="speakMessage('Girlfriend')" style="cursor:pointer;">/ˈɡɜːrlˌfrɛnd/ 🔊</td><td>Noun</td><td>Pacar (Perempuan)</td></tr>
+        <tr><td class="highlight-column">322</td><td>Give</td><td onclick="speakMessage('Give')" style="cursor:pointer;">/ɡɪv/ 🔊</td><td>Verb</td><td>Memberi</td></tr>
+        <tr><td class="highlight-column">323</td><td>Glass</td><td onclick="speakMessage('Glass')" style="cursor:pointer;">/ɡlɑːs/ 🔊</td><td>Noun</td><td>Gelas</td></tr>
+        <tr><td class="highlight-column">324</td><td>Go</td><td onclick="speakMessage('Go')" style="cursor:pointer;">/ɡəʊ/ 🔊</td><td>Verb</td><td>Pergi</td></tr>
+        <tr><td class="highlight-column">325</td><td>Good</td><td onclick="speakMessage('Good')" style="cursor:pointer;">/ɡʊd/ 🔊</td><td>Adjective</td><td>Baik</td></tr>
+        <tr><td class="highlight-column">326</td><td>Goodbye</td><td onclick="speakMessage('Goodbye')" style="cursor:pointer;">/ɡʊdˈbaɪ/ 🔊</td><td>Interjection</td><td>Selamat Tinggal</td></tr>
+        <tr><td class="highlight-column">327</td><td>Grandfather</td><td onclick="speakMessage('Grandfather')" style="cursor:pointer;">/ˈɡrændˌfɑːðər/ 🔊</td><td>Noun</td><td>Kakek</td></tr>
+        <tr><td class="highlight-column">328</td><td>Grandmother</td><td onclick="speakMessage('Grandmother')" style="cursor:pointer;">/ˈɡrændˌmʌðər/ 🔊</td><td>Noun</td><td>Nenek</td></tr>
+        <tr><td class="highlight-column">329</td><td>Grandparent</td><td onclick="speakMessage('Grandparent')" style="cursor:pointer;">/ˈɡrændˌpɛərənt/ 🔊</td><td>Noun</td><td>Kakek/Nenek</td></tr>
+        <tr><td class="highlight-column">330</td><td>Great</td><td onclick="speakMessage('Great')" style="cursor:pointer;">/ɡreɪt/ 🔊</td><td>Adjective</td><td>Hebat</td></tr>
+        <tr><td class="highlight-column">331</td><td>Green</td><td onclick="speakMessage('Green')" style="cursor:pointer;">/ɡriːn/ 🔊</td><td>Adjective/Noun</td><td>Hijau</td></tr>
+        <tr><td class="highlight-column">332</td><td>Grey</td><td onclick="speakMessage('Grey')" style="cursor:pointer;">/ɡreɪ/ 🔊</td><td>Adjective</td><td>Abu-abu</td></tr>
+        <tr><td class="highlight-column">333</td><td>Group</td><td onclick="speakMessage('Group')" style="cursor:pointer;">/ɡruːp/ 🔊</td><td>Noun</td><td>Grup</td></tr>
+        <tr><td class="highlight-column">334</td><td>Grow</td><td onclick="speakMessage('Grow')" style="cursor:pointer;">/ɡrəʊ/ 🔊</td><td>Verb</td><td>Menumbuhkan</td></tr>
+        <tr><td class="highlight-column">335</td><td>Guess</td><td onclick="speakMessage('Guess')" style="cursor:pointer;">/ɡɛs/ 🔊</td><td>Verb/Noun</td><td>Tebak</td></tr>
+        <tr><td class="highlight-column">336</td><td>Guitar</td><td onclick="speakMessage('Guitar')" style="cursor:pointer;">/ɡɪˈtɑːr/ 🔊</td><td>Noun</td><td>Gitar</td></tr>
+        <tr><td class="highlight-column">337</td><td>Gym</td><td onclick="speakMessage('Gym')" style="cursor:pointer;">/dʒɪm/ 🔊</td><td>Noun</td><td>Gim</td></tr>
+        <tr><td class="highlight-column">338</td><td>Hair</td><td onclick="speakMessage('Hair')" style="cursor:pointer;">/heə(r)/ 🔊</td><td>Noun</td><td>Rambut</td></tr>
+        <tr><td class="highlight-column">339</td><td>Half</td><td onclick="speakMessage('Half')" style="cursor:pointer;">/hɑːf/ 🔊</td><td>Noun/Adjective</td><td>Setengah</td></tr>
+        <tr><td class="highlight-column">340</td><td>Hand</td><td onclick="speakMessage('Hand')" style="cursor:pointer;">/hænd/ 🔊</td><td>Noun</td><td>Tangan</td></tr>
+        <tr><td class="highlight-column">341</td><td>Happen</td><td onclick="speakMessage('Happen')" style="cursor:pointer;">/ˈhæpən/ 🔊</td><td>Verb</td><td>Terjadi</td></tr>
+        <tr><td class="highlight-column">342</td><td>Happy</td><td onclick="speakMessage('Happy')" style="cursor:pointer;">/ˈhæpi/ 🔊</td><td>Adjective</td><td>Bahagia</td></tr>
+        <tr><td class="highlight-column">343</td><td>Hard</td><td onclick="speakMessage('Hard')" style="cursor:pointer;">/hɑːrd/ 🔊</td><td>Adjective/Adverb</td><td>Susah/Keras</td></tr>
+        <tr><td class="highlight-column">344</td><td>Hat</td><td onclick="speakMessage('Hat')" style="cursor:pointer;">/hæt/ 🔊</td><td>Noun</td><td>Topi</td></tr>
+        <tr><td class="highlight-column">345</td><td>Hate</td><td onclick="speakMessage('Hate')" style="cursor:pointer;">/heɪt/ 🔊</td><td>Verb</td><td>Benci</td></tr>
+        <tr><td class="highlight-column">346</td><td>Have</td><td onclick="speakMessage('Have')" style="cursor:pointer;">/hæv/ 🔊</td><td>Verb</td><td>Memiliki</td></tr>
+        <tr><td class="highlight-column">347</td><td>Have to</td><td onclick="speakMessage('Have to')" style="cursor:pointer;">/ˈhæv tuː/ 🔊</td><td>Phrase</td><td>Harus</td></tr>
+        <tr><td class="highlight-column">348</td><td>He</td><td onclick="speakMessage('He')" style="cursor:pointer;">/hiː/ 🔊</td><td>Pronoun</td><td>Dia (laki-laki)</td></tr>
+        <tr><td class="highlight-column">349</td><td>Head</td><td onclick="speakMessage('Head')" style="cursor:pointer;">/hɛd/ 🔊</td><td>Noun</td><td>Kepala</td></tr>
+        <tr><td class="highlight-column">350</td><td>Health</td><td onclick="speakMessage('Health')" style="cursor:pointer;">/hɛlθ/ 🔊</td><td>Noun</td><td>Kesehatan</td></tr>
+        <tr><td class="highlight-column">351</td><td>Healthy</td><td onclick="speakMessage('Healthy')" style="cursor:pointer;">/ˈhɛlθi/ 🔊</td><td>Adjective</td><td>Sehat</td></tr>
+        <tr><td class="highlight-column">352</td><td>Hear</td><td onclick="speakMessage('Hear')" style="cursor:pointer;">/hɪə(r)/ 🔊</td><td>Verb</td><td>Mendengar</td></tr>
+        <tr><td class="highlight-column">353</td><td>Hello</td><td onclick="speakMessage('Hello')" style="cursor:pointer;">/həˈləʊ/ 🔊</td><td>Interjection</td><td>Halo</td></tr>
+        <tr><td class="highlight-column">354</td><td>Help</td><td onclick="speakMessage('Help')" style="cursor:pointer;">/hɛlp/ 🔊</td><td>Verb</td><td>Membantu</td></tr>
+        <tr><td class="highlight-column">355</td><td>Her</td><td onclick="speakMessage('Her')" style="cursor:pointer;">/hɜː(r)/ 🔊</td><td>Pronoun</td><td>Dia (perempuan)</td></tr>
+        <tr><td class="highlight-column">356</td><td>Here</td><td onclick="speakMessage('Here')" style="cursor:pointer;">/hɪə(r)/ 🔊</td><td>Adverb</td><td>Di sini</td></tr>
+        <tr><td class="highlight-column">357</td><td>Hey</td><td onclick="speakMessage('Hey')" style="cursor:pointer;">/heɪ/ 🔊</td><td>Interjection</td><td>Hei</td></tr>
+        <tr><td class="highlight-column">358</td><td>Hi</td><td onclick="speakMessage('Hi')" style="cursor:pointer;">/haɪ/ 🔊</td><td>Interjection</td><td>Halo</td></tr>
+        <tr><td class="highlight-column">359</td><td>High</td><td onclick="speakMessage('High')" style="cursor:pointer;">/haɪ/ 🔊</td><td>Adjective</td><td>Tinggi</td></tr>
+        <tr><td class="highlight-column">360</td><td>Him</td><td onclick="speakMessage('Him')" style="cursor:pointer;">/hɪm/ 🔊</td><td>Pronoun</td><td>Dia (laki-laki)</td></tr>
+        <tr><td class="highlight-column">361</td><td>His</td><td onclick="speakMessage('His')" style="cursor:pointer;">/hɪz/ 🔊</td><td>Pronoun</td><td>Punya dia (laki-laki)</td></tr>
+        <tr><td class="highlight-column">362</td><td>History</td><td onclick="speakMessage('History')" style="cursor:pointer;">/ˈhɪstəri/ 🔊</td><td>Noun</td><td>Sejarah</td></tr>
+        <tr><td class="highlight-column">363</td><td>Hobby</td><td onclick="speakMessage('Hobby')" style="cursor:pointer;">/ˈhɒbi/ 🔊</td><td>Noun</td><td>Hobi</td></tr>
+        <tr><td class="highlight-column">364</td><td>Holiday</td><td onclick="speakMessage('Holiday')" style="cursor:pointer;">/ˈhɒlɪdeɪ/ 🔊</td><td>Noun</td><td>Cuti / Liburan</td></tr>
+        <tr><td class="highlight-column">365</td><td>Home</td><td onclick="speakMessage('Home')" style="cursor:pointer;">/həʊm/ 🔊</td><td>Noun</td><td>Rumah</td></tr>
+        <tr><td class="highlight-column">366</td><td>Homework</td><td onclick="speakMessage('Homework')" style="cursor:pointer;">/ˈhəʊmwɜːk/ 🔊</td><td>Noun</td><td>Pekerjaan Rumah</td></tr>
+        <tr><td class="highlight-column">367</td><td>Hope</td><td onclick="speakMessage('Hope')" style="cursor:pointer;">/həʊp/ 🔊</td><td>Verb</td><td>Harapan</td></tr>
+        <tr><td class="highlight-column">368</td><td>Horse</td><td onclick="speakMessage('Horse')" style="cursor:pointer;">/hɔːs/ 🔊</td><td>Noun</td><td>Kuda</td></tr>
+        <tr><td class="highlight-column">369</td><td>Hospital</td><td onclick="speakMessage('Hospital')" style="cursor:pointer;">/ˈhɒspɪtl/ 🔊</td><td>Noun</td><td>Rumah Sakit</td></tr>
+        <tr><td class="highlight-column">370</td><td>Hot</td><td onclick="speakMessage('Hot')" style="cursor:pointer;">/hɒt/ 🔊</td><td>Adjective</td><td>Panas</td></tr>
+        <tr><td class="highlight-column">371</td><td>Hotel</td><td onclick="speakMessage('Hotel')" style="cursor:pointer;">/həʊˈtɛl/ 🔊</td><td>Noun</td><td>Hotel</td></tr>
+        <tr><td class="highlight-column">372</td><td>Hour</td><td onclick="speakMessage('Hour')" style="cursor:pointer;">/aʊə(r)/ 🔊</td><td>Noun</td><td>Jam (waktu)</td></tr>
+        <tr><td class="highlight-column">373</td><td>House</td><td onclick="speakMessage('House')" style="cursor:pointer;">/haʊs/ 🔊</td><td>Noun</td><td>Rumah</td></tr>
+        <tr><td class="highlight-column">374</td><td>How</td><td onclick="speakMessage('How')" style="cursor:pointer;">/haʊ/ 🔊</td><td>Adverb</td><td>Bagaimana</td></tr>
+        <tr><td class="highlight-column">375</td><td>However</td><td onclick="speakMessage('However')" style="cursor:pointer;">/haʊˈɛvə(r)/ 🔊</td><td>Adverb</td><td>Namun</td></tr>
+        <tr><td class="highlight-column">376</td><td>Hundred</td><td onclick="speakMessage('Hundred')" style="cursor:pointer;">/ˈhʌndrəd/ 🔊</td><td>Noun</td><td>Seratus</td></tr>
+        <tr><td class="highlight-column">377</td><td>Hungry</td><td onclick="speakMessage('Hungry')" style="cursor:pointer;">/ˈhʌŋɡri/ 🔊</td><td>Adjective</td><td>Lapar</td></tr>
+        <tr><td class="highlight-column">378</td><td>Husband</td><td onclick="speakMessage('Husband')" style="cursor:pointer;">/ˈhʌzbənd/ 🔊</td><td>Noun</td><td>Suami</td></tr>
+        <tr><td class="highlight-column">379</td><td>Ice cream</td><td onclick="speakMessage('Ice cream')" style="cursor:pointer;">/ˈaɪs kriːm/ 🔊</td><td>Noun</td><td>Ais Krim</td></tr>
+        <tr><td class="highlight-column">380</td><td>Idea</td><td onclick="speakMessage('Idea')" style="cursor:pointer;">/aɪˈdɪə/ 🔊</td><td>Noun</td><td>Ide</td></tr>
+        <tr><td class="highlight-column">381</td><td>If</td><td onclick="speakMessage('If')" style="cursor:pointer;">/ɪf/ 🔊</td><td>Conjunction</td><td>Jika</td></tr>
+        <tr><td class="highlight-column">382</td><td>Imagine</td><td onclick="speakMessage('Imagine')" style="cursor:pointer;">/ɪˈmædʒɪn/ 🔊</td><td>Verb</td><td>Bayangkan</td></tr>
+        <tr><td class="highlight-column">383</td><td>Important</td><td onclick="speakMessage('Important')" style="cursor:pointer;">/ɪmˈpɔːtnt/ 🔊</td><td>Adjective</td><td>Penting</td></tr>
+        <tr><td class="highlight-column">384</td><td>Improve</td><td onclick="speakMessage('Improve')" style="cursor:pointer;">/ɪmˈpruːv/ 🔊</td><td>Verb</td><td>Meningkatkan</td></tr>
+        <tr><td class="highlight-column">385</td><td>In</td><td onclick="speakMessage('In')" style="cursor:pointer;">/ɪn/ 🔊</td><td>Preposition</td><td>Di dalam</td></tr>
+        <tr><td class="highlight-column">386</td><td>Include</td><td onclick="speakMessage('Include')" style="cursor:pointer;">/ɪnˈkluːd/ 🔊</td><td>Verb</td><td>Termasuk</td></tr>
+        <tr><td class="highlight-column">387</td><td>Information</td><td onclick="speakMessage('Information')" style="cursor:pointer;">/ˌɪnfəˈmeɪʃən/ 🔊</td><td>Noun</td><td>Informasi</td></tr>
+        <tr><td class="highlight-column">388</td><td>Interest</td><td onclick="speakMessage('Interest')" style="cursor:pointer;">/ˈɪntrəst/ 🔊</td><td>Noun</td><td>Minat</td></tr>
+        <tr><td class="highlight-column">389</td><td>Interested</td><td onclick="speakMessage('Interested')" style="cursor:pointer;">/ˈɪntrəstɪd/ 🔊</td><td>Adjective</td><td>Terpikat</td></tr>
+        <tr><td class="highlight-column">390</td><td>Interesting</td><td onclick="speakMessage('Interesting')" style="cursor:pointer;">/ˈɪntrəstɪŋ/ 🔊</td><td>Adjective</td><td>Menyenangkan</td></tr>
+        <tr><td class="highlight-column">391</td><td>Internet</td><td onclick="speakMessage('Internet')" style="cursor:pointer;">/ˈɪntənet/ 🔊</td><td>Noun</td><td>Internet</td></tr>
+        <tr><td class="highlight-column">392</td><td>Interview</td><td onclick="speakMessage('Interview')" style="cursor:pointer;">/ˈɪntəvjuː/ 🔊</td><td>Noun/Verb</td><td>Wawancara</td></tr>
+        <tr><td class="highlight-column">393</td><td>Into</td><td onclick="speakMessage('Into')" style="cursor:pointer;">/ˈɪntə/ 🔊</td><td>Preposition</td><td>Ke dalam</td></tr>
+        <tr><td class="highlight-column">394</td><td>Introduce</td><td onclick="speakMessage('Introduce')" style="cursor:pointer;">/ˌɪntrəˈdjuːs/ 🔊</td><td>Verb</td><td>Memperkenalkan</td></tr>
+        <tr><td class="highlight-column">395</td><td>Island</td><td onclick="speakMessage('Island')" style="cursor:pointer;">/ˈaɪlənd/ 🔊</td><td>Noun</td><td>Pulau</td></tr>
+        <tr><td class="highlight-column">396</td><td>It</td><td onclick="speakMessage('It')" style="cursor:pointer;">/ɪt/ 🔊</td><td>Pronoun</td><td>Itu</td></tr>
+        <tr><td class="highlight-column">397</td><td>Its</td><td onclick="speakMessage('Its')" style="cursor:pointer;">/ɪts/ 🔊</td><td>Pronoun</td><td>Miliknya</td></tr>
+        <tr><td class="highlight-column">398</td><td>Jacket</td><td onclick="speakMessage('Jacket')" style="cursor:pointer;">/ˈdʒækɪt/ 🔊</td><td>Noun</td><td>Jaket</td></tr>
+        <tr><td class="highlight-column">399</td><td>January</td><td onclick="speakMessage('January')" style="cursor:pointer;">/ˈdʒæn.jʊ.ə.ri/ 🔊</td><td>Noun</td><td>Januari</td></tr>
+        <tr><td class="highlight-column">400</td><td>Jeans</td><td onclick="speakMessage('Jeans')" style="cursor:pointer;">/dʒiːnz/ 🔊</td><td>Noun</td><td>Jeans</td></tr>
+        <tr><td class="highlight-column">401</td><td>Job</td><td onclick="speakMessage('Job')" style="cursor:pointer;">/dʒɒb/ 🔊</td><td>Noun</td><td>Pekerjaan</td></tr>
+        <tr><td class="highlight-column">402</td><td>Join</td><td onclick="speakMessage('Join')" style="cursor:pointer;">/dʒɔɪn/ 🔊</td><td>Verb</td><td>Bergabung</td></tr>
+        <tr><td class="highlight-column">403</td><td>Journey</td><td onclick="speakMessage('Journey')" style="cursor:pointer;">/ˈdʒɜːni/ 🔊</td><td>Noun</td><td>Perjalanan</td></tr>
+        <tr><td class="highlight-column">404</td><td>Juice</td><td onclick="speakMessage('Juice')" style="cursor:pointer;">/dʒuːs/ 🔊</td><td>Noun</td><td>Jus</td></tr>
+        <tr><td class="highlight-column">405</td><td>July</td><td onclick="speakMessage('July')" style="cursor:pointer;">/dʒʊˈlaɪ/ 🔊</td><td>Noun</td><td>Juli</td></tr>
+        <tr><td class="highlight-column">406</td><td>June</td><td onclick="speakMessage('June')" style="cursor:pointer;">/dʒuːn/ 🔊</td><td>Noun</td><td>Juni</td></tr>
+        <tr><td class="highlight-column">407</td><td>Just</td><td onclick="speakMessage('Just')" style="cursor:pointer;">/dʒʌst/ 🔊</td><td>Adverb</td><td>Baru saja</td></tr>
+        <tr><td class="highlight-column">408</td><td>Keep</td><td onclick="speakMessage('Keep')" style="cursor:pointer;">/kiːp/ 🔊</td><td>Verb</td><td>Menjaga</td></tr>
+        <tr><td class="highlight-column">409</td><td>Key</td><td onclick="speakMessage('Key')" style="cursor:pointer;">/kiː/ 🔊</td><td>Noun</td><td>Kunci</td></tr>
+        <tr><td class="highlight-column">410</td><td>Kilometre</td><td onclick="speakMessage('Kilometre')" style="cursor:pointer;">/ˈkɪləʊˌmiːtə(r)/ 🔊</td><td>Noun</td><td>Kilometer</td></tr>
+        <tr><td class="highlight-column">411</td><td>Kind</td><td onclick="speakMessage('Kind')" style="cursor:pointer;">/kaɪnd/ 🔊</td><td>Adjective/Noun</td><td>Baik/ Jenis</td></tr>
+        <tr><td class="highlight-column">412</td><td>Kitchen</td><td onclick="speakMessage('Kitchen')" style="cursor:pointer;">/ˈkɪtʃɪn/ 🔊</td><td>Noun</td><td>Dapur</td></tr>
+        <tr><td class="highlight-column">413</td><td>Know</td><td onclick="speakMessage('Know')" style="cursor:pointer;">/nəʊ/ 🔊</td><td>Verb</td><td>Mengetahui</td></tr>
+        <tr><td class="highlight-column">414</td><td>Land</td><td onclick="speakMessage('Land')" style="cursor:pointer;">/lænd/ 🔊</td><td>Noun/Verb</td><td>Tanah/Mendarat</td></tr>
+        <tr><td class="highlight-column">415</td><td>Language</td><td onclick="speakMessage('Language')" style="cursor:pointer;">/ˈlæŋɡwɪdʒ/ 🔊</td><td>Noun</td><td>Bahasa</td></tr>
+        <tr><td class="highlight-column">416</td><td>Large</td><td onclick="speakMessage('Large')" style="cursor:pointer;">/lɑːdʒ/ 🔊</td><td>Adjective</td><td>Besar</td></tr>
+        <tr><td class="highlight-column">417</td><td>Last</td><td onclick="speakMessage('Last')" style="cursor:pointer;">/læst/ 🔊</td><td>Adjective/Verb</td><td>Terakhir</td></tr>
+        <tr><td class="highlight-column">418</td><td>Late</td><td onclick="speakMessage('Late')" style="cursor:pointer;">/leɪt/ 🔊</td><td>Adjective/Adverb</td><td>Terlambat</td></tr>
+        <tr><td class="highlight-column">419</td><td>Later</td><td onclick="speakMessage('Later')" style="cursor:pointer;">/ˈleɪtə(r)/ 🔊</td><td>Adverb</td><td>Nanti</td></tr>
+        <tr><td class="highlight-column">420</td><td>Laugh</td><td onclick="speakMessage('Laugh')" style="cursor:pointer;">/læf/ 🔊</td><td>Verb</td><td>Tertawa</td></tr>
+        <tr><td class="highlight-column">421</td><td>Learn</td><td onclick="speakMessage('Learn')" style="cursor:pointer;">/lɜːn/ 🔊</td><td>Verb</td><td>Belajar</td></tr>
+        <tr><td class="highlight-column">422</td><td>Leave</td><td onclick="speakMessage('Leave')" style="cursor:pointer;">/liːv/ 🔊</td><td>Verb</td><td> meninggalkan</td></tr>
+        <tr><td class="highlight-column">423</td><td>Left</td><td onclick="speakMessage('Left')" style="cursor:pointer;">/lɛft/ 🔊</td><td>Adjective</td><td>Kiri/Tinggal</td></tr>
+        <tr><td class="highlight-column">424</td><td>Leg</td><td onclick="speakMessage('Leg')" style="cursor:pointer;">/lɛɡ/ 🔊</td><td>Noun</td><td>Kaki</td></tr>
+        <tr><td class="highlight-column">425</td><td>Lesson</td><td onclick="speakMessage('Lesson')" style="cursor:pointer;">/ˈlɛsn/ 🔊</td><td>Noun</td><td>Pelajaran</td></tr>
+        <tr><td class="highlight-column">426</td><td>Let</td><td onclick="speakMessage('Let')" style="cursor:pointer;">/lɛt/ 🔊</td><td>Verb</td><td>Mengizinkan</td></tr>
+        <tr><td class="highlight-column">427</td><td>Letter</td><td onclick="speakMessage('Letter')" style="cursor:pointer;">/ˈlɛtə(r)/ 🔊</td><td>Noun</td><td>Surat</td></tr>
+        <tr><td class="highlight-column">428</td><td>Library</td><td onclick="speakMessage('Library')" style="cursor:pointer;">/ˈlaɪbrəri/ 🔊</td><td>Noun</td><td>Perpustakaan</td></tr>
+        <tr><td class="highlight-column">429</td><td>Lie</td><td onclick="speakMessage('Lie')" style="cursor:pointer;">/laɪ/ 🔊</td><td>Verb</td><td>Berbohong</td></tr>
+        <tr><td class="highlight-column">429</td><td>Life</td><td onclick="speakMessage('Life')" style="cursor:pointer;">/laɪf/ 🔊</td><td>Noun</td><td>Hidup</td></tr>
+        <tr><td class="highlight-column">430</td><td>Light</td><td onclick="speakMessage('Light')" style="cursor:pointer;">/laɪt/ 🔊</td><td>Noun/Adjective</td><td>Cahaya/Cerah</td></tr>
+        <tr><td class="highlight-column">431</td><td>Like</td><td onclick="speakMessage('Like')" style="cursor:pointer;">/laɪk/ 🔊</td><td>Verb/Preposition</td><td>Suka</td></tr>
+        <tr><td class="highlight-column">432</td><td>Line</td><td onclick="speakMessage('Line')" style="cursor:pointer;">/laɪn/ 🔊</td><td>Noun</td><td>Garis</td></tr>
+        <tr><td class="highlight-column">433</td><td>Lion</td><td onclick="speakMessage('Lion')" style="cursor:pointer;">/ˈlaɪən/ 🔊</td><td>Noun</td><td>Singa</td></tr>
+        <tr><td class="highlight-column">434</td><td>List</td><td onclick="speakMessage('List')" style="cursor:pointer;">/lɪst/ 🔊</td><td>Noun/Verb</td><td>Daftar/Menuliskan</td></tr>
+        <tr><td class="highlight-column">435</td><td>Listen</td><td onclick="speakMessage('Listen')" style="cursor:pointer;">/ˈlɪsən/ 🔊</td><td>Verb</td><td>Mendengarkan</td></tr>
+        <tr><td class="highlight-column">436</td><td>Little</td><td onclick="speakMessage('Little')" style="cursor:pointer;">/ˈlɪtl/ 🔊</td><td>Adjective</td><td>Sedikit/Kecil</td></tr>
+        <tr><td class="highlight-column">437</td><td>Live</td><td onclick="speakMessage('Live')" style="cursor:pointer;">/lɪv/ 🔊</td><td>Verb/Adjective</td><td>Hidup/Tinggal</td></tr>
+        <tr><td class="highlight-column">438</td><td>Local</td><td onclick="speakMessage('Local')" style="cursor:pointer;">/ˈləʊkəl/ 🔊</td><td>Adjective</td><td>Lokal</td></tr>
+        <tr><td class="highlight-column">439</td><td>Long</td><td onclick="speakMessage('Long')" style="cursor:pointer;">/lɒŋ/ 🔊</td><td>Adjective/Adverb</td><td>Panjang</td></tr>
+        <tr><td class="highlight-column">440</td><td>Look</td><td onclick="speakMessage('Look')" style="cursor:pointer;">/lʊk/ 🔊</td><td>Verb</td><td>Melihat</td></tr>
+        <tr><td class="highlight-column">441</td><td>Lose</td><td onclick="speakMessage('Lose')" style="cursor:pointer;">/luːz/ 🔊</td><td>Verb</td><td>Kehilangan</td></tr>
+        <tr><td class="highlight-column">442</td><td>Lot</td><td onclick="speakMessage('Lot')" style="cursor:pointer;">/lɒt/ 🔊</td><td>Noun</td><td>Banyak</td></tr>
+        <tr><td class="highlight-column">443</td><td>Love</td><td onclick="speakMessage('Love')" style="cursor:pointer;">/lʌv/ 🔊</td><td>Verb/Noun</td><td>Cinta</td></tr>
+        <tr><td class="highlight-column">444</td><td>Lunch</td><td onclick="speakMessage('Lunch')" style="cursor:pointer;">/lʌntʃ/ 🔊</td><td>Noun</td><td>Makan Siang</td></tr>
+        <tr><td class="highlight-column">445</td><td>Machine</td><td onclick="speakMessage('Machine')" style="cursor:pointer;">/məˈʃiːn/ 🔊</td><td>Noun</td><td>Mesin</td></tr>
+        <tr><td class="highlight-column">446</td><td>Magazine</td><td onclick="speakMessage('Magazine')" style="cursor:pointer;">/ˌmæɡəˈziːn/ 🔊</td><td>Noun</td><td>Majalah</td></tr>
+        <tr><td class="highlight-column">447</td><td>Main</td><td onclick="speakMessage('Main')" style="cursor:pointer;">/meɪn/ 🔊</td><td>Adjective</td><td>Utama</td></tr>
+        <tr><td class="highlight-column">448</td><td>Make</td><td onclick="speakMessage('Make')" style="cursor:pointer;">/meɪk/ 🔊</td><td>Verb</td><td>Membuat</td></tr>
+        <tr><td class="highlight-column">449</td><td>Man</td><td onclick="speakMessage('Man')" style="cursor:pointer;">/mæn/ 🔊</td><td>Noun</td><td>Laki-laki</td></tr>
+        <tr><td class="highlight-column">450</td><td>Many</td><td onclick="speakMessage('Many')" style="cursor:pointer;">/ˈmɛni/ 🔊</td><td>Adjective</td><td>Banyak</td></tr>
+        <tr><td class="highlight-column">451</td><td>Map</td><td onclick="speakMessage('Map')" style="cursor:pointer;">/mæp/ 🔊</td><td>Noun</td><td>Peta</td></tr>
+        <tr><td class="highlight-column">452</td><td>March</td><td onclick="speakMessage('March')" style="cursor:pointer;">/mɑːtʃ/ 🔊</td><td>Noun/Verb</td><td>Maret/Berbaris</td></tr>
+        <tr><td class="highlight-column">453</td><td>Market</td><td onclick="speakMessage('Market')" style="cursor:pointer;">/ˈmɑːrkɪt/ 🔊</td><td>Noun</td><td>Pasar</td></tr>
+        <tr><td class="highlight-column">454</td><td>Married</td><td onclick="speakMessage('Married')" style="cursor:pointer;">/ˈmærid/ 🔊</td><td>Adjective</td><td>Menikah</td></tr>
+        <tr><td class="highlight-column">455</td><td>Match</td><td onclick="speakMessage('Match')" style="cursor:pointer;">/mætʃ/ 🔊</td><td>Noun/Verb</td><td>Pertandingan/Menyesuaikan</td></tr>
+        <tr><td class="highlight-column">456</td><td>May</td><td onclick="speakMessage('May')" style="cursor:pointer;">/meɪ/ 🔊</td><td>Modal Verb/Noun</td><td>May</td></tr>
+        <tr><td class="highlight-column">457</td><td>Maybe</td><td onclick="speakMessage('Maybe')" style="cursor:pointer;">/ˈmeɪbi/ 🔊</td><td>Adverb</td><td>Barangkali</td></tr>
+        <tr><td class="highlight-column">458</td><td>Me</td><td onclick="speakMessage('Me')" style="cursor:pointer;">/miː/ 🔊</td><td>Pronoun</td><td>Saya</td></tr>
+        <tr><td class="highlight-column">459</td><td>Meal</td><td onclick="speakMessage('Meal')" style="cursor:pointer;">/miːl/ 🔊</td><td>Noun</td><td>Hidangan/Makanan</td></tr>
+        <tr><td class="highlight-column">460</td><td>Mean</td><td onclick="speakMessage('Mean')" style="cursor:pointer;">/miːn/ 🔊</td><td>Verb</td><td>Berarti</td></tr>
+        <tr><td class="highlight-column">461</td><td>Meaning</td><td onclick="speakMessage('Meaning')" style="cursor:pointer;">/ˈmiːnɪŋ/ 🔊</td><td>Noun</td><td>Arti</td></tr>
+        <tr><td class="highlight-column">462</td><td>Meat</td><td onclick="speakMessage('Meat')" style="cursor:pointer;">/miːt/ 🔊</td><td>Noun</td><td>Daging</td></tr>
+        <tr><td class="highlight-column">463</td><td>Meet</td><td onclick="speakMessage('Meet')" style="cursor:pointer;">/miːt/ 🔊</td><td>Verb</td><td>Menemui</td></tr>
+        <tr><td class="highlight-column">464</td><td>Meeting</td><td onclick="speakMessage('Meeting')" style="cursor:pointer;">/ˈmiːtɪŋ/ 🔊</td><td>Noun</td><td>Perjumpaan/Rapat</td></tr>
+        <tr><td class="highlight-column">465</td><td>Member</td><td onclick="speakMessage('Member')" style="cursor:pointer;">/ˈmɛmbə(r)/ 🔊</td><td>Noun</td><td>Anggota</td></tr>
+        <tr><td class="highlight-column">466</td><td>Menu</td><td onclick="speakMessage('Menu')" style="cursor:pointer;">/ˈmɛnjuː/ 🔊</td><td>Noun</td><td>Menu</td></tr>
+        <tr><td class="highlight-column">467</td><td>Message</td><td onclick="speakMessage('Message')" style="cursor:pointer;">/ˈmɛsɪdʒ/ 🔊</td><td>Noun</td><td>Pesan</td></tr>
+        <tr><td class="highlight-column">468</td><td>Metre</td><td onclick="speakMessage('Metre')" style="cursor:pointer;">/ˈmiːtə(r)/ 🔊</td><td>Noun</td><td>Meter</td></tr>
+        <tr><td class="highlight-column">469</td><td>Midnight</td><td onclick="speakMessage('Midnight')" style="cursor:pointer;">/ˈmɪdnaɪt/ 🔊</td><td>Noun</td><td>Tengah Malam</td></tr>
+        <tr><td class="highlight-column">470</td><td>Mile</td><td onclick="speakMessage('Mile')" style="cursor:pointer;">/maɪl/ 🔊</td><td>Noun</td><td>Batu (unit panjang)</td></tr>
+        <tr><td class="highlight-column">471</td><td>Milk</td><td onclick="speakMessage('Milk')" style="cursor:pointer;">/mɪlk/ 🔊</td><td>Noun</td><td>Susu</td></tr>
+        <tr><td class="highlight-column">472</td><td>Million</td><td onclick="speakMessage('Million')" style="cursor:pointer;">/ˈmɪljən/ 🔊</td><td>Noun</td><td>Juta</td></tr>
+        <tr><td class="highlight-column">473</td><td>Minute</td><td onclick="speakMessage('Minute')" style="cursor:pointer;">/ˈmɪnɪt/ 🔊</td><td>Noun</td><td>Menit</td></tr>
+        <tr><td class="highlight-column">474</td><td>Miss</td><td onclick="speakMessage('Miss')" style="cursor:pointer;">/mɪs/ 🔊</td><td>Verb/Noun</td><td>Ketinggalan</td></tr>
+        <tr><td class="highlight-column">475</td><td>Mistake</td><td onclick="speakMessage('Mistake')" style="cursor:pointer;">/mɪsˈteɪk/ 🔊</td><td>Noun/Verb</td><td>Kesalahan</td></tr>
+        <tr><td class="highlight-column">476</td><td>Model</td><td onclick="speakMessage('Model')" style="cursor:pointer;">/ˈmɒdl/ 🔊</td><td>Noun</td><td>Model</td></tr>
+        <tr><td class="highlight-column">477</td><td>Modern</td><td onclick="speakMessage('Modern')" style="cursor:pointer;">/ˈmɒdən/ 🔊</td><td>Adjective</td><td>Modern</td></tr>
+        <tr><td class="highlight-column">478</td><td>Moment</td><td onclick="speakMessage('Moment')" style="cursor:pointer;">/ˈməʊmənt/ 🔊</td><td>Noun</td><td>Moment</td></tr>
+        <tr><td class="highlight-column">479</td><td>Monday</td><td onclick="speakMessage('Monday')" style="cursor:pointer;">/ˈmʌndeɪ/ 🔊</td><td>Noun</td><td>Senin</td></tr>
+        <tr><td class="highlight-column">480</td><td>Money</td><td onclick="speakMessage('Money')" style="cursor:pointer;">/ˈmʌni/ 🔊</td><td>Noun</td><td>Uang</td></tr>
+        <tr><td class="highlight-column">481</td><td>Month</td><td onclick="speakMessage('Month')" style="cursor:pointer;">/mʌnθ/ 🔊</td><td>Noun</td><td>Bulan</td></tr>
+        <tr><td class="highlight-column">482</td><td>More</td><td onclick="speakMessage('More')" style="cursor:pointer;">/mɔːr/ 🔊</td><td>Adjective/Adverb</td><td>Lebih</td></tr>
+        <tr><td class="highlight-column">483</td><td>Morning</td><td onclick="speakMessage('Morning')" style="cursor:pointer;">/ˈmɔːnɪŋ/ 🔊</td><td>Noun</td><td>Pagi</td></tr>
+        <tr><td class="highlight-column">484</td><td>Most</td><td onclick="speakMessage('Most')" style="cursor:pointer;">/məʊst/ 🔊</td><td>Adjective/Pronoun</td><td>Paling</td></tr>
+        <tr><td class="highlight-column">485</td><td>Mother</td><td onclick="speakMessage('Mother')" style="cursor:pointer;">/ˈmʌðər/ 🔊</td><td>Noun</td><td>Ibu</td></tr>
+        <tr><td class="highlight-column">486</td><td>Mountain</td><td onclick="speakMessage('Mountain')" style="cursor:pointer;">/ˈmaʊntɪn/ 🔊</td><td>Noun</td><td>Gunung</td></tr>
+        <tr><td class="highlight-column">487</td><td>Mouse</td><td onclick="speakMessage('Mouse')" style="cursor:pointer;">/maʊs/ 🔊</td><td>Noun</td><td>Mouse/Tikus</td></tr>
+        <tr><td class="highlight-column">488</td><td>Mouse</td><td onclick="speakMessage('Mouse')" style="cursor:pointer;">/maʊs/ 🔊</td><td>Noun</td><td>Mouse (alat komputer)</td></tr>
+        <tr><td class="highlight-column">489</td><td>Move</td><td onclick="speakMessage('Move')" style="cursor:pointer;">/muːv/ 🔊</td><td>Verb</td><td>Bergerak</td></tr>
+        <tr><td class="highlight-column">490</td><td>Movie</td><td onclick="speakMessage('Movie')" style="cursor:pointer;">/ˈmuːvi/ 🔊</td><td>Noun</td><td>Film</td></tr>
+        <tr><td class="highlight-column">491</td><td>Much</td><td onclick="speakMessage('Much')" style="cursor:pointer;">/mʌʧ/ 🔊</td><td>Adjective/Pronoun</td><td>Banyak</td></tr>
+        <tr><td class="highlight-column">492</td><td>Mum</td><td onclick="speakMessage('Mum')" style="cursor:pointer;">/mʌm/ 🔊</td><td>Noun</td><td>Ibu</td></tr>
+        <tr><td class="highlight-column">493</td><td>Museum</td><td onclick="speakMessage('Museum')" style="cursor:pointer;">/mjuːˈziːəm/ 🔊</td><td>Noun</td><td>Museum</td></tr>
+        <tr><td class="highlight-column">494</td><td>Music</td><td onclick="speakMessage('Music')" style="cursor:pointer;">/ˈmjuːzɪk/ 🔊</td><td>Noun</td><td>Musik</td></tr>
+        <tr><td class="highlight-column">495</td><td>Must</td><td onclick="speakMessage('Must')" style="cursor:pointer;">/mʌst/ 🔊</td><td>Modal Verb</td><td>Harus</td></tr>
+        <tr><td class="highlight-column">496</td><td>My</td><td onclick="speakMessage('My')" style="cursor:pointer;">/maɪ/ 🔊</td><td>Pronoun</td><td>Milikku</td></tr>
+        <tr><td class="highlight-column">497</td><td>Name</td><td onclick="speakMessage('Name')" style="cursor:pointer;">/neɪm/ 🔊</td><td>Noun/Verb</td><td>Nama</td></tr>
+        <tr><td class="highlight-column">498</td><td>Natural</td><td onclick="speakMessage('Natural')" style="cursor:pointer;">/ˈnætʃərəl/ 🔊</td><td>Adjective</td><td>Alami</td></tr>
+        <tr><td class="highlight-column">499</td><td>Near</td><td onclick="speakMessage('Near')" style="cursor:pointer;">/nɪə(r)/ 🔊</td><td>Preposition/Adjective</td><td>Dekat</td></tr>
+        <tr><td class="highlight-column">500</td><td>Need</td><td onclick="speakMessage('Need')" style="cursor:pointer;">/niːd/ 🔊</td><td>Verb</td><td>Perlu</td></tr>
+        <tr><td class="highlight-column">501</td><td>Negative</td><td onclick="speakMessage('Negative')" style="cursor:pointer;">/ˈnɛɡətɪv/ 🔊</td><td>Adjective/Noun</td><td>Negatif</td></tr>
+        <tr><td class="highlight-column">502</td><td>Neighbour</td><td onclick="speakMessage('Neighbour')" style="cursor:pointer;">/ˈneɪbə(r)/ 🔊</td><td>Noun</td><td>Tetangga</td></tr>
+        <tr><td class="highlight-column">503</td><td>Never</td><td onclick="speakMessage('Never')" style="cursor:pointer;">/ˈnɛvə(r)/ 🔊</td><td>Adverb</td><td>Tak Pernah</td></tr>
+        <tr><td class="highlight-column">504</td><td>New</td><td onclick="speakMessage('New')" style="cursor:pointer;">/njuː/ 🔊</td><td>Adjective</td><td>Baru</td></tr>
+        <tr><td class="highlight-column">505</td><td>News</td><td onclick="speakMessage('News')" style="cursor:pointer;">/njuːz/ 🔊</td><td>Noun</td><td>Berita</td></tr>
+        <tr><td class="highlight-column">506</td><td>Newspaper</td><td onclick="speakMessage('Newspaper')" style="cursor:pointer;">/ˈnjuːzpeɪpə(r)/ 🔊</td><td>Noun</td><td>Surat Kabar</td></tr>
+        <tr><td class="highlight-column">507</td><td>Next</td><td onclick="speakMessage('Next')" style="cursor:pointer;">/nɛkst/ 🔊</td><td>Adjective/Adverb</td><td>Berikutnya</td></tr>
+        <tr><td class="highlight-column">508</td><td>Next to</td><td onclick="speakMessage('Next to')" style="cursor:pointer;">/nɛkst tuː/ 🔊</td><td>Preposition</td><td>Di Samping</td></tr>
+        <tr><td class="highlight-column">509</td><td>Nice</td><td onclick="speakMessage('Nice')" style="cursor:pointer;">/naɪs/ 🔊</td><td>Adjective</td><td>Baik/Aman</td></tr>
+        <tr><td class="highlight-column">510</td><td>Night</td><td onclick="speakMessage('Night')" style="cursor:pointer;">/naɪt/ 🔊</td><td>Noun</td><td>Malam</td></tr>
+        <tr><td class="highlight-column">511</td><td>Nine</td><td onclick="speakMessage('Nine')" style="cursor:pointer;">/naɪn/ 🔊</td><td>Number</td><td>Sembilan</td></tr>
+        <tr><td class="highlight-column">512</td><td>Nineteen</td><td onclick="speakMessage('Nineteen')" style="cursor:pointer;">/ˈnaɪnˈtiːn/ 🔊</td><td>Number</td><td>Sembilan Belas</td></tr>
+        <tr><td class="highlight-column">513</td><td>Ninety</td><td onclick="speakMessage('Ninety')" style="cursor:pointer;">/ˈnaɪnti/ 🔊</td><td>Number</td><td>Sembilan Puluh</td></tr>
+        <tr><td class="highlight-column">514</td><td>No</td><td onclick="speakMessage('No')" style="cursor:pointer;">/nəʊ/ 🔊</td><td>Adverb</td><td>Tidak</td></tr>
+        <tr><td class="highlight-column">515</td><td>No one</td><td onclick="speakMessage('No one')" style="cursor:pointer;">/nəʊ wʌn/ 🔊</td><td>Pronoun</td><td>Tidak ada orang</td></tr>
+        <tr><td class="highlight-column">516</td><td>Nobody</td><td onclick="speakMessage('Nobody')" style="cursor:pointer;">/ˈnəʊbədi/ 🔊</td><td>Pronoun</td><td>Tidak ada orang</td></tr>
+        <tr><td class="highlight-column">517</td><td>North</td><td onclick="speakMessage('North')" style="cursor:pointer;">/nɔːθ/ 🔊</td><td>Noun/Adjective</td><td>Utara</td></tr>
+        <tr><td class="highlight-column">518</td><td>Nose</td><td onclick="speakMessage('Nose')" style="cursor:pointer;">/nəʊz/ 🔊</td><td>Noun</td><td>Hidung</td></tr>
+        <tr><td class="highlight-column">519</td><td>Not</td><td onclick="speakMessage('Not')" style="cursor:pointer;">/nɒt/ 🔊</td><td>Adverb</td><td>Tidak</td></tr>
+        <tr><td class="highlight-column">520</td><td>Note</td><td onclick="speakMessage('Note')" style="cursor:pointer;">/nəʊt/ 🔊</td><td>Noun/Verb</td><td>Catatan</td></tr>
+        <tr><td class="highlight-column">521</td><td>Nothing</td><td onclick="speakMessage('Nothing')" style="cursor:pointer;">/ˈnʌθɪŋ/ 🔊</td><td>Pronoun</td><td>Tidak ada</td></tr>
+        <tr><td class="highlight-column">522</td><td>November</td><td onclick="speakMessage('November')" style="cursor:pointer;">/nəʊˈvɛmbər/ 🔊</td><td>Noun</td><td>November</td></tr>
+        <tr><td class="highlight-column">523</td><td>Now</td><td onclick="speakMessage('Now')" style="cursor:pointer;">/naʊ/ 🔊</td><td>Adverb</td><td>Sekarang</td></tr>
+        <tr><td class="highlight-column">524</td><td>Number</td><td onclick="speakMessage('Number')" style="cursor:pointer;">/ˈnʌmbər/ 🔊</td><td>Noun</td><td>Nomor</td></tr>
+        <tr><td class="highlight-column">525</td><td>Nurse</td><td onclick="speakMessage('Nurse')" style="cursor:pointer;">/nɜːrs/ 🔊</td><td>Noun</td><td>Perawat</td></tr>
+        <tr><td class="highlight-column">526</td><td>Object</td><td onclick="speakMessage('Object')" style="cursor:pointer;">/ˈɒbdʒɪkt/ 🔊</td><td>Noun</td><td>Objek</td></tr>
+        <tr><td class="highlight-column">527</td><td>O’clock</td><td onclick="speakMessage('O’clock')" style="cursor:pointer;">/əˈklɒk/ 🔊</td><td>Expression</td><td>Jam</td></tr>
+        <tr><td class="highlight-column">528</td><td>October</td><td onclick="speakMessage('October')" style="cursor:pointer;">/ɒkˈtəʊbə(r)/ 🔊</td><td>Noun</td><td>Oktober</td></tr>
+        <tr><td class="highlight-column">529</td><td>Of</td><td onclick="speakMessage('Of')" style="cursor:pointer;">/ɒv/ 🔊</td><td>Preposition</td><td>Dari</td></tr>
+        <tr><td class="highlight-column">530</td><td>Off</td><td onclick="speakMessage('Off')" style="cursor:pointer;">/ɒf/ 🔊</td><td>Preposition/Adjective</td><td>Matikan</td></tr>
+        <tr><td class="highlight-column">531</td><td>Office</td><td onclick="speakMessage('Office')" style="cursor:pointer;">/ˈɒfɪs/ 🔊</td><td>Noun</td><td>Kantor</td></tr>
+        <tr><td class="highlight-column">532</td><td>Often</td><td onclick="speakMessage('Often')" style="cursor:pointer;">/ˈɒfən/ 🔊</td><td>Adverb</td><td>Sering</td></tr>
+        <tr><td class="highlight-column">533</td><td>Oh</td><td onclick="speakMessage('Oh')" style="cursor:pointer;">/əʊ/ 🔊</td><td>Interjection</td><td>Oh</td></tr>
+        <tr><td class="highlight-column">534</td><td>OK</td><td onclick="speakMessage('OK')" style="cursor:pointer;">/ˌəʊˈkeɪ/ 🔊</td><td>Interjection</td><td>Oke</td></tr>
+        <tr><td class="highlight-column">535</td><td>Old</td><td onclick="speakMessage('Old')" style="cursor:pointer;">/əʊld/ 🔊</td><td>Adjective</td><td>Tua/Lama</td></tr>
+        <tr><td class="highlight-column">536</td><td>On</td><td onclick="speakMessage('On')" style="cursor:pointer;">/ɒn/ 🔊</td><td>Preposition/Adverb</td><td>Di</td></tr>
+        <tr><td class="highlight-column">537</td><td>Once</td><td onclick="speakMessage('Once')" style="cursor:pointer;">/wʌns/ 🔊</td><td>Adverb</td><td>Sekali</td></tr>
+        <tr><td class="highlight-column">538</td><td>One</td><td onclick="speakMessage('One')" style="cursor:pointer;">/wʌn/ 🔊</td><td>Number</td><td>Satu</td></tr>
+        <tr><td class="highlight-column">539</td><td>Onion</td><td onclick="speakMessage('Onion')" style="cursor:pointer;">/ˈʌnjən/ 🔊</td><td>Noun</td><td>Bawang</td></tr>
+        <tr><td class="highlight-column">540</td><td>Online</td><td onclick="speakMessage('Online')" style="cursor:pointer;">/ˈɒnˌlaɪn/ 🔊</td><td>Adjective/Adverb</td><td>Online</td></tr>
+        <tr><td class="highlight-column">541</td><td>Only</td><td onclick="speakMessage('Only')" style="cursor:pointer;">/ˈəʊnli/ 🔊</td><td>Adjective/Adverb</td><td>Hanya</td></tr>
+        <tr><td class="highlight-column">542</td><td>Open</td><td onclick="speakMessage('Open')" style="cursor:pointer;">/ˈəʊpən/ 🔊</td><td>Adjective/Verb</td><td>Buka</td></tr>
+        <tr><td class="highlight-column">543</td><td>Opinion</td><td onclick="speakMessage('Opinion')" style="cursor:pointer;">/əˈpɪnjən/ 🔊</td><td>Noun</td><td>Opini</td></tr>
+        <tr><td class="highlight-column">544</td><td>Opposite</td><td onclick="speakMessage('Opposite')" style="cursor:pointer;">/ˈɒpəzɪt/ 🔊</td><td>Adjective/Preposition</td><td>Berbeda</td></tr>
+        <tr><td class="highlight-column">545</td><td>Or</td><td onclick="speakMessage('Or')" style="cursor:pointer;">/ɔːr/ 🔊</td><td>Conjunction</td><td>Atau</td></tr>
+        <tr><td class="highlight-column">546</td><td>Orange</td><td onclick="speakMessage('Orange')" style="cursor:pointer;">/ˈɔːrɪndʒ/ 🔊</td><td>Noun/Adjective</td><td>Jeruk/Oranye</td></tr>
+        <tr><td class="highlight-column">547</td><td>Order</td><td onclick="speakMessage('Order')" style="cursor:pointer;">/ˈɔːdə(r)/ 🔊</td><td>Noun/Verb</td><td>Pesanan/Pesan</td></tr>
+        <tr><td class="highlight-column">548</td><td>Other</td><td onclick="speakMessage('Other')" style="cursor:pointer;">/ˈʌðər/ 🔊</td><td>Adjective/Pronoun</td><td>Lain</td></tr>
+        <tr><td class="highlight-column">549</td><td>Our</td><td onclick="speakMessage('Our')" style="cursor:pointer;">/aʊər/ 🔊</td><td>Pronoun</td><td>Kami/Kita</td></tr>
+        <tr><td class="highlight-column">550</td><td>Out</td><td onclick="speakMessage('Out')" style="cursor:pointer;">/aʊt/ 🔊</td><td>Adverb/Preposition</td><td>Keluar</td></tr>
+        <tr><td class="highlight-column">551</td><td>Outside</td><td onclick="speakMessage('Outside')" style="cursor:pointer;">/ˈaʊtˌsaɪd/ 🔊</td><td>Preposition/Adjective</td><td>Di luar</td></tr>
+        <tr><td class="highlight-column">552</td><td>Over</td><td onclick="speakMessage('Over')" style="cursor:pointer;">/ˈəʊvər/ 🔊</td><td>Preposition/Adverb</td><td>Di atas</td></tr>
+        <tr><td class="highlight-column">553</td><td>Own</td><td onclick="speakMessage('Own')" style="cursor:pointer;">/əʊn/ 🔊</td><td>Adjective/Verb</td><td>Milik</td></tr>
+        <tr><td class="highlight-column">554</td><td>Page</td><td onclick="speakMessage('Page')" style="cursor:pointer;">/peɪdʒ/ 🔊</td><td>Noun</td><td>Halaman</td></tr>
+        <tr><td class="highlight-column">555</td><td>Paint</td><td onclick="speakMessage('Paint')" style="cursor:pointer;">/peɪnt/ 🔊</td><td>Verb/Noun</td><td>Cat</td></tr>
+        <tr><td class="highlight-column">556</td><td>Painting</td><td onclick="speakMessage('Painting')" style="cursor:pointer;">/ˈpeɪntɪŋ/ 🔊</td><td>Noun</td><td>Lukisan</td></tr>
+        <tr><td class="highlight-column">557</td><td>Pair</td><td onclick="speakMessage('Pair')" style="cursor:pointer;">/peə(r)/ 🔊</td><td>Noun</td><td>Pasangan</td></tr>
+        <tr><td class="highlight-column">558</td><td>Paper</td><td onclick="speakMessage('Paper')" style="cursor:pointer;">/ˈpeɪpər/ 🔊</td><td>Noun</td><td>Kertas</td></tr>
+        <tr><td class="highlight-column">559</td><td>Paragraph</td><td onclick="speakMessage('Paragraph')" style="cursor:pointer;">/ˈpærəɡræf/ 🔊</td><td>Noun</td><td>Paragraf</td></tr>
+        <tr><td class="highlight-column">560</td><td>Parent</td><td onclick="speakMessage('Parent')" style="cursor:pointer;">/ˈpeərənt/ 🔊</td><td>Noun</td><td>Orang tua</td></tr>
+        <tr><td class="highlight-column">561</td><td>Park</td><td onclick="speakMessage('Park')" style="cursor:pointer;">/pɑːrk/ 🔊</td><td>Noun/Verb</td><td>Taman/berparkir</td></tr>
+        <tr><td class="highlight-column">562</td><td>Part</td><td onclick="speakMessage('Part')" style="cursor:pointer;">/pɑːrt/ 🔊</td><td>Noun</td><td>Bagian</td></tr>
+        <tr><td class="highlight-column">563</td><td>Partner</td><td onclick="speakMessage('Partner')" style="cursor:pointer;">/ˈpɑːtnər/ 🔊</td><td>Noun</td><td>Rekan</td></tr>
+        <tr><td class="highlight-column">564</td><td>Party</td><td onclick="speakMessage('Party')" style="cursor:pointer;">/ˈpɑːrti/ 🔊</td><td>Noun</td><td>Pesta</td></tr>
+        <tr><td class="highlight-column">565</td><td>Passport</td><td onclick="speakMessage('Passport')" style="cursor:pointer;">/ˈpæspɔːrt/ 🔊</td><td>Noun</td><td>Paspor</td></tr>
+        <tr><td class="highlight-column">566</td><td>Past</td><td onclick="speakMessage('Past')" style="cursor:pointer;">/pɑːst/ 🔊</td><td>Adjective/Verb</td><td>Gara-gara</td></tr>
+        <tr><td class="highlight-column">567</td><td>Pay</td><td onclick="speakMessage('Pay')" style="cursor:pointer;">/peɪ/ 🔊</td><td>Verb</td><td>Membayar</td></tr>
+        <tr><td class="highlight-column">568</td><td>Pen</td><td onclick="speakMessage('Pen')" style="cursor:pointer;">/pen/ 🔊</td><td>Noun</td><td>Pulpen</td></tr>
+        <tr><td class="highlight-column">569</td><td>Pencil</td><td onclick="speakMessage('Pencil')" style="cursor:pointer;">/ˈpɛnsəl/ 🔊</td><td>Noun</td><td>Pensil</td></tr>
+        <tr><td class="highlight-column">570</td><td>People</td><td onclick="speakMessage('People')" style="cursor:pointer;">/ˈpiːpl/ 🔊</td><td>Noun</td><td>Orang-orang</td></tr>
+        <tr><td class="highlight-column">571</td><td>Pepper</td><td onclick="speakMessage('Pepper')" style="cursor:pointer;">/ˈpɛpər/ 🔊</td><td>Noun</td><td>Lada</td></tr>
+        <tr><td class="highlight-column">572</td><td>Perfect</td><td onclick="speakMessage('Perfect')" style="cursor:pointer;">/ˈpɜːrfɪkt/ 🔊</td><td>Adjective</td><td>Sempurna</td></tr>
+        <tr><td class="highlight-column">573</td><td>Period</td><td onclick="speakMessage('Period')" style="cursor:pointer;">/ˈpɪriəd/ 🔊</td><td>Noun</td><td>Periode/Titik</td></tr>
+        <tr><td class="highlight-column">574</td><td>Person</td><td onclick="speakMessage('Person')" style="cursor:pointer;">/ˈpɜːrsən/ 🔊</td><td>Noun</td><td>Orang</td></tr>
+        <tr><td class="highlight-column">575</td><td>Personal</td><td onclick="speakMessage('Personal')" style="cursor:pointer;">/ˈpɜːrsənl/ 🔊</td><td>Adjective</td><td>Pribadi</td></tr>
+        <tr><td class="highlight-column">576</td><td>Phone</td><td onclick="speakMessage('Phone')" style="cursor:pointer;">/fəʊn/ 🔊</td><td>Noun</td><td>Telepon</td></tr>
+        <tr><td class="highlight-column">577</td><td>Photo</td><td onclick="speakMessage('Photo')" style="cursor:pointer;">/ˈfəʊtəʊ/ 🔊</td><td>Noun</td><td>Foto</td></tr>
+        <tr><td class="highlight-column">578</td><td>Photograph</td><td onclick="speakMessage('Photograph')" style="cursor:pointer;">/ˈfəʊtəɡrɑːf/ 🔊</td><td>Noun/Verb</td><td>Fotografi/Foto</td></tr>
+        <tr><td class="highlight-column">579</td><td>Phrase</td><td onclick="speakMessage('Phrase')" style="cursor:pointer;">/freɪz/ 🔊</td><td>Noun</td><td>Frasa</td></tr>
+        <tr><td class="highlight-column">580</td><td>Piano</td><td onclick="speakMessage('Piano')" style="cursor:pointer;">/piˈænəʊ/ 🔊</td><td>Noun</td><td>Piano</td></tr>
+        <tr><td class="highlight-column">581</td><td>Picture</td><td onclick="speakMessage('Picture')" style="cursor:pointer;">/ˈpɪktʃər/ 🔊</td><td>Noun</td><td>Gambar</td></tr>
+        <tr><td class="highlight-column">582</td><td>Piece</td><td onclick="speakMessage('Piece')" style="cursor:pointer;">/piːs/ 🔊</td><td>Noun</td><td>Potongan</td></tr>
+        <tr><td class="highlight-column">583</td><td>Pig</td><td onclick="speakMessage('Pig')" style="cursor:pointer;">/pɪɡ/ 🔊</td><td>Noun</td><td>Babi</td></tr>
+        <tr><td class="highlight-column">584</td><td>Pink</td><td onclick="speakMessage('Pink')" style="cursor:pointer;">/pɪŋk/ 🔊</td><td>Adjective/Noun</td><td>Merah muda</td></tr>
+        <tr><td class="highlight-column">585</td><td>Place</td><td onclick="speakMessage('Place')" style="cursor:pointer;">/pleɪs/ 🔊</td><td>Noun/Verb</td><td>Tempat</td></tr>
+        <tr><td class="highlight-column">586</td><td>Plan</td><td onclick="speakMessage('Plan')" style="cursor:pointer;">/plæn/ 🔊</td><td>Noun/Verb</td><td>Rencana</td></tr>
+        <tr><td class="highlight-column">587</td><td>Plane</td><td onclick="speakMessage('Plane')" style="cursor:pointer;">/pleɪn/ 🔊</td><td>Noun</td><td>Pesawat</td></tr>
+        <tr><td class="highlight-column">588</td><td>Plant</td><td onclick="speakMessage('Plant')" style="cursor:pointer;">/plænt/ 🔊</td><td>Noun/Verb</td><td>Tumbuhan/Menanam</td></tr>
+        <tr><td class="highlight-column">589</td><td>Play</td><td onclick="speakMessage('Play')" style="cursor:pointer;">/pleɪ/ 🔊</td><td>Verb</td><td>Bermain</td></tr>
+        <tr><td class="highlight-column">590</td><td>Player</td><td onclick="speakMessage('Player')" style="cursor:pointer;">/ˈpleɪər/ 🔊</td><td>Noun</td><td>Pemain</td></tr>
+        <tr><td class="highlight-column">591</td><td>Please</td><td onclick="speakMessage('Please')" style="cursor:pointer;">/pliːz/ 🔊</td><td>Verb/Adverb</td><td>Tolong</td></tr>
+        <tr><td class="highlight-column">592</td><td>Point</td><td onclick="speakMessage('Point')" style="cursor:pointer;">/pɔɪnt/ 🔊</td><td>Noun/Verb</td><td>Titik/Menunjuk</td></tr>
+        <tr><td class="highlight-column">593</td><td>Police</td><td onclick="speakMessage('Police')" style="cursor:pointer;">/pəˈliːs/ 🔊</td><td>Noun</td><td>Polisi</td></tr>
+        <tr><td class="highlight-column">594</td><td>Policeman</td><td onclick="speakMessage('Policeman')" style="cursor:pointer;">/ˈpəʊlɪsˌmæn/ 🔊</td><td>Noun</td><td>Polisi (pria)</td></tr>
+        <tr><td class="highlight-column">595</td><td>Pool</td><td onclick="speakMessage('Pool')" style="cursor:pointer;">/puːl/ 🔊</td><td>Noun</td><td>Kolam</td></tr>
+        <tr><td class="highlight-column">596</td><td>Poor</td><td onclick="speakMessage('Poor')" style="cursor:pointer;">/pʊər/ 🔊</td><td>Adjective</td><td>Miskin</td></tr>
+        <tr><td class="highlight-column">597</td><td>Popular</td><td onclick="speakMessage('Popular')" style="cursor:pointer;">/ˈpɒpjʊlər/ 🔊</td><td>Adjective</td><td>Populer</td></tr>
+        <tr><td class="highlight-column">598</td><td>Positive</td><td onclick="speakMessage('Positive')" style="cursor:pointer;">/ˈpɒzətɪv/ 🔊</td><td>Adjective</td><td>Positif</td></tr>
+        <tr><td class="highlight-column">599</td><td>Possible</td><td onclick="speakMessage('Possible')" style="cursor:pointer;">/ˈpɒsɪbəl/ 🔊</td><td>Adjective</td><td>Memungkinkan</td></tr>
+        <tr><td class="highlight-column">600</td><td>Post</td><td onclick="speakMessage('Post')" style="cursor:pointer;">/pəʊst/ 🔊</td><td>Noun/Verb</td><td>Pos</td></tr>
+        <tr><td class="highlight-column">601</td><td>Potato</td><td onclick="speakMessage('Potato')" style="cursor:pointer;">/pəˈteɪtəʊ/ 🔊</td><td>Noun</td><td>Kentang</td></tr>
+        <tr><td class="highlight-column">602</td><td>Pound</td><td onclick="speakMessage('Pound')" style="cursor:pointer;">/paʊnd/ 🔊</td><td>Noun</td><td>Pound (mata uang)</td></tr>
+        <tr><td class="highlight-column">603</td><td>Practice</td><td onclick="speakMessage('Practice')" style="cursor:pointer;">/ˈpræktɪs/ 🔊</td><td>Noun/Verb</td><td>Latihan</td></tr>
+        <tr><td class="highlight-column">604</td><td>Practise</td><td onclick="speakMessage('Practise')" style="cursor:pointer;">/ˈpræktɪs/ 🔊</td><td>Verb</td><td>Latihan (untuk British)</td></tr>
+        <tr><td class="highlight-column">605</td><td>Prefer</td><td onclick="speakMessage('Prefer')" style="cursor:pointer;">/prɪˈfɜːr/ 🔊</td><td>Verb</td><td>Lebih suka</td></tr>
+        <tr><td class="highlight-column">606</td><td>Prepare</td><td onclick="speakMessage('Prepare')" style="cursor:pointer;">/prɪˈpeər/ 🔊</td><td>Verb</td><td>Menyiapkan</td></tr>
+        <tr><td class="highlight-column">607</td><td>Present</td><td onclick="speakMessage('Present')" style="cursor:pointer;">/ˈprezənt/ 🔊</td><td>Adjective/Noun/Verb</td><td>Hadiah/Memberikan</td></tr>
+        <tr><td class="highlight-column">608</td><td>Pretty</td><td onclick="speakMessage('Pretty')" style="cursor:pointer;">/ˈprɪti/ 🔊</td><td>Adjective</td><td>Cantik</td></tr>
+        <tr><td class="highlight-column">609</td><td>Price</td><td onclick="speakMessage('Price')" style="cursor:pointer;">/praɪs/ 🔊</td><td>Noun</td><td>Harga</td></tr>
+        <tr><td class="highlight-column">610</td><td>Probably</td><td onclick="speakMessage('Probably')" style="cursor:pointer;">/ˈprɒbəbli/ 🔊</td><td>Adverb</td><td>Mungkin</td></tr>
+        <tr><td class="highlight-column">611</td><td>Problem</td><td onclick="speakMessage('Problem')" style="cursor:pointer;">/ˈprɒbləm/ 🔊</td><td>Noun</td><td>Masalah</td></tr>
+        <tr><td class="highlight-column">612</td><td>Product</td><td onclick="speakMessage('Product')" style="cursor:pointer;">/ˈprɒdʌkt/ 🔊</td><td>Noun</td><td>Produk</td></tr>
+        <tr><td class="highlight-column">613</td><td>Programme</td><td onclick="speakMessage('Programme')" style="cursor:pointer;">/ˈprəʊɡræm/ 🔊</td><td>Noun/Verb</td><td>Program</td></tr>
+        <tr><td class="highlight-column">614</td><td>Project</td><td onclick="speakMessage('Project')" style="cursor:pointer;">/ˈprɒdʒɪkt/ 🔊</td><td>Noun</td><td>Proyek</td></tr>
+        <tr><td class="highlight-column">615</td><td>Purple</td><td onclick="speakMessage('Purple')" style="cursor:pointer;">/ˈpɜːrpl/ 🔊</td><td>Adjective/Noun</td><td>Ungu</td></tr>
+        <tr><td class="highlight-column">616</td><td>Put</td><td onclick="speakMessage('Put')" style="cursor:pointer;">/pʊt/ 🔊</td><td>Verb</td><td>Meletakkan</td></tr>
+        <tr><td class="highlight-column">617</td><td>Quarter</td><td onclick="speakMessage('Quarter')" style="cursor:pointer;">/ˈkwɔːtər/ 🔊</td><td>Noun</td><td>Kuartal</td></tr>
+        <tr><td class="highlight-column">618</td><td>Question</td><td onclick="speakMessage('Question')" style="cursor:pointer;">/ˈkwɛsʧən/ 🔊</td><td>Noun</td><td>Pertanyaan</td></tr>
+        <tr><td class="highlight-column">619</td><td>Quick</td><td onclick="speakMessage('Quick')" style="cursor:pointer;">/kwɪk/ 🔊</td><td>Adjective</td><td>Cepat</td></tr>
+        <tr><td class="highlight-column">620</td><td>Quickly</td><td onclick="speakMessage('Quickly')" style="cursor:pointer;">/ˈkwɪkli/ 🔊</td><td>Adverb</td><td>Dengan cepat</td></tr>
+        <tr><td class="highlight-column">621</td><td>Quiet</td><td onclick="speakMessage('Quiet')" style="cursor:pointer;">/ˈkwaɪət/ 🔊</td><td>Adjective</td><td>Tenang</td></tr>
+        <tr><td class="highlight-column">622</td><td>Quite</td><td onclick="speakMessage('Quite')" style="cursor:pointer;">/kwaɪt/ 🔊</td><td>Adverb</td><td>Cukup</td></tr>
+        <tr><td class="highlight-column">623</td><td>Radio</td><td onclick="speakMessage('Radio')" style="cursor:pointer;">/ˈreɪdiəʊ/ 🔊</td><td>Noun</td><td>Radio</td></tr>
+        <tr><td class="highlight-column">624</td><td>Rain</td><td onclick="speakMessage('Rain')" style="cursor:pointer;">/reɪn/ 🔊</td><td>Noun/Verb</td><td>Hujan/Menurunkan hujan</td></tr>
+        <tr><td class="highlight-column">625</td><td>Read</td><td onclick="speakMessage('Read')" style="cursor:pointer;">/riːd/ 🔊</td><td>Verb</td><td>Membaca</td></tr>
+        <tr><td class="highlight-column">626</td><td>Reader</td><td onclick="speakMessage('Reader')" style="cursor:pointer;">/ˈriːdər/ 🔊</td><td>Noun</td><td>Pembaca</td></tr>
+        <tr><td class="highlight-column">627</td><td>Reading</td><td onclick="speakMessage('Reading')" style="cursor:pointer;">/ˈriːdɪŋ/ 🔊</td><td>Noun</td><td>Membaca</td></tr>
+        <tr><td class="highlight-column">628</td><td>Ready</td><td onclick="speakMessage('Ready')" style="cursor:pointer;">/ˈrɛdi/ 🔊</td><td>Adjective</td><td>Siap</td></tr>
+        <tr><td class="highlight-column">629</td><td>Real</td><td onclick="speakMessage('Real')" style="cursor:pointer;">/rɪəl/ 🔊</td><td>Adjective</td><td>Nyata</td></tr>
+        <tr><td class="highlight-column">630</td><td>Really</td><td onclick="speakMessage('Really')" style="cursor:pointer;">/ˈrɪəli/ 🔊</td><td>Adverb</td><td>Sungguh</td></tr>
+        <tr><td class="highlight-column">631</td><td>Reason</td><td onclick="speakMessage('Reason')" style="cursor:pointer;">/ˈriːzən/ 🔊</td><td>Noun</td><td>Alasan</td></tr>
+        <tr><td class="highlight-column">632</td><td>Red</td><td onclick="speakMessage('Red')" style="cursor:pointer;">/rɛd/ 🔊</td><td>Adjective/Noun</td><td>Merah</td></tr>
+        <tr><td class="highlight-column">633</td><td>Relax</td><td onclick="speakMessage('Relax')" style="cursor:pointer;">/rɪˈlæks/ 🔊</td><td>Verb</td><td>Bersantai</td></tr>
+        <tr><td class="highlight-column">634</td><td>Remember</td><td onclick="speakMessage('Remember')" style="cursor:pointer;">/rɪˈmɛmbər/ 🔊</td><td>Verb</td><td>Ingat</td></tr>
+        <tr><td class="highlight-column">635</td><td>Repeat</td><td onclick="speakMessage('Repeat')" style="cursor:pointer;">/rɪˈpiːt/ 🔊</td><td>Verb</td><td>Ulangi</td></tr>
+        <tr><td class="highlight-column">636</td><td>Report</td><td onclick="speakMessage('Report')" style="cursor:pointer;">/rɪˈpɔːrt/ 🔊</td><td>Noun/Verb</td><td>Laporan</td></tr>
+        <tr><td class="highlight-column">637</td><td>Restaurant</td><td onclick="speakMessage('Restaurant')" style="cursor:pointer;">/ˈrɛstərɒnt/ 🔊</td><td>Noun</td><td>Restoran</td></tr>
+        <tr><td class="highlight-column">638</td><td>Result</td><td onclick="speakMessage('Result')" style="cursor:pointer;">/rɪˈzʌlt/ 🔊</td><td>Noun</td><td>Hasil</td></tr>
+        <tr><td class="highlight-column">639</td><td>Return</td><td onclick="speakMessage('Return')" style="cursor:pointer;">/rɪˈtɜːrn/ 🔊</td><td>Verb</td><td>Kembali</td></tr>
+        <tr><td class="highlight-column">640</td><td>Rice</td><td onclick="speakMessage('Rice')" style="cursor:pointer;">/raɪs/ 🔊</td><td>Noun</td><td>Beras</td></tr>
+        <tr><td class="highlight-column">641</td><td>Rich</td><td onclick="speakMessage('Rich')" style="cursor:pointer;">/rɪʧ/ 🔊</td><td>Adjective</td><td>Kaya</td></tr>
+        <tr><td class="highlight-column">642</td><td>Ride</td><td onclick="speakMessage('Ride')" style="cursor:pointer;">/raɪd/ 🔊</td><td>Verb/Noun</td><td>Naik</td></tr>
+        <tr><td class="highlight-column">643</td><td>Right</td><td onclick="speakMessage('Right')" style="cursor:pointer;">/raɪt/ 🔊</td><td>Adjective/Adverb</td><td>Benar</td></tr>
+        <tr><td class="highlight-column">644</td><td>River</td><td onclick="speakMessage('River')" style="cursor:pointer;">/ˈrɪvər/ 🔊</td><td>Noun</td><td>Sungai</td></tr>
+        <tr><td class="highlight-column">645</td><td>Road</td><td onclick="speakMessage('Road')" style="cursor:pointer;">/roʊd/ 🔊</td><td>Noun</td><td>Jalan</td></tr>
+        <tr><td class="highlight-column">646</td><td>Room</td><td onclick="speakMessage('Room')" style="cursor:pointer;">/ruːm/ 🔊</td><td>Noun</td><td>Kamar</td></tr>
+        <tr><td class="highlight-column">647</td><td>Routine</td><td onclick="speakMessage('Routine')" style="cursor:pointer;">/ruːˈtiːn/ 🔊</td><td>Noun</td><td>Rutinitas</td></tr>
+        <tr><td class="highlight-column">648</td><td>Rule</td><td onclick="speakMessage('Rule')" style="cursor:pointer;">/ruːl/ 🔊</td><td>Noun</td><td>Aturan</td></tr>
+        <tr><td class="highlight-column">649</td><td>Run</td><td onclick="speakMessage('Run')" style="cursor:pointer;">/rʌn/ 🔊</td><td>Verb</td><td>Berlari</td></tr>
+        <tr><td class="highlight-column">650</td><td>Sad</td><td onclick="speakMessage('Sad')" style="cursor:pointer;">/sæd/ 🔊</td><td>Adjective</td><td>Sedih</td></tr>
+        <tr><td class="highlight-column">651</td><td>Salad</td><td onclick="speakMessage('Salad')" style="cursor:pointer;">/ˈsæləd/ 🔊</td><td>Noun</td><td>Salad</td></tr>
+        <tr><td class="highlight-column">652</td><td>Salt</td><td onclick="speakMessage('Salt')" style="cursor:pointer;">/sɔːlt/ 🔊</td><td>Noun</td><td>Garam</td></tr>
+        <tr><td class="highlight-column">653</td><td>Same</td><td onclick="speakMessage('Same')" style="cursor:pointer;">/seɪm/ 🔊</td><td>Adjective</td><td>Sama</td></tr>
+        <tr><td class="highlight-column">654</td><td>Sandwich</td><td onclick="speakMessage('Sandwich')" style="cursor:pointer;">/ˈsændwɪʧ/ 🔊</td><td>Noun</td><td>Sandwich</td></tr>
+        <tr><td class="highlight-column">655</td><td>Saturday</td><td onclick="speakMessage('Saturday')" style="cursor:pointer;">/ˈsætərdeɪ/ 🔊</td><td>Noun</td><td>Sabtu</td></tr>
+        <tr><td class="highlight-column">656</td><td>Say</td><td onclick="speakMessage('Say')" style="cursor:pointer;">/seɪ/ 🔊</td><td>Verb</td><td>Berbicara</td></tr>
+        <tr><td class="highlight-column">657</td><td>School</td><td onclick="speakMessage('School')" style="cursor:pointer;">/skuːl/ 🔊</td><td>Noun</td><td>Sekolah</td></tr>
+        <tr><td class="highlight-column">658</td><td>Science</td><td onclick="speakMessage('Science')" style="cursor:pointer;">/ˈsaɪəns/ 🔊</td><td>Noun</td><td>Ilmu Pengetahuan</td></tr>
+        <tr><td class="highlight-column">659</td><td>Scientist</td><td onclick="speakMessage('Scientist')" style="cursor:pointer;">/ˈsaɪəntɪst/ 🔊</td><td>Noun</td><td>Ilmuwan</td></tr>
+        <tr><td class="highlight-column">660</td><td>Sea</td><td onclick="speakMessage('Sea')" style="cursor:pointer;">/siː/ 🔊</td><td>Noun</td><td>Laut</td></tr>
+        <tr><td class="highlight-column">661</td><td>Second</td><td onclick="speakMessage('Second')" style="cursor:pointer;">/ˈsɛkənd/ 🔊</td><td>Noun/Adjective</td><td>Detik/Kedua</td></tr>
+        <tr><td class="highlight-column">662</td><td>Second</td><td onclick="speakMessage('Second')" style="cursor:pointer;">/ˈsɛkənd/ 🔊</td><td>Adjective</td><td>Kedua</td></tr>
+        <tr><td class="highlight-column">663</td><td>Section</td><td onclick="speakMessage('Section')" style="cursor:pointer;">/ˈsɛkʃən/ 🔊</td><td>Noun</td><td>Bagian</td></tr>
+        <tr><td class="highlight-column">664</td><td>See</td><td onclick="speakMessage('See')" style="cursor:pointer;">/siː/ 🔊</td><td>Verb</td><td>Melihat</td></tr>
+        <tr><td class="highlight-column">665</td><td>Sell</td><td onclick="speakMessage('Sell')" style="cursor:pointer;">/sɛl/ 🔊</td><td>Verb</td><td>Menjual</td></tr>
+        <tr><td class="highlight-column">666</td><td>Send</td><td onclick="speakMessage('Send')" style="cursor:pointer;">/sɛnd/ 🔊</td><td>Verb</td><td>Mengirim</td></tr>
+        <tr><td class="highlight-column">667</td><td>Sentence</td><td onclick="speakMessage('Sentence')" style="cursor:pointer;">/ˈsɛntəns/ 🔊</td><td>Noun</td><td>Kalimat</td></tr>
+        <tr><td class="highlight-column">668</td><td>September</td><td onclick="speakMessage('September')" style="cursor:pointer;">/sɛpˈtɛmbər/ 🔊</td><td>Noun</td><td>September</td></tr>
+        <tr><td class="highlight-column">669</td><td>Seven</td><td onclick="speakMessage('Seven')" style="cursor:pointer;">/ˈsɛvən/ 🔊</td><td>Number</td><td>Tujuh</td></tr>
+        <tr><td class="highlight-column">670</td><td>Seventeen</td><td onclick="speakMessage('Seventeen')" style="cursor:pointer;">/ˈsɛvənˌtiːn/ 🔊</td><td>Number</td><td>Tujuh Belas</td></tr>
+        <tr><td class="highlight-column">671</td><td>Seventy</td><td onclick="speakMessage('Seventy')" style="cursor:pointer;">/ˈsɛvənˌti/ 🔊</td><td>Number</td><td>Tujuh Puluh</td></tr>
+        <tr><td class="highlight-column">672</td><td>Share</td><td onclick="speakMessage('Share')" style="cursor:pointer;">/ʃɛr/ 🔊</td><td>Verb</td><td>Berbagi</td></tr>
+        <tr><td class="highlight-column">673</td><td>She</td><td onclick="speakMessage('She')" style="cursor:pointer;">/ʃiː/ 🔊</td><td>Pronoun</td><td>Dia (perempuan)</td></tr>
+        <tr><td class="highlight-column">674</td><td>Sheep</td><td onclick="speakMessage('Sheep')" style="cursor:pointer;">/ʃiːp/ 🔊</td><td>Noun</td><td>Domba</td></tr>
+        <tr><td class="highlight-column">675</td><td>Shirt</td><td onclick="speakMessage('Shirt')" style="cursor:pointer;">/ʃɜːrt/ 🔊</td><td>Noun</td><td>Kemeja</td></tr>
+        <tr><td class="highlight-column">676</td><td>Shoe</td><td onclick="speakMessage('Shoe')" style="cursor:pointer;">/ʃuː/ 🔊</td><td>Noun</td><td>Sepatu</td></tr>
+        <tr><td class="highlight-column">677</td><td>Shop</td><td onclick="speakMessage('Shop')" style="cursor:pointer;">/ʃɒp/ 🔊</td><td>Noun/Verb</td><td>Toko/Berbelanja</td></tr>
+        <tr><td class="highlight-column">678</td><td>Shopping</td><td onclick="speakMessage('Shopping')" style="cursor:pointer;">/ˈʃɒpɪŋ/ 🔊</td><td>Noun</td><td>Berbelanja</td></tr>
+        <tr><td class="highlight-column">679</td><td>Short</td><td onclick="speakMessage('Short')" style="cursor:pointer;">/ʃɔːrt/ 🔊</td><td>Adjective</td><td>Pendek</td></tr>
+        <tr><td class="highlight-column">680</td><td>Should</td><td onclick="speakMessage('Should')" style="cursor:pointer;">/ʃʊd/ 🔊</td><td>Modal verb</td><td>Seharusnya</td></tr>
+        <tr><td class="highlight-column">681</td><td>Show</td><td onclick="speakMessage('Show')" style="cursor:pointer;">/ʃoʊ/ 🔊</td><td>Verb/Noun</td><td>Menunjukkan/Tampilkan</td></tr>
+        <tr><td class="highlight-column">682</td><td>Shower</td><td onclick="speakMessage('Shower')" style="cursor:pointer;">/ˈʃaʊər/ 🔊</td><td>Noun/Verb</td><td>Pancuran/Mandi</td></tr>
+        <tr><td class="highlight-column">683</td><td>Sick</td><td onclick="speakMessage('Sick')" style="cursor:pointer;">/sɪk/ 🔊</td><td>Adjective</td><td>Sakit</td></tr>
+        <tr><td class="highlight-column">684</td><td>Similar</td><td onclick="speakMessage('Similar')" style="cursor:pointer;">/ˈsɪmɪlər/ 🔊</td><td>Adjective</td><td>Mirip</td></tr>
+        <tr><td class="highlight-column">685</td><td>Sing</td><td onclick="speakMessage('Sing')" style="cursor:pointer;">/sɪŋ/ 🔊</td><td>Verb</td><td>Menyanyi</td></tr>
+        <tr><td class="highlight-column">686</td><td>Singer</td><td onclick="speakMessage('Singer')" style="cursor:pointer;">/ˈsɪŋər/ 🔊</td><td>Noun</td><td>Penyanyi</td></tr>
+        <tr><td class="highlight-column">687</td><td>Sister</td><td onclick="speakMessage('Sister')" style="cursor:pointer;">/ˈsɪstər/ 🔊</td><td>Noun</td><td>Saudara Perempuan</td></tr>
+        <tr><td class="highlight-column">688</td><td>Sit</td><td onclick="speakMessage('Sit')" style="cursor:pointer;">/sɪt/ 🔊</td><td>Verb</td><td>Duduk</td></tr>
+        <tr><td class="highlight-column">689</td><td>Situation</td><td onclick="speakMessage('Situation')" style="cursor:pointer;">/ˌsɪtʃuˈeɪʃən/ 🔊</td><td>Noun</td><td>Situasi</td></tr>
+        <tr><td class="highlight-column">690</td><td>Six</td><td onclick="speakMessage('Six')" style="cursor:pointer;">/sɪks/ 🔊</td><td>Number</td><td>Enam</td></tr>
+        <tr><td class="highlight-column">691</td><td>Sixteen</td><td onclick="speakMessage('Sixteen')" style="cursor:pointer;">/ˈsɪkstiːn/ 🔊</td><td>Number</td><td>Enambelas</td></tr>
+        <tr><td class="highlight-column">692</td><td>Sixty</td><td onclick="speakMessage('Sixty')" style="cursor:pointer;">/ˈsɪksti/ 🔊</td><td>Number</td><td>Enam puluh</td></tr>
+        <tr><td class="highlight-column">693</td><td>Skill</td><td onclick="speakMessage('Skill')" style="cursor:pointer;">/skɪl/ 🔊</td><td>Noun</td><td>Keahlian</td></tr>
+        <tr><td class="highlight-column">694</td><td>Skirt</td><td onclick="speakMessage('Skirt')" style="cursor:pointer;">/skɜːrt/ 🔊</td><td>Noun</td><td>Rok</td></tr>
+        <tr><td class="highlight-column">695</td><td>Sleep</td><td onclick="speakMessage('Sleep')" style="cursor:pointer;">/sliːp/ 🔊</td><td>Verb/Noun</td><td>Tidur</td></tr>
+        <tr><td class="highlight-column">696</td><td>Slow</td><td onclick="speakMessage('Slow')" style="cursor:pointer;">/sloʊ/ 🔊</td><td>Adjective/Verb</td><td>Lambat</td></tr>
+        <tr><td class="highlight-column">697</td><td>Small</td><td onclick="speakMessage('Small')" style="cursor:pointer;">/smɔːl/ 🔊</td><td>Adjective</td><td>Kecil</td></tr>
+        <tr><td class="highlight-column">698</td><td>Snake</td><td onclick="speakMessage('Snake')" style="cursor:pointer;">/sneɪk/ 🔊</td><td>Noun</td><td>Ular</td></tr>
+        <tr><td class="highlight-column">699</td><td>Snow</td><td onclick="speakMessage('Snow')" style="cursor:pointer;">/snoʊ/ 🔊</td><td>Noun/Verb</td><td>Salju</td></tr>
+        <tr><td class="highlight-column">700</td><td>So</td><td onclick="speakMessage('So')" style="cursor:pointer;">/soʊ/ 🔊</td><td>Adverb</td><td>Jadi</td></tr>
+        <tr><td class="highlight-column">701</td><td>Some</td><td onclick="speakMessage('Some')" style="cursor:pointer;">/sʌm/ 🔊</td><td>Pronoun/Adjective</td><td>Beberapa</td></tr>
+        <tr><td class="highlight-column">702</td><td>Somebody</td><td onclick="speakMessage('Somebody')" style="cursor:pointer;">/ˈsʌmbədi/ 🔊</td><td>Pronoun</td><td>Seseorang</td></tr>
+        <tr><td class="highlight-column">703</td><td>Someone</td><td onclick="speakMessage('Someone')" style="cursor:pointer;">/ˈsʌmwʌn/ 🔊</td><td>Pronoun</td><td>Seseorang</td></tr>
+        <tr><td class="highlight-column">704</td><td>Something</td><td onclick="speakMessage('Something')" style="cursor:pointer;">/ˈsʌmθɪŋ/ 🔊</td><td>Pronoun</td><td>Sesuatunya</td></tr>
+        <tr><td class="highlight-column">705</td><td>Sometimes</td><td onclick="speakMessage('Sometimes')" style="cursor:pointer;">/ˈsʌmtaɪmz/ 🔊</td><td>Adverb</td><td>Terkadang</td></tr>
+        <tr><td class="highlight-column">706</td><td>Son</td><td onclick="speakMessage('Son')" style="cursor:pointer;">/sʌn/ 🔊</td><td>Noun</td><td>Anak Laki-Laki</td></tr>
+        <tr><td class="highlight-column">707</td><td>Song</td><td onclick="speakMessage('Song')" style="cursor:pointer;">/sɔːŋ/ 🔊</td><td>Noun</td><td>Lagu</td></tr>
+        <tr><td class="highlight-column">708</td><td>Soon</td><td onclick="speakMessage('Soon')" style="cursor:pointer;">/suːn/ 🔊</td><td>Adverb</td><td>Segera</td></tr>
+        <tr><td class="highlight-column">709</td><td>Sorry</td><td onclick="speakMessage('Sorry')" style="cursor:pointer;">/ˈsɔːri/ 🔊</td><td>Adjective</td><td>Maaf</td></tr>
+        <tr><td class="highlight-column">710</td><td>Sound</td><td onclick="speakMessage('Sound')" style="cursor:pointer;">/saʊnd/ 🔊</td><td>Noun/Verb</td><td>Suara/Mendengar</td></tr>
+        <tr><td class="highlight-column">711</td><td>Soup</td><td onclick="speakMessage('Soup')" style="cursor:pointer;">/suːp/ 🔊</td><td>Noun</td><td>Sup</td></tr>
+        <tr><td class="highlight-column">712</td><td>South</td><td onclick="speakMessage('South')" style="cursor:pointer;">/saʊθ/ 🔊</td><td>Noun/Adjective</td><td>Selatan</td></tr>
+        <tr><td class="highlight-column">713</td><td>Space</td><td onclick="speakMessage('Space')" style="cursor:pointer;">/speɪs/ 🔊</td><td>Noun</td><td>Ruang</td></tr>
+        <tr><td class="highlight-column">714</td><td>Speak</td><td onclick="speakMessage('Speak')" style="cursor:pointer;">/spiːk/ 🔊</td><td>Verb</td><td>Berbicara</td></tr>
+        <tr><td class="highlight-column">715</td><td>Special</td><td onclick="speakMessage('Special')" style="cursor:pointer;">/ˈspɛʃəl/ 🔊</td><td>Adjective</td><td>Istimewa</td></tr>
+        <tr><td class="highlight-column">716</td><td>Spell</td><td onclick="speakMessage('Spell')" style="cursor:pointer;">/spɛl/ 🔊</td><td>Verb</td><td>Mengeja</td></tr>
+        <tr><td class="highlight-column">717</td><td>Spelling</td><td onclick="speakMessage('Spelling')" style="cursor:pointer;">/ˈspɛlɪŋ/ 🔊</td><td>Noun</td><td>Ejaan</td></tr>
+        <tr><td class="highlight-column">718</td><td>Spend</td><td onclick="speakMessage('Spend')" style="cursor:pointer;">/spɛnd/ 🔊</td><td>Verb</td><td>Menghabiskan</td></tr>
+        <tr><td class="highlight-column">719</td><td>Sport</td><td onclick="speakMessage('Sport')" style="cursor:pointer;">/spɔːrt/ 🔊</td><td>Noun</td><td>Olahraga</td></tr>
+        <tr><td class="highlight-column">720</td><td>Spring</td><td onclick="speakMessage('Spring')" style="cursor:pointer;">/sprɪŋ/ 🔊</td><td>Noun</td><td>Musim Semi</td></tr>
+        <tr><td class="highlight-column">721</td><td>Stand</td><td onclick="speakMessage('Stand')" style="cursor:pointer;">/stænd/ 🔊</td><td>Verb</td><td>Berstandar</td></tr>
+        <tr><td class="highlight-column">722</td><td>Star</td><td onclick="speakMessage('Star')" style="cursor:pointer;">/stɑːr/ 🔊</td><td>Noun</td><td>Bintang</td></tr>
+        <tr><td class="highlight-column">723</td><td>Start</td><td onclick="speakMessage('Start')" style="cursor:pointer;">/stɑːrt/ 🔊</td><td>Verb</td><td>Mulai</td></tr>
+        <tr><td class="highlight-column">724</td><td>Statement</td><td onclick="speakMessage('Statement')" style="cursor:pointer;">/ˈsteɪtmənt/ 🔊</td><td>Noun</td><td>Pernyataan</td></tr>
+        <tr><td class="highlight-column">725</td><td>Station</td><td onclick="speakMessage('Station')" style="cursor:pointer;">/ˈsteɪʃən/ 🔊</td><td>Noun</td><td>Stasiun</td></tr>
+        <tr><td class="highlight-column">726</td><td>Stay</td><td onclick="speakMessage('Stay')" style="cursor:pointer;">/steɪ/ 🔊</td><td>Verb</td><td>Tinggal</td></tr>
+        <tr><td class="highlight-column">727</td><td>Still</td><td onclick="speakMessage('Still')" style="cursor:pointer;">/stɪl/ 🔊</td><td>Adjective/Adverb</td><td>Masih</td></tr>
+        <tr><td class="highlight-column">728</td><td>Stop</td><td onclick="speakMessage('Stop')" style="cursor:pointer;">/stɑːp/ 🔊</td><td>Verb</td><td>Berhenti</td></tr>
+        <tr><td class="highlight-column">729</td><td>Story</td><td onclick="speakMessage('Story')" style="cursor:pointer;">/ˈstɔːri/ 🔊</td><td>Noun</td><td>Cerita</td></tr>
+        <tr><td class="highlight-column">730</td><td>Street</td><td onclick="speakMessage('Street')" style="cursor:pointer;">/striːt/ 🔊</td><td>Noun</td><td>Jalan</td></tr>
+        <tr><td class="highlight-column">731</td><td>Strong</td><td onclick="speakMessage('Strong')" style="cursor:pointer;">/strɔːŋ/ 🔊</td><td>Adjective</td><td>Kuat</td></tr>
+        <tr><td class="highlight-column">732</td><td>Student</td><td onclick="speakMessage('Student')" style="cursor:pointer;">/ˈstuːdənt/ 🔊</td><td>Noun</td><td>Siswa</td></tr>
+        <tr><td class="highlight-column">733</td><td>Study</td><td onclick="speakMessage('Study')" style="cursor:pointer;">/ˈstʌdi/ 🔊</td><td>Verb</td><td>Belajar</td></tr>
+        <tr><td class="highlight-column">734</td><td>Style</td><td onclick="speakMessage('Style')" style="cursor:pointer;">/staɪl/ 🔊</td><td>Noun</td><td>Gaya</td></tr>
+        <tr><td class="highlight-column">735</td><td>Subject</td><td onclick="speakMessage('Subject')" style="cursor:pointer;">/ˈsʌbdʒɪkt/ 🔊</td><td>Noun</td><td>Mata Pelajaran</td></tr>
+        <tr><td class="highlight-column">736</td><td>Success</td><td onclick="speakMessage('Success')" style="cursor:pointer;">/səkˈsɛs/ 🔊</td><td>Noun</td><td>Kesuksesan</td></tr>
+        <tr><td class="highlight-column">737</td><td>Sugar</td><td onclick="speakMessage('Sugar')" style="cursor:pointer;">/ˈʃʊɡər/ 🔊</td><td>Noun</td><td>Gula</td></tr>
+        <tr><td class="highlight-column">738</td><td>Summer</td><td onclick="speakMessage('Summer')" style="cursor:pointer;">/ˈsʌmər/ 🔊</td><td>Noun</td><td>Musim Panas</td></tr>
+        <tr><td class="highlight-column">739</td><td>Sun</td><td onclick="speakMessage('Sun')" style="cursor:pointer;">/sʌn/ 🔊</td><td>Noun</td><td>Matahari</td></tr>
+        <tr><td class="highlight-column">740</td><td>Sunday</td><td onclick="speakMessage('Sunday')" style="cursor:pointer;">/ˈsʌndeɪ/ 🔊</td><td>Noun</td><td>Hari Minggu</td></tr>
+        <tr><td class="highlight-column">741</td><td>Supermarket</td><td onclick="speakMessage('Supermarket')" style="cursor:pointer;">/ˈsuːpərˌmɑːrkɪt/ 🔊</td><td>Noun</td><td>Supermarket</td></tr>
+        <tr><td class="highlight-column">742</td><td>Sure</td><td onclick="speakMessage('Sure')" style="cursor:pointer;">/ʃʊr/ 🔊</td><td>Adjective</td><td>Pasti</td></tr>
+        <tr><td class="highlight-column">743</td><td>Sweater</td><td onclick="speakMessage('Sweater')" style="cursor:pointer;">/ˈswɛtər/ 🔊</td><td>Noun</td><td/Sweater</td></tr>
+        <tr><td class="highlight-column">744</td><td>Swim</td><td onclick="speakMessage('Swim')" style="cursor:pointer;">/swɪm/ 🔊</td><td>Verb</td><td>Mendukung
+          <tr><td class="highlight-column">745</td><td>Swimming</td><td onclick="speakMessage('Swimming')" style="cursor:pointer;">/ˈswɪmɪŋ/ 🔊</td><td>Noun</td><td>Renang</td></tr>
+          <tr><td class="highlight-column">746</td><td>Table</td><td onclick="speakMessage('Table')" style="cursor:pointer;">/ˈteɪbəl/ 🔊</td><td>Noun</td><td>Meja</td></tr>
+          <tr><td class="highlight-column">747</td><td>Take</td><td onclick="speakMessage('Take')" style="cursor:pointer;">/teɪk/ 🔊</td><td>Verb</td><td>Mengambil</td></tr>
+          <tr><td class="highlight-column">748</td><td>Talk</td><td onclick="speakMessage('Talk')" style="cursor:pointer;">/tɔːk/ 🔊</td><td>Verb</td><td>Berbicara</td></tr>
+          <tr><td class="highlight-column">749</td><td>Tall</td><td onclick="speakMessage('Tall')" style="cursor:pointer;">/tɔːl/ 🔊</td><td>Adjective</td><td>Tinggi</td></tr>
+          <tr><td class="highlight-column">750</td><td>Taxi</td><td onclick="speakMessage('Taxi')" style="cursor:pointer;">/ˈtæksi/ 🔊</td><td>Noun</td><td>Taksi</td></tr>
+          <tr><td class="highlight-column">751</td><td>Tea</td><td onclick="speakMessage('Tea')" style="cursor:pointer;">/tiː/ 🔊</td><td>Noun</td><td>Teh</td></tr>
+          <tr><td class="highlight-column">752</td><td>Teach</td><td onclick="speakMessage('Teach')" style="cursor:pointer;">/tiːtʃ/ 🔊</td><td>Verb</td><td>Mengajar</td></tr>
+          <tr><td class="highlight-column">753</td><td>Teacher</td><td onclick="speakMessage('Teacher')" style="cursor:pointer;">/ˈtiːtʃər/ 🔊</td><td>Noun</td><td>Guru</td></tr>
+          <tr><td class="highlight-column">754</td><td>Team</td><td onclick="speakMessage('Team')" style="cursor:pointer;">/tiːm/ 🔊</td><td>Noun</td><td>Tim</td></tr>
+          <tr><td class="highlight-column">755</td><td>Teenager</td><td onclick="speakMessage('Teenager')" style="cursor:pointer;">/ˈtiːneɪdʒər/ 🔊</td><td>Noun</td><td>Anak Remaja</td></tr>
+          <tr><td class="highlight-column">756</td><td>Telephone</td><td onclick="speakMessage('Telephone')" style="cursor:pointer;">/ˈtɛlɪfəʊn/ 🔊</td><td>Noun</td><td>Telepon</td></tr>
+          <tr><td class="highlight-column">757</td><td>Television</td><td onclick="speakMessage('Television')" style="cursor:pointer;">/ˈtɛlɪˌvɪʒən/ 🔊</td><td>Noun</td><td>Televisi</td></tr>
+          <tr><td class="highlight-column">758</td><td>Tell</td><td onclick="speakMessage('Tell')" style="cursor:pointer;">/tɛl/ 🔊</td><td>Verb</td><td>Memberitahu</td></tr>
+          <tr><td class="highlight-column">759</td><td>Ten</td><td onclick="speakMessage('Ten')" style="cursor:pointer;">/tɛn/ 🔊</td><td>Number</td><td>Sepuluh</td></tr>
+          <tr><td class="highlight-column">760</td><td>Tennis</td><td onclick="speakMessage('Tennis')" style="cursor:pointer;">/ˈtɛnɪs/ 🔊</td><td>Noun</td><td>Tenis</td></tr>
+          <tr><td class="highlight-column">761</td><td>Terrible</td><td onclick="speakMessage('Terrible')" style="cursor:pointer;">/ˈtɛrɪbəl/ 🔊</td><td>Adjective</td><td>Mengerikan</td></tr>
+          <tr><td class="highlight-column">762</td><td>Test</td><td onclick="speakMessage('Test')" style="cursor:pointer;">/tɛst/ 🔊</td><td>Noun/Verb</td><td>Ujian/Menguji</td></tr>
+          <tr><td class="highlight-column">763</td><td>Text</td><td onclick="speakMessage('Text')" style="cursor:pointer;">/tɛkst/ 🔊</td><td>Noun</td><td>Teks</td></tr>
+          <tr><td class="highlight-column">764</td><td>Than</td><td onclick="speakMessage('Than')" style="cursor:pointer;">/ðæn/ 🔊</td><td>Conjunction</td><td>Dari</td></tr>
+          <tr><td class="highlight-column">765</td><td>Thank</td><td onclick="speakMessage('Thank')" style="cursor:pointer;">/θæŋk/ 🔊</td><td>Verb</td><td>Terima Kasih</td></tr>
+          <tr><td class="highlight-column">766</td><td>Thanks</td><td onclick="speakMessage('Thanks')" style="cursor:pointer;">/θæŋks/ 🔊</td><td>Interjection</td><td>Terima Kasih</td></tr>
+          <tr><td class="highlight-column">767</td><td>That</td><td onclick="speakMessage('That')" style="cursor:pointer;">/ðæt/ 🔊</td><td>Pronoun/Adjective</td><td>Itu</td></tr>
+          <tr><td class="highlight-column">768</td><td>The</td><td onclick="speakMessage('The')" style="cursor:pointer;">/ðə/ 🔊</td><td>Article</td><td>Yang</td></tr>
+          <tr><td class="highlight-column">769</td><td>Theatre</td><td onclick="speakMessage('Theatre')" style="cursor:pointer;">/ˈθɪətər/ 🔊</td><td>Noun</td><td>Teater</td></tr>
+          <tr><td class="highlight-column">770</td><td>Their</td><td onclick="speakMessage('Their')" style="cursor:pointer;">/ðɛər/ 🔊</td><td>Pronoun</td><td>Mereka</td></tr>
+          <tr><td class="highlight-column">771</td><td>Them</td><td onclick="speakMessage('Them')" style="cursor:pointer;">/ðɛm/ 🔊</td><td>Pronoun</td><td>Mereka</td></tr>
+          <tr><td class="highlight-column">772</td><td>Then</td><td onclick="speakMessage('Then')" style="cursor:pointer;">/ðɛn/ 🔊</td><td>Adverb</td><td>Kemudian</td></tr>
+          <tr><td class="highlight-column">773</td><td>There</td><td onclick="speakMessage('There')" style="cursor:pointer;">/ðɛər/ 🔊</td><td>Adverb</td><td>Di sana</td></tr>
+          <tr><td class="highlight-column">774</td><td>They</td><td onclick="speakMessage('They')" style="cursor:pointer;">/ðeɪ/ 🔊</td><td>Pronoun</td><td>Mereka</td></tr>
+          <tr><td class="highlight-column">775</td><td>Thing</td><td onclick="speakMessage('Thing')" style="cursor:pointer;">/θɪŋ/ 🔊</td><td>Noun</td><td>Barang</td></tr>
+          <tr><td class="highlight-column">776</td><td>Think</td><td onclick="speakMessage('Think')" style="cursor:pointer;">/θɪŋk/ 🔊</td><td>Verb</td><td>Berpikir</td></tr>
+          <tr><td class="highlight-column">777</td><td>Third</td><td onclick="speakMessage('Third')" style="cursor:pointer;">/θɜːrd/ 🔊</td><td>Ordinal Number</td><td>Ketiga</td></tr>
+          <tr><td class="highlight-column">778</td><td>Thirsty</td><td onclick="speakMessage('Thirsty')" style="cursor:pointer;">/ˈθɜːrsti/ 🔊</td><td>Adjective</td><td>Haus</td></tr>
+          <tr><td class="highlight-column">779</td><td>Thirteen</td><td onclick="speakMessage('Thirteen')" style="cursor:pointer;">/ˈθɜːrtiːn/ 🔊</td><td>Number</td><td>Tiga Belas</td></tr>
+          <tr><td class="highlight-column">780</td><td>Thirty</td><td onclick="speakMessage('Thirty')" style="cursor:pointer;">/ˈθɜːrti/ 🔊</td><td>Number</td><td>Tiga Puluh</td></tr>
+          <tr><td class="highlight-column">781</td><td>This</td><td onclick="speakMessage('This')" style="cursor:pointer;">/ðɪs/ 🔊</td><td>Pronoun/Adjective</td><td>Ini</td></tr>
+          <tr><td class="highlight-column">782</td><td>Thousand</td><td onclick="speakMessage('Thousand')" style="cursor:pointer;">/ˈθaʊzənd/ 🔊</td><td>Number</td><td>Seribu</td></tr>
+          <tr><td class="highlight-column">783</td><td>Three</td><td onclick="speakMessage('Three')" style="cursor:pointer;">/θriː/ 🔊</td><td>Number</td><td>Tiga</td></tr>
+          <tr><td class="highlight-column">784</td><td>Through</td><td onclick="speakMessage('Through')" style="cursor:pointer;">/θruː/ 🔊</td><td>Preposition</td><td>Melalui</td></tr>
+          <tr><td class="highlight-column">785</td><td>Thursday</td><td onclick="speakMessage('Thursday')" style="cursor:pointer;">/ˈθɜːrzdeɪ/ 🔊</td><td>Noun</td><td>Kamis</td></tr>
+          <tr><td class="highlight-column">786</td><td>Ticket</td><td onclick="speakMessage('Ticket')" style="cursor:pointer;">/ˈtɪkɪt/ 🔊</td><td>Noun</td><td>Tiket</td></tr>
+          <tr><td class="highlight-column">787</td><td>Time</td><td onclick="speakMessage('Time')" style="cursor:pointer;">/taɪm/ 🔊</td><td>Noun</td><td>Waktu</td></tr>
+          <tr><td class="highlight-column">788</td><td>Tired</td><td onclick="speakMessage('Tired')" style="cursor:pointer;">/ˈtaɪərd/ 🔊</td><td>Adjective</td><td>Lelah</td></tr>
+          <tr><td class="highlight-column">789</td><td>Title</td><td onclick="speakMessage('Title')" style="cursor:pointer;">/ˈtaɪtl/ 🔊</td><td>Noun</td><td>Judul</td></tr>
+          <tr><td class="highlight-column">790</td><td>To</td><td onclick="speakMessage('To')" style="cursor:pointer;">/tuː/ 🔊</td><td>Preposition</td><td>Ke</td></tr>
+          <tr><td class="highlight-column">791</td><td>Today</td><td onclick="speakMessage('Today')" style="cursor:pointer;">/təˈdeɪ/ 🔊</td><td>Adverb</td><td>Hari Ini</td></tr>
+          <tr><td class="highlight-column">792</td><td>Together</td><td onclick="speakMessage('Together')" style="cursor:pointer;">/təˈɡɛðər/ 🔊</td><td>Adverb</td><td>Bersama</td></tr>
+          <tr><td class="highlight-column">793</td><td>Toilet</td><td onclick="speakMessage('Toilet')" style="cursor:pointer;">/ˈtɔɪlət/ 🔊</td><td>Noun</td><td>Kamar Mandi</td></tr>
+          <tr><td class="highlight-column">794</td><td>Tomato</td><td onclick="speakMessage('Tomato')" style="cursor:pointer;">/təˈmeɪtəʊ/ 🔊</td><td>Noun</td><td>Tomat</td></tr>
+          <tr><td class="highlight-column">795</td><td>Tomorrow</td><td onclick="speakMessage('Tomorrow')" style="cursor:pointer;">/təˈmɒroʊ/ 🔊</td><td>Noun/Adverb</td><td>Besok</td></tr>
+          <tr><td class="highlight-column">796</td><td>Tonight</td><td onclick="speakMessage('Tonight')" style="cursor:pointer;">/təˈnaɪt/ 🔊</td><td>Adverb</td><td>Malam Ini</td></tr>
+          <tr><td class="highlight-column">797</td><td>Too</td><td onclick="speakMessage('Too')" style="cursor:pointer;">/tuː/ 🔊</td><td>Adverb</td><td>Terlalu</td></tr>
+          <tr><td class="highlight-column">798</td><td>Tooth</td><td onclick="speakMessage('Tooth')" style="cursor:pointer;">/tuːθ/ 🔊</td><td>Noun</td><td>Gigi</td></tr>
+          <tr><td class="highlight-column">799</td><td>Topic</td><td onclick="speakMessage('Topic')" style="cursor:pointer;">/ˈtɒpɪk/ 🔊</td><td>Noun</td><td>Topik</td></tr>
+          <tr><td class="highlight-column">800</td><td>Tourist</td><td onclick="speakMessage('Tourist')" style="cursor:pointer;">/ˈtʊərɪst/ 🔊</td><td>Noun</td><td>Wisatawan</td></tr>
+          <tr><td class="highlight-column">801</td><td>Town</td><td onclick="speakMessage('Town')" style="cursor:pointer;">/taʊn/ 🔊</td><td>Noun</td><td>Kota</td></tr>
+          <tr><td class="highlight-column">802</td><td>Traffic</td><td onclick="speakMessage('Traffic')" style="cursor:pointer;">/ˈtræfɪk/ 🔊</td><td>Noun</td><td>Lalu Lintas</td></tr>
+          <tr><td class="highlight-column">803</td><td>Train</td><td onclick="speakMessage('Train')" style="cursor:pointer;">/treɪn/ 🔊</td><td>Noun</td><td>Kereta</td></tr>
+          <tr><td class="highlight-column">804</td><td>Travel</td><td onclick="speakMessage('Travel')" style="cursor:pointer;">/ˈtrævəl/ 🔊</td><td>Verb</td><td>Bepergian</td></tr>
+          <tr><td class="highlight-column">805</td><td>Tree</td><td onclick="speakMessage('Tree')" style="cursor:pointer;">/triː/ 🔊</td><td>Noun</td><td>Pohon</td></tr>
+          <tr><td class="highlight-column">806</td><td>Trip</td><td onclick="speakMessage('Trip')" style="cursor:pointer;">/trɪp/ 🔊</td><td>Noun</td><td>Perjalanan</td></tr>
+          <tr><td class="highlight-column">807</td><td>Trousers</td><td onclick="speakMessage('Trousers')" style="cursor:pointer;">/ˈtraʊzərz/ 🔊</td><td>Noun</td><td>Celana Panjang</td></tr>
+          <tr><td class="highlight-column">808</td><td>True</td><td onclick="speakMessage('True')" style="cursor:pointer;">/truː/ 🔊</td><td>Adjective</td><td>Benar</td></tr>
+          <tr><td class="highlight-column">809</td><td>Try</td><td onclick="speakMessage('Try')" style="cursor:pointer;">/traɪ/ 🔊</td><td>Verb</td><td>Mencoba</td></tr>
+          <tr><td class="highlight-column">810</td><td>T-shirt</td><td onclick="speakMessage('T-shirt')" style="cursor:pointer;">/ˈtiːʃɜːrt/ 🔊</td><td>Noun</td><td>kaos</td></tr>
+          <tr><td class="highlight-column">811</td><td>Tuesday</td><td onclick="speakMessage('Tuesday')" style="cursor:pointer;">/ˈtjuːzdeɪ/ 🔊</td><td>Noun</td><td>Selasa</td></tr>
+          <tr><td class="highlight-column">812</td><td>Turn</td><td onclick="speakMessage('Turn')" style="cursor:pointer;">/tɜːrn/ 🔊</td><td>Verb</td><td>Berputar</td></tr>
+          <tr><td class="highlight-column">813</td><td>TV</td><td onclick="speakMessage('TV')" style="cursor:pointer;">/ˈtiːviː/ 🔊</td><td>Noun</td><td>Televisi</td></tr>
+          <tr><td class="highlight-column">814</td><td>Twelve</td><td onclick="speakMessage('Twelve')" style="cursor:pointer;">/twɛlv/ 🔊</td><td>Number</td><td>Duabelas</td></tr>
+          <tr><td class="highlight-column">815</td><td>Twenty</td><td onclick="speakMessage('Twenty')" style="cursor:pointer;">/ˈtwɛnti/ 🔊</td><td>Number</td><td>Duapuluh</td></tr>
+          <tr><td class="highlight-column">816</td><td>Twice</td><td onclick="speakMessage('Twice')" style="cursor:pointer;">/twaɪs/ 🔊</td><td>Adverb</td><td>dua kali</td></tr>
+          <tr><td class="highlight-column">817</td><td>Two</td><td onclick="speakMessage('Two')" style="cursor:pointer;">/tuː/ 🔊</td><td>Number</td><td>dua</td></tr>
+          <tr><td class="highlight-column">818</td><td>Type</td><td onclick="speakMessage('Type')" style="cursor:pointer;">/taɪp/ 🔊</td><td>Noun/Verb</td><td>tipe/mengetik</td></tr>
+          <tr><td class="highlight-column">819</td><td>Umbrella</td><td onclick="speakMessage('Umbrella')" style="cursor:pointer;">/ʌmˈbrɛlə/ 🔊</td><td>Noun</td><td>Payung</td></tr>
+          <tr><td class="highlight-column">820</td><td>Uncle</td><td onclick="speakMessage('Uncle')" style="cursor:pointer;">/ˈʌŋkəl/ 🔊</td><td>Noun</td><td>Paman</td></tr>
+          <tr><td class="highlight-column">821</td><td>Under</td><td onclick="speakMessage('Under')" style="cursor:pointer;">/ˈʌndər/ 🔊</td><td>Preposition</td><td>Di bawah</td></tr>
+          <tr><td class="highlight-column">822</td><td>Understand</td><td onclick="speakMessage('Understand')" style="cursor:pointer;">/ˌʌndərˈstænd/ 🔊</td><td>Verb</td><td>Memahami</td></tr>
+          <tr><td class="highlight-column">823</td><td>University</td><td onclick="speakMessage('University')" style="cursor:pointer;">/ˌjuːnɪˈvɜːrsɪti/ 🔊</td><td>Noun</td><td>Universitas</td></tr>
+          <tr><td class="highlight-column">824</td><td>Until</td><td onclick="speakMessage('Until')" style="cursor:pointer;">/ʌnˈtɪl/ 🔊</td><td>Preposition/Conjunction</td><td>Sampai</td></tr>
+          <tr><td class="highlight-column">825</td><td>Up</td><td onclick="speakMessage('Up')" style="cursor:pointer;">/ʌp/ 🔊</td><td>Preposition/Adverb</td><td>Ke atas</td></tr>
+          <tr><td class="highlight-column">826</td><td>Upstairs</td><td onclick="speakMessage('Upstairs')" style="cursor:pointer;">/ˈʌpˌstɛərz/ 🔊</td><td>Adverb</td><td>Di atas (lantai)</td></tr>
+          <tr><td class="highlight-column">827</td><td>Us</td><td onclick="speakMessage('Us')" style="cursor:pointer;">/ʌs/ 🔊</td><td>Pronoun</td><td>Kami/Kita</td></tr>
+          <tr><td class="highlight-column">828</td><td>Use</td><td onclick="speakMessage('Use')" style="cursor:pointer;">/juːz/ 🔊</td><td>Verb/Noun</td><td>Menggunakan</td></tr>
+          <tr><td class="highlight-column">829</td><td>Useful</td><td onclick="speakMessage('Useful')" style="cursor:pointer;">/ˈjuːsfəl/ 🔊</td><td>Adjective</td><td>Berguna</td></tr>
+          <tr><td class="highlight-column">830</td><td>Usually</td><td onclick="speakMessage('Usually')" style="cursor:pointer;">/ˈjuːʒuəli/ 🔊</td><td>Adverb</td><td>Biasanya</td></tr>
+          <tr><td class="highlight-column">831</td><td>Vacation</td><td onclick="speakMessage('Vacation')" style="cursor:pointer;">/vəˈkeɪʃən/ 🔊</td><td>Noun</td><td>Liburan</td></tr>
+          <tr><td class="highlight-column">832</td><td>Vegetable</td><td onclick="speakMessage('Vegetable')" style="cursor:pointer;">/ˈvɛdʒtəbl/ 🔊</td><td>Noun</td><td>Sayuran</td></tr>
+          <tr><td class="highlight-column">833</td><td>Very</td><td onclick="speakMessage('Very')" style="cursor:pointer;">/ˈvɛri/ 🔊</td><td>Adverb</td><td>Sangat</td></tr>
+          <tr><td class="highlight-column">834</td><td>Video</td><td onclick="speakMessage('Video')" style="cursor:pointer;">/ˈvɪdɪəʊ/ 🔊</td><td>Noun</td><td>Video</td></tr>
+          <tr><td class="highlight-column">835</td><td>Village</td><td onclick="speakMessage('Village')" style="cursor:pointer;">/ˈvɪlɪdʒ/ 🔊</td><td>Noun</td><td>Desa</td></tr>
+          <tr><td class="highlight-column">836</td><td>Visit</td><td onclick="speakMessage('Visit')" style="cursor:pointer;">/ˈvɪzɪt/ 🔊</td><td>Verb/Noun</td><td>Melawat/Kunjungan</td></tr>
+          <tr><td class="highlight-column">837</td><td>Visitor</td><td onclick="speakMessage('Visitor')" style="cursor:pointer;">/ˈvɪzɪtər/ 🔊</td><td>Noun</td><td>Pengunjung</td></tr>
+          <tr><td class="highlight-column">838</td><td>Wait</td><td onclick="speakMessage('Wait')" style="cursor:pointer;">/weɪt/ 🔊</td><td>Verb</td><td>Menunggu</td></tr>
+          <tr><td class="highlight-column">839</td><td>Waiter</td><td onclick="speakMessage('Waiter')" style="cursor:pointer;">/ˈweɪtər/ 🔊</td><td>Noun</td><td>Pelayan</td></tr>
+          <tr><td class="highlight-column">840</td><td>Wake</td><td onclick="speakMessage('Wake')" style="cursor:pointer;">/weɪk/ 🔊</td><td>Verb</td><td>Bangun</td></tr>
+          <tr><td class="highlight-column">841</td><td>Walk</td><td onclick="speakMessage('Walk')" style="cursor:pointer;">/wɔːk/ 🔊</td><td>Verb</td><td>Berjalan</td></tr>
+          <tr><td class="highlight-column">842</td><td>Wall</td><td onclick="speakMessage('Wall')" style="cursor:pointer;">/wɔːl/ 🔊</td><td>Noun</td><td>Dinding</td></tr>
+          <tr><td class="highlight-column">843</td><td>Want</td><td onclick="speakMessage('Want')" style="cursor:pointer;">/wɒnt/ 🔊</td><td>Verb</td><td>Ingin</td></tr>
+          <tr><td class="highlight-column">844</td><td>Warm</td><td onclick="speakMessage('Warm')" style="cursor:pointer;">/wɔːm/ 🔊</td><td>Adjective</td><td>Hangat</td></tr>
+          <tr><td class="highlight-column">845</td><td>Wash</td><td onclick="speakMessage('Wash')" style="cursor:pointer;">/wɒʃ/ 🔊</td><td>Verb</td><td>Mencuci</td></tr>
+          <tr><td class="highlight-column">846</td><td>Watch</td><td onclick="speakMessage('Watch')" style="cursor:pointer;">/wɒtʃ/ 🔊</td><td>Verb/Noun</td><td>Menonton/Arloji</td></tr>
+          <tr><td class="highlight-column">847</td><td>Water</td><td onclick="speakMessage('Water')" style="cursor:pointer;">/ˈwɔːtər/ 🔊</td><td>Noun</td><td>Air</td></tr>
+          <tr><td class="highlight-column">848</td><td>Way</td><td onclick="speakMessage('Way')" style="cursor:pointer;">/weɪ/ 🔊</td><td>Noun</td><td>Jalan/Cara</td></tr>
+          <tr><td class="highlight-column">849</td><td>We</td><td onclick="speakMessage('We')" style="cursor:pointer;">/wiː/ 🔊</td><td>Pronoun</td><td>Kami/Kita</td></tr>
+          <tr><td class="highlight-column">850</td><td>Wear</td><td onclick="speakMessage('Wear')" style="cursor:pointer;">/wɛər/ 🔊</td><td>Verb</td><td>Memakai</td></tr>
+          <tr><td class="highlight-column">851</td><td>Weather</td><td onclick="speakMessage('Weather')" style="cursor:pointer;">/ˈwɛðər/ 🔊</td><td>Noun</td><td>Cuaca</td></tr>
+          <tr><td class="highlight-column">852</td><td>Website</td><td onclick="speakMessage('Website')" style="cursor:pointer;">/ˈwɛbsaɪt/ 🔊</td><td>Noun</td><td>Situs Web</td></tr>
+          <tr><td class="highlight-column">853</td><td>Wednesday</td><td onclick="speakMessage('Wednesday')" style="cursor:pointer;">/ˈwɛdnəsdeɪ/ 🔊</td><td>Noun</td><td>Rabu</td></tr>
+          <tr><td class="highlight-column">854</td><td>Week</td><td onclick="speakMessage('Week')" style="cursor:pointer;">/wiːk/ 🔊</td><td>Noun</td><td>Minggu</td></tr>
+          <tr><td class="highlight-column">855</td><td>Weekend</td><td onclick="speakMessage('Weekend')" style="cursor:pointer;">/ˈwiːkˌɛnd/ 🔊</td><td>Noun</td><td>Akhir Pekan</td></tr>
+          <tr><td class="highlight-column">856</td><td>Welcome</td><td onclick="speakMessage('Welcome')" style="cursor:pointer;">/ˈwɛlkəm/ 🔊</td><td>Verb/Adjective</td><td>Selamat Datang</td></tr>
+          <tr><td class="highlight-column">857</td><td>Well</td><td onclick="speakMessage('Well')" style="cursor:pointer;">/wɛl/ 🔊</td><td>Adverb/Adjective</td><td>Baik</td></tr>
+          <tr><td class="highlight-column">858</td><td>West</td><td onclick="speakMessage('West')" style="cursor:pointer;">/wɛst/ 🔊</td><td>Noun/Adjective</td><td>Barat</td></tr>
+          <tr><td class="highlight-column">859</td><td>Well</td><td onclick="speakMessage('Well')" style="cursor:pointer;">/wɛl/ 🔊</td><td>Adverb/Adjective</td><td>Baik</td></tr>
+          <tr><td class="highlight-column">860</td><td>West</td><td onclick="speakMessage('West')" style="cursor:pointer;">/wɛst/ 🔊</td><td>Noun/Adjective</td><td>Barat</td></tr>
+          <tr><td class="highlight-column">861</td><td>What</td><td onclick="speakMessage('What')" style="cursor:pointer;">/wɒt/ 🔊</td><td>Pronoun/Determiner</td><td>Apa</td></tr>
+          <tr><td class="highlight-column">862</td><td>When</td><td onclick="speakMessage('When')" style="cursor:pointer;">/wɛn/ 🔊</td><td>Adverb/Conjunction</td><td>Kapan</td></tr>
+          <tr><td class="highlight-column">863</td><td>Where</td><td onclick="speakMessage('Where')" style="cursor:pointer;">/wɛə/ 🔊</td><td>Adverb</td><td>Dimana</td></tr>
+          <tr><td class="highlight-column">864</td><td>Which</td><td onclick="speakMessage('Which')" style="cursor:pointer;">/wɪʧ/ 🔊</td><td>Pronoun/Determiner</td><td>Yang mana</td></tr>
+          <tr><td class="highlight-column">865</td><td>White</td><td onclick="speakMessage('White')" style="cursor:pointer;">/waɪt/ 🔊</td><td>Adjective</td><td>Putih</td></tr>
+          <tr><td class="highlight-column">866</td><td>Who</td><td onclick="speakMessage('Who')" style="cursor:pointer;">/huː/ 🔊</td><td>Pronoun</td><td>Siapa</td></tr>
+          <tr><td class="highlight-column">867</td><td>Why</td><td onclick="speakMessage('Why')" style="cursor:pointer;">/waɪ/ 🔊</td><td>Adverb</td><td>Kenapa</td></tr>
+          <tr><td class="highlight-column">868</td><td>Wife</td><td onclick="speakMessage('Wife')" style="cursor:pointer;">/waɪf/ 🔊</td><td>Noun</td><td>Istri</td></tr>
+          <tr><td class="highlight-column">869</td><td>Will</td><td onclick="speakMessage('Will')" style="cursor:pointer;">/wɪl/ 🔊</td><td>Auxiliary Verb</td><td>Akan</td></tr>
+          <tr><td class="highlight-column">870</td><td>Win</td><td onclick="speakMessage('Win')" style="cursor:pointer;">/wɪn/ 🔊</td><td>Verb</td><td>Memenangkan</td></tr>
+          <tr><td class="highlight-column">871</td><td>Window</td><td onclick="speakMessage('Window')" style="cursor:pointer;">/ˈwɪndəʊ/ 🔊</td><td>Noun</td><td>Jendela</td></tr>
+          <tr><td class="highlight-column">872</td><td>Wine</td><td onclick="speakMessage('Wine')" style="cursor:pointer;">/waɪn/ 🔊</td><td>Noun</td><td>Anggur</td></tr>
+          <tr><td class="highlight-column">873</td><td>Winter</td><td onclick="speakMessage('Winter')" style="cursor:pointer;">/ˈwɪntər/ 🔊</td><td>Noun</td><td>Musim dingin</td></tr>
+          <tr><td class="highlight-column">874</td><td>With</td><td onclick="speakMessage('With')" style="cursor:pointer;">/wɪð/ 🔊</td><td>Preposition</td><td>Dengan</td></tr>
+          <tr><td class="highlight-column">875</td><td>Without</td><td onclick="speakMessage('Without')" style="cursor:pointer;">/wɪðˈaʊt/ 🔊</td><td>Preposition</td><td>Tanpa</td></tr>
+          <tr><td class="highlight-column">876</td><td>Woman</td><td onclick="speakMessage('Woman')" style="cursor:pointer;">/ˈwɪmɪn/ 🔊</td><td>Noun</td><td>Wanita</td></tr>
+          <tr><td class="highlight-column">877</td><td>Wonderful</td><td onclick="speakMessage('Wonderful')" style="cursor:pointer;">/ˈwʌndərfəl/ 🔊</td><td>Adjective</td><td>Indah</td></tr>
+          <tr><td class="highlight-column">878</td><td>Word</td><td onclick="speakMessage('Word')" style="cursor:pointer;">/wɜːd/ 🔊</td><td>Noun</td><td>Kata</td></tr>
+          <tr><td class="highlight-column">879</td><td>Work</td><td onclick="speakMessage('Work')" style="cursor:pointer;">/wɜːrk/ 🔊</td><td>Verb/Noun</td><td>Bekerja/Pekerjaan</td></tr>
+          <tr><td class="highlight-column">880</td><td>Worker</td><td onclick="speakMessage('Worker')" style="cursor:pointer;">/ˈwɜːrkər/ 🔊</td><td>Noun</td><td>Pekerja</td></tr>
+          <tr><td class="highlight-column">881</td><td>World</td><td onclick="speakMessage('World')" style="cursor:pointer;">/wɜːrld/ 🔊</td><td>Noun</td><td>Dunia</td></tr>
+          <tr><td class="highlight-column">882</td><td>Would</td><td onclick="speakMessage('Would')" style="cursor:pointer;">/wʊd/ 🔊</td><td>Auxiliary Verb</td><td>Akan</td></tr>
+          <tr><td class="highlight-column">883</td><td>Write</td><td onclick="speakMessage('Write')" style="cursor:pointer;">/raɪt/ 🔊</td><td>Verb</td><td>Menulis</td></tr>
+          <tr><td class="highlight-column">884</td><td>Writer</td><td onclick="speakMessage('Writer')" style="cursor:pointer;">/ˈraɪtər/ 🔊</td><td>Noun</td><td>Penulis</td></tr>
+          <tr><td class="highlight-column">885</td><td>Writing</td><td onclick="speakMessage('Writing')" style="cursor:pointer;">/ˈraɪtɪŋ/ 🔊</td><td>Noun</td><td>Menulis</td></tr>
+          <tr><td class="highlight-column">886</td><td>Wrong</td><td onclick="speakMessage('Wrong')" style="cursor:pointer;">/rɒŋ/ 🔊</td><td>Adjective</td><td>Salah</td></tr>
+          <tr><td class="highlight-column">887</td><td>Yeah</td><td onclick="speakMessage('Yeah')" style="cursor:pointer;">/jæ/ 🔊</td><td>Informal</td><td>Ya</td></tr>
+          <tr><td class="highlight-column">888</td><td>Year</td><td onclick="speakMessage('Year')" style="cursor:pointer;">/jɪə/ 🔊</td><td>Noun</td><td>Tahun</td></tr>
+          <tr><td class="highlight-column">889</td><td>Yellow</td><td onclick="speakMessage('Yellow')" style="cursor:pointer;">/ˈjɛləʊ/ 🔊</td><td>Adjective/Noun</td><td>Kuning</td></tr>
+          <tr><td class="highlight-column">890</td><td>Yes</td><td onclick="speakMessage('Yes')" style="cursor:pointer;">/jɛs/ 🔊</td><td>Adverb</td><td>Ya</td></tr>
+          <tr><td class="highlight-column">891</td><td>Yesterday</td><td onclick="speakMessage('Yesterday')" style="cursor:pointer;">/ˈjɛstərdeɪ/ 🔊</td><td>Noun/Adverb</td><td>Kemarin</td></tr>
+          <tr><td class="highlight-column">892</td><td>You</td><td onclick="speakMessage('You')" style="cursor:pointer;">/juː/ 🔊</td><td>Pronoun</td><td>Anda/Kamu</td></tr>
+          <tr><td class="highlight-column">893</td><td>Young</td><td onclick="speakMessage('Young')" style="cursor:pointer;">/jʌŋ/ 🔊</td><td>Adjective</td><td>Muda</td></tr>
+          <tr><td class="highlight-column">894</td><td>Your</td><td onclick="speakMessage('Your')" style="cursor:pointer;">/jɔːr/ 🔊</td><td>Possessive Pronoun</td><td>Anda/Kamu</td></tr>
+          <tr><td class="highlight-column">895</td><td>Yourself</td><td onclick="speakMessage('Yourself')" style="cursor:pointer;">/jɔːrˈsɛlf/ 🔊</td><td>Pronoun</td><td>Dirimu</td></tr>
+          
+      </tbody>
+      
+    </table>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Speech Script -->
+  <script>
+    function speakMessage(text) {
+      const utterance = new SpeechSynthesisUtterance(text);
+      speechSynthesis.speak(utterance);
+    }
+  </script>
+</body>
+</html>
